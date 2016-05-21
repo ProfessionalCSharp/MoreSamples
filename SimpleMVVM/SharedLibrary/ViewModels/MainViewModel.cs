@@ -23,7 +23,7 @@ namespace SharedLibrary.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-        public DelegateCommand ActionCommand;
+        public DelegateCommand ActionCommand { get; private set; }
 
         public async void Action()
         {
