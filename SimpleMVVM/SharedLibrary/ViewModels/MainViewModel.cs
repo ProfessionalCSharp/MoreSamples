@@ -16,7 +16,7 @@ namespace SharedLibrary.ViewModels
             ActionCommand = new DelegateCommand(Action);
         }
 
-        private string _title = "Sample";
+        private string _title = "Sample - Shared Library";
         public string Title
         {
             get { return _title; }
