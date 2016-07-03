@@ -15,7 +15,8 @@ namespace MarkdownSample
         {
             try
             {
-                string markdown = File.ReadAllText("../../src/MarkdownSample/MarkdownSample1.md");
+                string filename = Path.Combine(Directory.GetCurrentDirectory(), "MarkdownSample1.md");
+                string markdown = File.ReadAllText(filename);
                 string html = Markdown.ToHtml(markdown);
                 Console.WriteLine(html);
             }
@@ -23,8 +24,6 @@ namespace MarkdownSample
             {
                 Console.WriteLine(ex);
             }
-
-
         }
     }
 }
