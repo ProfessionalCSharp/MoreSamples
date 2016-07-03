@@ -20,16 +20,41 @@ What about an image?
 And source code as well:
 
 ```csharp
-public string Foo(string s)
+public string Greeting(string name)
 {
-	return $"Hello, {s}";
+	return $"Hello, {name}";
 }
 ```
 
+Code can also be written within text: `WriteLine("Hello, World")` - this is cool
 
-And a list:
+Here's a list:
 
 * One
 * Two
 * Three
 * Four
+
+The list can also be numbered:
+
+1. One
+2. Two
+3. Three
+
+With sub-lists:
+1. One
+	* a
+	* b
+	* C
+2. Two
+	* d
+	* e
+	* f
+
+
+And a table:
+
+| title 1  | title 2  | title 3 |
+| -------  | -------- | ------- |
+| cell 1   | cell 2   | cell 3  |
+| cell 4   | cell 5   | cell 6  |
