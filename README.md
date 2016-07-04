@@ -20,6 +20,8 @@ Folder: MarkdownSample
 
 This sample shows generating HTML from Markdown code using the Markdig Library.
 
+See the blog article [Using Markdown](https://csharp.christiannagel.com/2016/07/03/markdown/ "Using Markdown") for more information.
+
 ### Simple MVVM
 
 Folder: SimpleMVVM
