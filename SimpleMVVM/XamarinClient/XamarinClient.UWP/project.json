@@ -1,7 +1,7 @@
 ﻿{
   "dependencies": {
-    "Microsoft.Extensions.DependencyInjection": "1.0.0-rc2-final",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
+    "Microsoft.Extensions.DependencyInjection": "1.0.0",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.0",
     "Prism.Core": "6.1.0",
     "Xamarin.Forms": "2.2.0.31"
   },
