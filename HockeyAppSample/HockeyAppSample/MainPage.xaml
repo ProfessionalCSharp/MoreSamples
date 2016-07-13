@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="HockeyAppSample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HockeyAppSample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Orientation="Vertical">
+            <Button Content="Navigate to SecondPage" Click="OnNavigateToSecondPage" />
+            <TextBox x:Name="sampleDataText" Header="Sample Data" />
+            <Button Content="Action" Click="OnAction" />
+            <Button Content="Create Error" Click="OnError" />
+            <Button Content="Unhandled Exception" Click="OnUnhandledException" />
+            <Button Content="Flush" Click="OnFlush" />
+        </StackPanel>
+    </Grid>
+</Page>
