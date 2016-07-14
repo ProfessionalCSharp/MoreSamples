@@ -1,9 +1,9 @@
 ﻿{
   "dependencies": {
     "Microsoft.Extensions.DependencyInjection": "1.0.0",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.0",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.1",
     "Prism.Core": "6.1.0",
-    "Xamarin.Forms": "2.2.0.31"
+    "Xamarin.Forms": "2.3.0.107"
   },
   "frameworks": {
     "uap10.0": {}

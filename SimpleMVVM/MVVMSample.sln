@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SharedLibrary", "SharedLibrary\SharedLibrary.xproj", "{DEF9B0D9-E94A-4CB2-BCA1-AD6B4C558BDE}"
 EndProject
@@ -21,12 +21,12 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "XamarinClient", "XamarinCli
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		XamarinClient\XamarinClient\XamarinClient.projitems*{8879928c-4697-4fe1-81ad-061a0372d621}*SharedItemsImports = 4
 		XamarinClient\XamarinClient\XamarinClient.projitems*{118cc7e3-fff8-4146-8d92-21cc77b53f4d}*SharedItemsImports = 4
 		XamarinClient\XamarinClient\XamarinClient.projitems*{33bc8e04-91ff-41cf-849d-b820cf00e07e}*SharedItemsImports = 4
+		XamarinClient\XamarinClient\XamarinClient.projitems*{8879928c-4697-4fe1-81ad-061a0372d621}*SharedItemsImports = 4
 		XamarinClient\XamarinClient\XamarinClient.projitems*{b003edd0-48c1-42fb-84fb-e74a5833ba84}*SharedItemsImports = 13
-		XamarinClient\XamarinClient\XamarinClient.projitems*{fc343b65-b4a3-4aba-a62b-08036d663c71}*SharedItemsImports = 4
 		XamarinClient\XamarinClient\XamarinClient.projitems*{f36d9043-13f1-4e0b-87bf-b65b77d3b9c8}*SharedItemsImports = 4
+		XamarinClient\XamarinClient\XamarinClient.projitems*{fc343b65-b4a3-4aba-a62b-08036d663c71}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
