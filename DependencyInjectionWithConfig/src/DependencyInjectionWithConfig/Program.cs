@@ -4,16 +4,15 @@ using System;
 using System.IO;
 using static System.Console;
 
-namespace DependencyInjectionWithOptions
+namespace DependencyInjectionWithConfig
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            //RegisterServicesWithOptions();
-
             RegisterServicesWithConfig();
             UseServices();
+
         }
 
         private static void RegisterServicesWithConfig()
@@ -25,7 +24,8 @@ namespace DependencyInjectionWithOptions
 
             var services = new ServiceCollection();
             services.AddTransient<HelloController>();
-            services.AddGreetingService(config);
+            services.AddOptions();
+            services.AddGreetingService(config.GetSection("GreetingService"));
 
             Container = services.BuildServiceProvider();
         }
@@ -34,24 +34,9 @@ namespace DependencyInjectionWithOptions
         {
             var controller = Container.GetService<HelloController>();
 
-            string greeting = controller.Action("Stephanie");
+            string greeting = controller.Action("Katharina");
 
             WriteLine(greeting);
-        }
-
-        private static void RegisterServicesWithOptions()
-        {
-            var services = new ServiceCollection();
-            services.AddOptions();
-
-            services.AddTransient<HelloController>();
-
-            services.AddGreetingService(options =>
-            {
-                options.From = "Christian";
-            });
-
-            Container = services.BuildServiceProvider();
         }
 
         public static IServiceProvider Container { get; private set; }
