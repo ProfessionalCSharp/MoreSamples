@@ -1,7 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.IO;
 using static System.Console;
 
 namespace DependencyInjectionWithOptions
@@ -10,25 +8,10 @@ namespace DependencyInjectionWithOptions
     {
         public static void Main(string[] args)
         {
-            //RegisterServicesWithOptions();
-
-            RegisterServicesWithConfig();
+            RegisterServicesWithOptions();
             UseServices();
         }
 
-        private static void RegisterServicesWithConfig()
-        {
-            IConfigurationBuilder configBuilder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json");
-            IConfigurationRoot config = configBuilder.Build();
-
-            var services = new ServiceCollection();
-            services.AddTransient<HelloController>();
-            services.AddGreetingService(config);
-
-            Container = services.BuildServiceProvider();
-        }
 
         private static void UseServices()
         {
