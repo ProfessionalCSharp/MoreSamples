@@ -6,7 +6,6 @@ namespace Microsoft.Extensions.DependencyInjection
 {
     public static class GreetingServiceCollectionExtensions
     {
-
         public static IServiceCollection AddGreetingService(this IServiceCollection collection, IConfiguration config)
         {
             if (collection == null) throw new ArgumentNullException(nameof(collection));

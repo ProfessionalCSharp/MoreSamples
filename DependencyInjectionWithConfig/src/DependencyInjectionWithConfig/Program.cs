@@ -12,7 +12,6 @@ namespace DependencyInjectionWithConfig
         {
             RegisterServicesWithConfig();
             UseServices();
-
         }
 
         private static void RegisterServicesWithConfig()

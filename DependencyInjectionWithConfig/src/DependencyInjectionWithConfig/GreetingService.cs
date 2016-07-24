@@ -8,7 +8,6 @@ namespace DependencyInjectionWithConfig
         public string From { get; set; }
     }
 
-
     public class GreetingService : IGreetingService
     {
         public GreetingService(IOptions<GreetingServiceOptions> options)

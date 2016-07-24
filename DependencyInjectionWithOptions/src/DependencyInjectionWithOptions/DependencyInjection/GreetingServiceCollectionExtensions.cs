@@ -1,6 +1,5 @@
 ﻿using DependencyInjectionWithOptions;
 using System;
-using Microsoft.Extensions.Configuration;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -14,6 +13,5 @@ namespace Microsoft.Extensions.DependencyInjection
             collection.Configure(setupAction);
             return collection.AddTransient<IGreetingService, GreetingService>();
         }
-
     }
 }
