@@ -32,7 +32,7 @@ namespace ConfigurationSample
         {
             Console.WriteLine(nameof(ReadSimpleConfiguration));
             string val1 = Config["SimpleConfig"];
-            Console.WriteLine(val1);
+            Console.WriteLine($"Read {val1} using the key SimpleConfig");
             Console.WriteLine();
         }
 
@@ -54,7 +54,7 @@ namespace ConfigurationSample
                 .Build();
         }
 
-        public static IConfigurationRoot Config { get; set; }
+        public static IConfigurationRoot Config { get; private set; }
 
         private static void SetupConfigurationWithOptionalSettings()
         {
@@ -73,7 +73,6 @@ namespace ConfigurationSample
             Console.WriteLine(Config.GetSection("ConnectionStrings")["DefaultConnection"]);
             Console.WriteLine(Config.GetConnectionString("DefaultConnection"));
             Console.WriteLine();
-        }
-        
+        }        
     }
 }
