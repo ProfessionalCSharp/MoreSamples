@@ -31,7 +31,7 @@ See the blog article [.NET Core Dependency Injection with Options](https://cshar
 
 ### Configuration
 
-Folder:
+Folder: ConfigurationSample
 
 This sample shows .NET Core configuration with a simple console application. The book contains configuration information in Chapter 40, ASP.NET Core.
 
