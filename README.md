@@ -6,6 +6,7 @@ This repository contains additional code samples for the book Professional C# 6.
 
 * Dependency Injection
 * Dependency Injection with Options
+* Configuration
 * Markdown
 
 ### Dependency Injection
@@ -27,6 +28,14 @@ Folder: DependencyInjectionWithOptions
 This sample extends on the Dependency Injection sample to add options for configuration of the injected service.
 
 See the blog article [.NET Core Dependency Injection with Options](https://csharp.christiannagel.com/2016/07/27/diwithoptions/ "DI with Options") for more information.
+
+### Configuration
+
+Folder:
+
+This sample shows .NET Core configuration with a simple console application. The book contains configuration information in Chapter 40, ASP.NET Core.
+
+See the blog article [Configuration with .NET Core](https://csharp.christiannagel.com/2016/08/02/netcoreconfiguration/ "Configuration") for more information.
 
 ### Markdown
 
