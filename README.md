@@ -56,7 +56,7 @@ Folder: InkSample
 
 This sample shows using the InkCanvas and the InkToolbar available with the Windows 10 Anniversary update.
 
-See the blog article [Using InkToolbar and InkCanvas with the Universal Windows Platform(https://csharp.christiannagel.com/2016/08/04/ink/ "InkToolbar and InkCanvas") for more information.
+See the blog article [Using InkToolbar and InkCanvas with the Universal Windows Platform](https://csharp.christiannagel.com/2016/08/04/ink/ "InkToolbar and InkCanvas") for more information.
 
 ### Simple MVVM
 
