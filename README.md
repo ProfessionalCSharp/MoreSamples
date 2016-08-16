@@ -37,6 +37,14 @@ This sample shows .NET Core configuration with a simple console application. The
 
 See the blog article [Configuration with .NET Core](https://csharp.christiannagel.com/2016/08/02/netcoreconfiguration/ "Configuration") for more information.
 
+### Dependency Injection with Configuration
+
+Folder: DependencyInjectionWithConfig
+
+This sample extends on the Dependency Injection with Options to instantiate the injected service using JSON configuration.
+
+See the blog article [.NET Core Dependency Injection with Configuration](https://csharp.christiannagel.com/2016/08/16/diwithconfiguration/ "DI with Configuration") for more information.
+
 ### Markdown
 
 Folder: MarkdownSample
