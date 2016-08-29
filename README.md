@@ -7,6 +7,7 @@ This repository contains additional code samples for the book Professional C# 6.
 * Dependency Injection
 * Dependency Injection with Options
 * Configuration
+* Dependency Injection with Configuration
 * Markdown
 
 ### Dependency Injection
@@ -57,6 +58,7 @@ See the blog article [Using Markdown](https://csharp.christiannagel.com/2016/07/
 
 * Ink
 * Simple MVVM
+* Grouped ListView
 
 ### Ink Sample
 
@@ -74,5 +76,12 @@ This sample shows how .NET Core libraries can be used from UWP by using System.E
 
 See the blog article [Using .NET Core Libraries from UWP](https://csharp.christiannagel.com/2016/05/23/netcore-uwp/ "Using .NET Core Libraries")
 
-The book Professional C# 6 and .NET Core 1.0 offers a bigger example with MVVM and both WPF and UWP applications in the chapter 31, "Patterns with XAML Apps". 
+The book Professional C# 6 and .NET Core 1.0 offers a bigger example with MVVM and both WPF and UWP applications in the chapter 31, "Patterns with XAML Apps".
 
+### Grouped ListView
+
+Folder: GroupedListViewSample
+
+This sample shows grouping using CollectionViewSource and ListView with compiled data binding.
+
+See the blog article [ListView Grouping with UWP](https://csharp.christiannagel.com/2016/08/29/uwpgrouping/ "ListView Grouping")
