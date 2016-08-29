@@ -2,7 +2,14 @@
 
 This repository contains additional code samples for the book Professional C# 6. Enjoy!
 
-### Dependency Injection (.NET Core)
+## .NET Core
+
+* Dependency Injection
+* Dependency Injection with Options
+* Configuration
+* Markdown
+
+### Dependency Injection
 
 Folder: DependencyInjection
 
@@ -14,7 +21,7 @@ The Simple MVVM sample makes use of Microsoft.Extensions.DependencyInjection as 
 
 The book Professional C# 6 and .NET Core 1.0 offers a bigger example with MVVM and both WPF and UWP applications in the chapter 31, "Patterns with XAML Apps", and in the ASP.NET Core chapters 40 "ASP.NET Core" and 41 "ASP.NET MVC". 
 
-### Dependency Injection with Options (.NET Core)
+### Dependency Injection with Options
 
 Folder: DependencyInjectionWithOptions
 
@@ -22,15 +29,23 @@ This sample extends on the Dependency Injection sample to add options for config
 
 See the blog article [.NET Core Dependency Injection with Options](https://csharp.christiannagel.com/2016/07/27/diwithoptions/ "DI with Options") for more information.
 
-### Ink Sample (UWP)
+### Configuration
 
-Folder: InkSample
+Folder: ConfigurationSample
 
-This sample shows using the InkCanvas and the InkToolbar available with the Windows 10 Anniversary update.
+This sample shows .NET Core configuration with a simple console application. The book contains configuration information in Chapter 40, ASP.NET Core.
 
-See the blog article [Using InkToolbar and InkCanvas with the Universal Windows Platform(https://csharp.christiannagel.com/2016/08/04/ink/ "InkToolbar and InkCanvas") for more information.
+See the blog article [Configuration with .NET Core](https://csharp.christiannagel.com/2016/08/02/netcoreconfiguration/ "Configuration") for more information.
 
-### Markdown (.NET Core)
+### Dependency Injection with Configuration
+
+Folder: DependencyInjectionWithConfig
+
+This sample extends on the Dependency Injection with Options to instantiate the injected service using JSON configuration.
+
+See the blog article [.NET Core Dependency Injection with Configuration](https://csharp.christiannagel.com/2016/08/16/diwithconfiguration/ "DI with Configuration") for more information.
+
+### Markdown
 
 Folder: MarkdownSample
 
@@ -38,7 +53,20 @@ This sample shows generating HTML from Markdown code using the Markdig Library.
 
 See the blog article [Using Markdown](https://csharp.christiannagel.com/2016/07/03/markdown/ "Using Markdown") for more information.
 
-### Simple MVVM (UWP)
+## Universal Windows Platform (UWP)
+
+* Ink
+* Simple MVVM
+
+### Ink Sample
+
+Folder: InkSample
+
+This sample shows using the InkCanvas and the InkToolbar available with the Windows 10 Anniversary update.
+
+See the blog article [Using InkToolbar and InkCanvas with the Universal Windows Platform](https://csharp.christiannagel.com/2016/08/04/ink/ "InkToolbar and InkCanvas") for more information.
+
+### Simple MVVM
 
 Folder: SimpleMVVM
 
