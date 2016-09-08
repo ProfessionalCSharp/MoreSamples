@@ -9,6 +9,7 @@ This repository contains additional code samples for the book Professional C# 6.
 * Configuration
 * Dependency Injection with Configuration
 * Markdown
+* Self-contained
 
 ### Dependency Injection
 
@@ -53,6 +54,14 @@ Folder: MarkdownSample
 This sample shows generating HTML from Markdown code using the Markdig Library.
 
 See the blog article [Using Markdown](https://csharp.christiannagel.com/2016/07/03/markdown/ "Using Markdown") for more information.
+
+### Self-Contained application
+
+Folder: SelfContained
+
+This sample shows how to create self-contained .NET Core applications in contrary to portable applications.
+
+See the blog article [Self-Contained .NET Core Applications](https://csharp.christiannagel.com/2016/08/11/selfcontained/ ".NET Core Self-contained") for more information.
 
 ## Universal Windows Platform (UWP)
 
