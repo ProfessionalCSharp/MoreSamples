@@ -1,0 +1,261 @@
+﻿<Window x:Class="_3DSample.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="3D" Height="300" Width="300">
+   <Window.Resources>
+      <Style TargetType="{x:Type Control}">
+         <Setter Property="Control.Margin" Value="5" />
+      </Style>
+      <Style TargetType="{x:Type Label}" BasedOn="{StaticResource {x:Type Control}}" />
+      <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource {x:Type Control}}" />
+      <Style TargetType="{x:Type Slider}" BasedOn="{StaticResource {x:Type Control}}" />
+      <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type Control}}" />
+      <SolidColorBrush x:Key="redBrush1" Color="Red" Opacity="0.8" />
+      <SolidColorBrush x:Key="grayBrush" Color="LightGray" Opacity="0.6" />
+
+      <LinearGradientBrush x:Key="redBrush" StartPoint="0,0" EndPoint="1,1">
+         <GradientStop Color="Yellow" Offset="0" />
+         <GradientStop Color="Orange" Offset="0.25" />
+         <GradientStop Color="Red" Offset="0.50" />
+         <GradientStop Color="Blue" Offset="0.75" />
+         <GradientStop Color="Violet" Offset="1" />
+      </LinearGradientBrush>
+   </Window.Resources>
+   <DockPanel>
+
+      <StackPanel DockPanel.Dock="Left">
+         <!-- Directional light configuration -->
+         <GroupBox Header="Light">
+            <Grid>
+               <Grid.Resources>
+                  <Style TargetType="{x:Type Label}">
+                     <Setter Property="Grid.Column" Value="0" />
+                     <Setter Property="Label.IsEnabled" Value="{Binding Path=IsChecked, ElementName=checkDirectionalLight}" />
+                  </Style>
+                  <Style TargetType="{x:Type Slider}">
+                     <Setter Property="Grid.Column" Value="1" />
+                     <Setter Property="Slider.IsEnabled" Value="{Binding Path=IsChecked, ElementName=checkDirectionalLight}" />
+                  </Style>
+               </Grid.Resources>
+               <Grid.ColumnDefinitions>
+                  <ColumnDefinition />
+                  <ColumnDefinition />
+               </Grid.ColumnDefinitions>
+               <Grid.RowDefinitions>
+                  <RowDefinition />
+                  <RowDefinition />
+                  <RowDefinition />
+                  <RowDefinition />
+               </Grid.RowDefinitions>
+               <CheckBox Name="checkDirectionalLight" IsChecked="True" Content="Directional Light" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Checked="checkDirectionalLight_Checked" Unchecked="checkDirectionalLight_Unchecked" />
+               <Label Grid.Row="1">X:</Label>
+               <Slider Grid.Row="1" Minimum="-6" Maximum="6" Value="1" Name="lightX" ValueChanged="directionalLight_ValueChanged" />
+               <Label Grid.Row="2" >Y:</Label>
+               <Slider Grid.Row="2" Minimum="-6" Maximum="6" Value="2" Name="lightY" ValueChanged="directionalLight_ValueChanged"  />
+               <Label Grid.Row="3" Content="Z:" />
+               <Slider Grid.Row="3" Minimum="-6" Maximum="6" Value="3" Name="lightZ" ValueChanged="directionalLight_ValueChanged"  />
+            </Grid>
+         </GroupBox>
+
+         <!-- spotlight configuration-->
+         <GroupBox>
+            <Grid>
+               <Grid.Resources>
+                  <Style TargetType="{x:Type Label}">
+                     <Setter Property="Grid.Column" Value="0" />
+                     <Setter Property="Label.IsEnabled" Value="{Binding Path=IsChecked, ElementName=checkSpotLight}" />
+                  </Style>
+                  <Style TargetType="{x:Type Slider}">
+                     <Setter Property="Grid.Column" Value="1" />
+                     <Setter Property="Slider.IsEnabled" Value="{Binding Path=IsChecked, ElementName=checkSpotLight}" />
+                  </Style>
+               </Grid.Resources>
+               <Grid.ColumnDefinitions>
+                  <ColumnDefinition />
+                  <ColumnDefinition />
+               </Grid.ColumnDefinitions>
+               <Grid.RowDefinitions>
+                  <RowDefinition />
+                  <RowDefinition />
+                  <RowDefinition />
+                  <RowDefinition />
+                  <RowDefinition />
+                  <RowDefinition />
+               </Grid.RowDefinitions>
+               <CheckBox Name="checkSpotLight" IsChecked="True" Content="Spot Light" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Checked="checkSpotLight_Checked" Unchecked="checkSpotLight_Unchecked" />
+               <Label Grid.Row="1">Position</Label>
+               <TextBox x:Name="spotPosition" Grid.Row="1" Grid.Column="1">1,1,7</TextBox>
+               <Label Grid.Row="2">Direction</Label>
+               <TextBox x:Name="spotDirection" Grid.Row="2" Grid.Column="1">-1,-1,-5</TextBox>
+
+               <Label Grid.Row="3">Inner cone:</Label>
+               <Slider Grid.Row="3" Minimum="-20" Maximum="80" Value="20" Name="spotInnerCone"  />
+               <Label Grid.Row="4" >Outer cone:</Label>
+               <Slider Grid.Row="4" Minimum="-20" Maximum="80" Value="20" Name="spotOuterCone"   />
+               <Label Grid.Row="5" Content="Range:" />
+               <Slider Grid.Row="5" Minimum="-20" Maximum="80" Value="20" Name="spotRange"  />
+            </Grid>
+         </GroupBox>
+
+         <!-- Transformation configuration -->
+         <GroupBox Header="Transformation">
+            <UniformGrid Columns="2">
+               <Label Content="X:" />
+               <Slider Minimum="-4" Maximum="4" Value="0" Name="axisX" ValueChanged="axis_ValueChanged"  />
+               <Label Content="Y:" />
+               <Slider Minimum="-4" Maximum="4" Value="0" Name="axisY" ValueChanged="axis_ValueChanged"  />
+               <Label Content="Z:" />
+               <Slider Minimum="-4" Maximum="4" Value="0" Name="axisZ" ValueChanged="axis_ValueChanged"  />
+               <Label Content="Angle:" />
+               <Slider Minimum="0" Maximum="360" Value="30" Name="axisAngle" />
+            </UniformGrid>
+         </GroupBox>
+         <GroupBox Header="Camera">
+            <UniformGrid Columns="2">
+               <Label Content="Position" />
+               <TextBox Name="textCameraPosition" Text="1, 0, 7" />
+               <Label Content="Direction" />
+               <TextBox Name="textCameraDirection" Text="-1, 0, -4" />
+            </UniformGrid>
+         </GroupBox>
+      </StackPanel>
+
+      <!-- now the 3D ViewPort3D-->
+      <Viewport3D>
+
+         <!-- spot light -->
+         <ModelVisual3D>
+            <ModelVisual3D.Content>
+               <SpotLight x:Name="spotLight" 
+               InnerConeAngle="{Binding Path=Value, ElementName=spotInnerCone}" 
+               OuterConeAngle="{Binding Path=Value, ElementName=spotOuterCone}" 
+               Color="#FFFFFF" 
+               Direction="{Binding Path=Text, ElementName=spotDirection}"
+               Position="{Binding Path=Text, ElementName=spotPosition}" 
+               Range="{Binding Path=Value, ElementName=spotRange}" />
+
+            </ModelVisual3D.Content>
+         </ModelVisual3D>
+
+         <!-- directional light -->
+         <ModelVisual3D>
+            <ModelVisual3D.Content>
+               <DirectionalLight Color="White" x:Name="directionalLight">
+                  <DirectionalLight.Direction>
+                     <Vector3D X="1" Y="2" Z="3" />
+                  </DirectionalLight.Direction>
+               </DirectionalLight>
+            </ModelVisual3D.Content>
+         </ModelVisual3D>
+
+         <!-- the model -->
+         <ModelVisual3D>
+            <ModelVisual3D.Content>
+               <Model3DGroup>
+                  <!-- Front -->
+                  <GeometryModel3D>
+                     <GeometryModel3D.Geometry>
+                        <MeshGeometry3D 
+                           Positions="-1 -1 1, 1 -1 1, 1 1 1, 1 1 1, -1 1 1, -1 -1 1" 
+                           TriangleIndices="0 1 2, 3 4 5" 
+                           TextureCoordinates="0 0, 1 0, 1 1, 1 1, 0 1, 0 0"
+                           />
+                      
+                     </GeometryModel3D.Geometry>
+                     <GeometryModel3D.Material>
+                        <DiffuseMaterial Brush="{StaticResource redBrush}" />
+                     </GeometryModel3D.Material>
+                     <GeometryModel3D.BackMaterial>
+                        <DiffuseMaterial Brush="{StaticResource grayBrush}" />
+                     </GeometryModel3D.BackMaterial>
+                  </GeometryModel3D>
+
+                  <!-- Left side -->
+                  <GeometryModel3D>
+                     <GeometryModel3D.Geometry>
+                        <MeshGeometry3D 
+                     Positions="-1 -1 1, -1 1 1, -1 -1 -1, -1 -1 -1, -1 1 1, -1 1 -1" 
+                     TriangleIndices="0 1 2, 3 4 5" 
+                     TextureCoordinates="0 1, 1 1, 0 0, 0 0, 1 1, 1 0"
+                     />
+                     </GeometryModel3D.Geometry>
+                     <GeometryModel3D.Material>
+                        <DiffuseMaterial Brush="{StaticResource redBrush}" />
+                     </GeometryModel3D.Material>
+                     <GeometryModel3D.BackMaterial>
+                        <DiffuseMaterial Brush="{StaticResource grayBrush}" />
+                     </GeometryModel3D.BackMaterial>
+                  </GeometryModel3D>
+
+                  <!-- Back side -->
+                  <GeometryModel3D>
+                     <GeometryModel3D.Geometry>
+                        <MeshGeometry3D 
+                     Positions="-1 -1 -1, 1 -1 -1, 1 1 -1, 1 1 -1, -1 1 -1, -1 -1 -1" 
+                     TriangleIndices="0 2 1, 3 5 4" 
+                     TextureCoordinates="0 0, 1 0, 1 1, 1 1, 0 1, 0 0"
+                     />
+                     </GeometryModel3D.Geometry>
+                     <GeometryModel3D.Material>
+                        <DiffuseMaterial Brush="{StaticResource redBrush}" />
+                     </GeometryModel3D.Material>
+                     <GeometryModel3D.BackMaterial>
+                        <DiffuseMaterial Brush="{StaticResource grayBrush}" />
+                     </GeometryModel3D.BackMaterial>
+                  </GeometryModel3D>
+
+                  <!-- Right side -->
+                  <GeometryModel3D>
+                     <GeometryModel3D.Geometry>
+                        <MeshGeometry3D 
+                     Positions="1 -1 1, 1 1 1, 1 -1 -1, 1 -1 -1, 1 1 1, 1 1 -1" 
+                     TriangleIndices="0 2 1, 3 5 4"
+                     TextureCoordinates="0 1, 1 1, 0 0, 0 0, 1 1, 1 0"
+                      />
+                     </GeometryModel3D.Geometry>
+                     <GeometryModel3D.Material>
+                        <DiffuseMaterial Brush="{StaticResource redBrush}" />
+                     </GeometryModel3D.Material>
+                     <GeometryModel3D.BackMaterial>
+                        <DiffuseMaterial Brush="{StaticResource grayBrush}" />
+                     </GeometryModel3D.BackMaterial>
+                  </GeometryModel3D>
+
+                  <!-- Bottom -->
+                  <GeometryModel3D>
+                     <GeometryModel3D.Geometry>
+                        <MeshGeometry3D 
+                     Positions="-1 -1 1, 1 -1 1, 1 -1 -1, 1 -1 -1, -1 -1 -1, -1 -1 1" 
+                     TriangleIndices="0 2 1, 3 5 4"
+                     TextureCoordinates="0 1, 1 1, 1 0, 1 0, 0 0, 0 1"
+                      />
+                     </GeometryModel3D.Geometry>
+                     <GeometryModel3D.Material>
+                        <DiffuseMaterial Brush="{StaticResource redBrush}" />
+                     </GeometryModel3D.Material>
+                     <GeometryModel3D.BackMaterial>
+                        <DiffuseMaterial Brush="{StaticResource grayBrush}" />
+                     </GeometryModel3D.BackMaterial>
+                  </GeometryModel3D>
+
+                  <!-- Transformation of the complete model -->
+                  <Model3DGroup.Transform>
+                     <RotateTransform3D CenterX="0" CenterY="0" CenterZ="0">
+                        <RotateTransform3D.Rotation>
+                           <AxisAngleRotation3D x:Name="axisRotation" Axis="0, 0, 0" 
+                           Angle="{Binding Path=Value, ElementName=axisAngle}" />
+                        </RotateTransform3D.Rotation>
+                     </RotateTransform3D>
+                  </Model3DGroup.Transform>
+               </Model3DGroup>
+            </ModelVisual3D.Content>
+         </ModelVisual3D>
+
+         <!-- Camera -->
+         <Viewport3D.Camera>
+            <PerspectiveCamera x:Name="camera" Position="{Binding Path=Text, ElementName=textCameraPosition}" LookDirection="{Binding Path=Text, ElementName=textCameraDirection}" />
+         </Viewport3D.Camera>
+      </Viewport3D>
+
+   </DockPanel>
+</Window>
