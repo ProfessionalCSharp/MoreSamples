@@ -85,3 +85,15 @@ Folder: GroupedListViewSample
 This sample shows grouping using CollectionViewSource and ListView with compiled data binding.
 
 See the blog article [ListView Grouping with UWP](https://csharp.christiannagel.com/2016/08/29/uwpgrouping/ "ListView Grouping")
+
+## WPF
+
+### 3D with WPF
+
+Folder: WPF/3DSampleProfessionalCSharp5
+
+This sample is from a previous version of the book, *Professional C# 5.0 and .NET 4.5.1* and demonstrates the 3D features of WPF with an animated 3D model
+
+Folder: WPF/3DSampleProfessionalCSharpOlderEdition
+
+This sample is from an older edition of *Professional C#" and demonstrates 3D features of WPF using sliders to move that allow adjusting the 3D scene
