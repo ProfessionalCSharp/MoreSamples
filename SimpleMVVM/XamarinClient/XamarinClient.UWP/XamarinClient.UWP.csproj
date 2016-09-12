@@ -128,9 +128,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="SharedLibrary">
-      <HintPath>..\..\SharedLibrary\bin\Debug\netstandard1.3\SharedLibrary.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\SharedLibrary\SharedLibrary.csproj">
+      <Project>{da88f63e-c6f0-4652-8f79-1a250ea88ba9}</Project>
+      <Name>SharedLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
