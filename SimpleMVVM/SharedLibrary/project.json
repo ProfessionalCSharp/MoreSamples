@@ -1,14 +1,13 @@
-{
-  "version": "1.0.1-*",
-
+﻿{
+  "supports": {},
   "dependencies": {
+    "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
     "NETStandard.Library": "1.6.0",
-    "Prism.Core": "6.1.0"
+    "Prism.Core": "6.2.0"
   },
-
   "frameworks": {
-    "netstandard1.6": {
-      "imports": [ "dnxcore50", "portable-monoandroid10+monotouch10+net45+win+win81+wp8+wpa81+xamarinios10" ]
+    "netstandard1.2": {
+      "imports": "portable-monoandroid10+monotouch10+net45+win+win81+wp8+wpa81+xamarinios10"
     }
   }
 }
