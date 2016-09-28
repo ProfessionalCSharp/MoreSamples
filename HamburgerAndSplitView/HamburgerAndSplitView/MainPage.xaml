@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="HamburgerAndSplitView.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HamburgerAndSplitView"
+    xmlns:conv="using:HamburgerAndSplitView.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <conv:NullableBoolToBoolConverter x:Key="NullableBoolConverter" />
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="MediumState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="HorizontalMenu.Visibility" Value="Visible" />
+                        <Setter Target="HamburgerButton.Visibility" Value="Collapsed" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="SmallState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="320" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="HamburgerButton.Visibility" Value="Visible" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <StackPanel x:DeferLoadStrategy="Lazy" x:Name="HorizontalMenu" Orientation="Horizontal" Visibility="Collapsed">
+            <Button Content="One" Style="{StaticResource MenuButtonStyle}" />
+            <Button Content="Two" Style="{StaticResource MenuButtonStyle}" />
+        </StackPanel>
+        <ToggleButton x:Name="HamburgerButton" Style="{StaticResource HamburgerButtonStyle}" Visibility="Collapsed" />
+        <SplitView Grid.Row="1" 
+                   DisplayMode="Inline"
+              
+                   OpenPaneLength="240"
+                   IsPaneOpen="{x:Bind HamburgerButton.IsChecked, Mode=TwoWay, Converter={StaticResource NullableBoolConverter}}">
+            <SplitView.Pane>
+                <StackPanel Orientation="Vertical">
+                    <Button Content="One" Style="{StaticResource MenuButtonStyle}" />
+                    <Button Content="Two" Style="{StaticResource MenuButtonStyle}" />
+                </StackPanel>
+            </SplitView.Pane>
+            <TextBlock Text="Main Content of the Page" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </SplitView>
+    </Grid>
+</Page>
