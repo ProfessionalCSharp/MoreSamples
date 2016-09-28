@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C59C055B-6B19-4203-8F00-8F53CAA51C1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EADAA8B0-F391-46A9-A265-90408D2C437A}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WebLocalizationSample", "src\WebLocalizationSample\WebLocalizationSample.xproj", "{E112F6A9-E632-4533-8BA9-4C49C6B10FE9}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TestWebLocalizationSample", "src\TestWebLocalizationSample\TestWebLocalizationSample.xproj", "{218216F6-D757-4E6E-A406-CC9C7049EDA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E112F6A9-E632-4533-8BA9-4C49C6B10FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E112F6A9-E632-4533-8BA9-4C49C6B10FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E112F6A9-E632-4533-8BA9-4C49C6B10FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E112F6A9-E632-4533-8BA9-4C49C6B10FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{218216F6-D757-4E6E-A406-CC9C7049EDA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{218216F6-D757-4E6E-A406-CC9C7049EDA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{218216F6-D757-4E6E-A406-CC9C7049EDA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{218216F6-D757-4E6E-A406-CC9C7049EDA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E112F6A9-E632-4533-8BA9-4C49C6B10FE9} = {C59C055B-6B19-4203-8F00-8F53CAA51C1D}
+		{218216F6-D757-4E6E-A406-CC9C7049EDA6} = {C59C055B-6B19-4203-8F00-8F53CAA51C1D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer Localizer
+
+
+<h3>Now running with this culture: @System.Globalization.CultureInfo.CurrentCulture.Name</h3>
+
+<p>@Localizer["LocalizedForView"]</p>
