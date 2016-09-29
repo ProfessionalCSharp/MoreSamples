@@ -1,6 +1,12 @@
 # More Samples
 
-This repository contains additional code samples for the book Professional C# 6. Enjoy!
+This repository contains additional code samples for the book Professional C# 6. Currently you'll find samples in these categories:
+
+* .NET Core
+* Universal Windows Platform (UWP)
+* WPF
+
+Enjoy!
 
 ## .NET Core
 
@@ -105,6 +111,8 @@ This sample shows a ToggleButton in Hamburger look, the SplitView, and AdaptiveT
 See the blog article [Hamburger Button and SplitView](https://csharp.christiannagel.com/2016/09/29/hamburgerandsplitview/ "Hamburger and SplitView")
 
 ## WPF
+
+Samples from previous editions that no longer made it into *Professional C# 6*, but are still useful.
 
 ### 3D with WPF
 
