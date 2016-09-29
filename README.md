@@ -68,6 +68,7 @@ See the blog article [Self-Contained .NET Core Applications](https://csharp.chri
 * Ink
 * Simple MVVM
 * Grouped ListView
+* 
 
 ### Ink Sample
 
@@ -94,6 +95,14 @@ Folder: GroupedListViewSample
 This sample shows grouping using CollectionViewSource and ListView with compiled data binding.
 
 See the blog article [ListView Grouping with UWP](https://csharp.christiannagel.com/2016/08/29/uwpgrouping/ "ListView Grouping")
+
+### Hamburger and SplitView
+
+Folder: HamburgerAndSplitView
+
+This sample shows a ToggleButton in Hamburger look, the SplitView, and AdaptiveTrigger.
+
+See the blog article [Hamburger Button and SplitView](https://csharp.christiannagel.com/2016/09/29/hamburgerandsplitview/ "Hamburger and SplitView")
 
 ## WPF
 
