@@ -1,6 +1,12 @@
 # More Samples
 
-This repository contains additional code samples for the book Professional C# 6. Enjoy!
+This repository contains additional code samples for the book Professional C# 6. Currently you'll find samples in these categories:
+
+* .NET Core
+* Universal Windows Platform (UWP)
+* WPF
+
+Enjoy!
 
 ## .NET Core
 
@@ -68,6 +74,7 @@ See the blog article [Self-Contained .NET Core Applications](https://csharp.chri
 * Ink
 * Simple MVVM
 * Grouped ListView
+* 
 
 ### Ink Sample
 
@@ -95,7 +102,17 @@ This sample shows grouping using CollectionViewSource and ListView with compiled
 
 See the blog article [ListView Grouping with UWP](https://csharp.christiannagel.com/2016/08/29/uwpgrouping/ "ListView Grouping")
 
+### Hamburger and SplitView
+
+Folder: HamburgerAndSplitView
+
+This sample shows a ToggleButton in Hamburger look, the SplitView, and AdaptiveTrigger.
+
+See the blog article [Hamburger Button and SplitView](https://csharp.christiannagel.com/2016/09/29/hamburgerandsplitview/ "Hamburger and SplitView")
+
 ## WPF
+
+Samples from previous editions that no longer made it into *Professional C# 6*, but are still useful.
 
 ### 3D with WPF
 
