@@ -1,4 +1,3 @@
-
 # More Samples
 
 This repository contains additional code samples for the book Professional C# 6. Currently you'll find samples in these categories:
@@ -23,7 +22,7 @@ Binary literals and digit separators, as well as other C# literals
 
 See the blog article [C# Literals & C# 7.0 Binary Literals and Digit Separators](https://csharp.christiannagel.com/2016/10/06/literals/ "Literals") for more information.
 
-## Tuples
+### Tuples
 
 Folder : TuplesSample
 
