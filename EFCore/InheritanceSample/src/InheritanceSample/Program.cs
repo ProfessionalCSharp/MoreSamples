@@ -8,8 +8,8 @@ namespace InheritanceSample
         public static void Main(string[] args)
         {
             //CreateDatabase();
-            //Query();
-            CreateDatabase2();
+            Query();
+            //CreateDatabase2();
             Query2();
 
         }
@@ -20,6 +20,13 @@ namespace InheritanceSample
             {
                 var payments = context.Payments.ToList();
                 foreach (var payment in payments)
+                {
+                    Console.WriteLine($"{payment.Name} {payment.Amount} {payment.GetType().Name}");
+                }
+
+                Console.WriteLine();
+                Console.WriteLine("just the creditcard payments");
+                foreach (var payment in context.Payments.OfType<CreditcardPayment>())
                 {
                     Console.WriteLine($"{payment.Name} {payment.Amount} {payment.GetType().Name}");
                 }
@@ -45,6 +52,13 @@ namespace InheritanceSample
             {
                 var payments = context.Payments.ToList();
                 foreach (var payment in payments)
+                {
+                    Console.WriteLine($"{payment.Name} {payment.Amount} {payment.GetType().Name}");
+                }
+
+                Console.WriteLine();
+                Console.WriteLine("just the creditcard payments");
+                foreach (var payment in context.Payments.OfType<CreditcardPayment>())
                 {
                     Console.WriteLine($"{payment.Name} {payment.Amount} {payment.GetType().Name}");
                 }
