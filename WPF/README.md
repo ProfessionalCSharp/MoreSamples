@@ -2,7 +2,7 @@
 
 > Enjoy the WPF code samples. These samples are from a previous book edtion that no longer made it into *Professional C# 6*, but are still useful.
 
-### 3D with WPF
+## 3D with WPF
 
 Folder: 3DSampleProfessionalCSharp5
 

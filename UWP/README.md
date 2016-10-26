@@ -7,7 +7,7 @@
 * Grouped ListView
 * Hamburger and SplitView
 
-### Ink Sample
+## Ink Sample
 
 Folder: InkSample
 
@@ -15,7 +15,7 @@ This sample shows using the InkCanvas and the InkToolbar available with the Wind
 
 See the blog article [Using InkToolbar and InkCanvas with the Universal Windows Platform](https://csharp.christiannagel.com/2016/08/04/ink/ "InkToolbar and InkCanvas") for more information.
 
-### Simple MVVM
+## Simple MVVM
 
 Folder: SimpleMVVM
 
@@ -25,7 +25,7 @@ See the blog article [Using .NET Core Libraries from UWP](https://csharp.christi
 
 The book Professional C# 6 and .NET Core 1.0 offers a bigger example with MVVM and both WPF and UWP applications in the chapter 31, "Patterns with XAML Apps".
 
-### Grouped ListView
+## Grouped ListView
 
 Folder: GroupedListViewSample
 
@@ -33,7 +33,7 @@ This sample shows grouping using CollectionViewSource and ListView with compiled
 
 See the blog article [ListView Grouping with UWP](https://csharp.christiannagel.com/2016/08/29/uwpgrouping/ "ListView Grouping")
 
-### Hamburger and SplitView
+## Hamburger and SplitView
 
 Folder: HamburgerAndSplitView
 
