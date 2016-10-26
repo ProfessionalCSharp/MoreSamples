@@ -7,9 +7,9 @@ namespace InheritanceSample
     {
         public static void Main(string[] args)
         {
-            //CreateDatabase();
+            CreateDatabase();
             Query();
-            //CreateDatabase2();
+            CreateDatabase2();
             Query2();
 
         }

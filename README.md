@@ -23,6 +23,10 @@ Enjoy!
 * Markdown
 * Self-contained
 
+## Entity Framework Core
+
+* Inheritance (TPH)
+
 ## Universal Windows Platform (UWP)
 
 * Ink
