@@ -20,7 +20,7 @@ namespace EFLoggingSample
                 .AddConsole(LogLevel.Information);
 
             ILogger logger = loggerFactory.CreateLogger<Program>();
-            logger.LogInformation("Log started");
+            logger.LogInformation("Logging started");
 
             return loggerFactory;
         }
