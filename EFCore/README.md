@@ -10,5 +10,4 @@ Folder: InheritanceSample
 
 This sample shows table per hierarchy (TPH) with conventions and Fluent API
 
-See the blog article TBD for more information.
-
+See the blog article [Entity Framework Core - Table per Hierarchy](https://csharp.christiannagel.com/2016/10/27/efcore_tph/ "TPH") for more information.
