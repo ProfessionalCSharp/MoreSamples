@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "CalculatorContract": "1.0.0-*",
+    "NETStandard.Library": "1.6.0",
+    "System.Composition.AttributedModel": "1.0.31-preview1-24530-04"
+  },
+
+  "frameworks": {
+    "netstandard1.4": {
+      "imports": [ "dnxcore50", "portable-net45+win81" ]
+    }
+  }
+}
