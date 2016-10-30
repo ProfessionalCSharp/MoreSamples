@@ -2,7 +2,7 @@
 {
     public class Book
     {
-        public Book()
+        private Book()
         {
 
         }
@@ -18,6 +18,5 @@
 
         private string _publisher;
         public string Publisher => _publisher;
-
     }
 }
