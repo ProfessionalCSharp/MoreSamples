@@ -6,6 +6,8 @@
         {
 
         }
+
+        private string _internalState = string.Empty;
         public Book(string title, string publisher)
         {
             Title = title;
@@ -16,7 +18,12 @@
 
         public string Title { get; set; }
 
+
         private string _publisher;
         public string Publisher => _publisher;
+
+        public override string ToString() =>
+            $"{Title}, {Publisher}, internal state: {_internalState}";
+
     }
 }

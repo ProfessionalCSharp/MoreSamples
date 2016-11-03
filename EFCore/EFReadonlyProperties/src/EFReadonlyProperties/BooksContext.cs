@@ -2,6 +2,7 @@
 
 namespace EFReadonlyProperties
 {
+
     public class BooksContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
