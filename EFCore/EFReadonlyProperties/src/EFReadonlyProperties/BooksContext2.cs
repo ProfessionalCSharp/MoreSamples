@@ -25,21 +25,17 @@ namespace EFReadonlyProperties
         }
 
 
-        public override EntityEntry Add([NotNull] object entity)
-        {
-            return base.Add(entity);
-        }
 
-        public override EntityEntry<TEntity> Add<TEntity>([NotNull] TEntity entity)
-        {
+        //public override EntityEntry<TEntity> Add<TEntity>([NotNull] TEntity entity)
+        //{
 
-            EntityEntry<TEntity> added = base.Add<TEntity>(entity);
-            PropertyValues values = added.CurrentValues.Clone();
+        //    EntityEntry<TEntity> added = base.Add<TEntity>(entity);
+        //    PropertyValues values = added.CurrentValues.Clone();
 
-            added.CurrentValues["JustABackingField"] = $"created at {DateTime.Now.ToString("t")}";
+        //    added.CurrentValues["JustABackingField"] = $"created at {DateTime.Now.ToString("t")}";
 
-            return added;
-        }
+        //    return added;
+        //}
 
         public override int SaveChanges()
         {
@@ -53,7 +49,6 @@ namespace EFReadonlyProperties
         {
             modelBuilder.Entity<Book>().Property(b => b.Publisher).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
             modelBuilder.Entity<Book>().Property(b => b.BookId).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
-            modelBuilder.Entity<Book>().Property<string>("JustABackingField").HasField("_internalState");
         }
         public DbSet<Book> Books { get; set; }
     }

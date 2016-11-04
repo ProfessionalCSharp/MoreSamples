@@ -8,6 +8,7 @@ namespace EFReadonlyProperties
         {
             Sample1();
             Sample2();
+            Console.WriteLine("Main end");
 
             Console.ReadLine();
         }

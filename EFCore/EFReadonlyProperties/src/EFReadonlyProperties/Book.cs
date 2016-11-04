@@ -3,15 +3,15 @@
     public class Book
     {
         private Book()
-        {
-
-        }
+            : this(string.Empty, string.Empty)
+        { }
 
         private string _internalState = string.Empty;
         public Book(string title, string publisher)
         {
             Title = title;
             _publisher = publisher;
+            _internalState = "initialized";
         }
         private int _bookId = 0;
         public int BookId => _bookId;
