@@ -26,6 +26,7 @@ Enjoy!
 ## Entity Framework Core
 
 * Inheritance (TPH)
+* Mapping to Getter Only Properties
 
 ## Universal Windows Platform (UWP)
 

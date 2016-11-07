@@ -20,6 +20,8 @@ Folder: EFReadOnlyProperties
 Maping to fields of getter only properties.
 This sample requires a preview of Entity Framework Core 1.1.
 
+See the blog article [Mapping to Getter-only Properties with EF Core](https://csharp.christiannagel.com/2016/11/07/efcorefields/ "EF Core mapping to fields") for more information.
+
 ## Logging
 
 Folder: EFLoggingSample
