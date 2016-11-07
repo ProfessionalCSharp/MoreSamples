@@ -4,6 +4,7 @@ This repository contains additional code samples for the book Professional C# 6.
 
 * C# 7.0
 * .NET Core
+* Entity Framework Core
 * Universal Windows Platform (UWP)
 * WPF
 
