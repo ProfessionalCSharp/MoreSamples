@@ -6,6 +6,7 @@
 * Simple MVVM
 * Grouped ListView
 * Hamburger and SplitView
+* Deep Linking
 
 ## Ink Sample
 
@@ -40,3 +41,11 @@ Folder: HamburgerAndSplitView
 This sample shows a ToggleButton in Hamburger look, the SplitView, and AdaptiveTrigger.
 
 See the blog article [Hamburger Button and SplitView](https://csharp.christiannagel.com/2016/09/29/hamburgerandsplitview/ "Hamburger and SplitView")
+
+## Deep Linking
+
+Folder: DeepLinkingSample
+
+This sample shows *deep linking* with UWP.
+
+See the blog article [Deep Linking with UWP](https://csharp.christiannagel.com/2016/11/15/deeplinking/ "Deep Linking")
