@@ -8,7 +8,30 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Style="{StaticResource TitleTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{x:Bind ViewModel.Path, Mode=OneWay}" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="52" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Deep Linking Sample" Style="{StaticResource HeaderTextBlockStyle}" Margin="8,0" />
+        <StackPanel Orientation="Vertical" Grid.Row="1" Padding="12">
+            <RichTextBlock Margin="12" Style="{StaticResource BodyRichTextBlockStyle}">
+                <Paragraph>
+                    Enter
+                    <Hyperlink NavigateUri="https://deeplinkingtest.azurewebsites.net/anylink">
+                        https://deeplinkingtest.azurewebsites.net/anylink
+                    </Hyperlink>
+                    or any other URL you configured with the App and the Website from the Start in Windows 10
+                </Paragraph>
+            </RichTextBlock>
+            <TextBlock Margin="12" Style="{StaticResource BodyTextBlockStyle}"
+                       Text="Do not enter the link in the Browser, this stays in the browser" />
+            <TextBlock Margin="12" Style="{StaticResource BodyTextBlockStyle}"
+                       Text="Be aware that I might have turned the Website off - check from the browser if it is active" />
+            <TextBlock Margin="12" Style="{StaticResource TitleTextBlockStyle}"                 
+                   Text="{x:Bind ViewModel.Path, Mode=OneWay}" />
+            <HyperlinkButton Content="This button works as well" Margin="12" NavigateUri="https://deeplinkingtest.azurewebsites.net/fromabutton" />
+        </StackPanel>
+
 
     </Grid>
 </Page>
