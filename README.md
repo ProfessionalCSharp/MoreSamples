@@ -35,6 +35,7 @@ Enjoy!
 * Simple MVVM
 * Grouped ListView
 * Hamburger and SplitView
+* Deep Linking
 
 ## WPF
 
