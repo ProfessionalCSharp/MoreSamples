@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "1.0.0-*",
   "buildOptions": {
     "emitEntryPoint": true
@@ -7,15 +7,15 @@
     "netcoreapp1.1": {
       "dependencies": {
         "Microsoft.NETCore.App": {
-          "type": "platform",
-          "version": "1.1.0-preview1-001100-00"
+          type: "platform",
+          "version": "1.1.0"
         }
       },
       "imports": "dnxcore50"
     }
   },
   "dependencies": {
-    "Microsoft.EntityFrameworkCore": "1.1.0-preview1-final",
-    "Microsoft.EntityFrameworkCore.SqlServer": "1.1.0-preview1-final"
+    "Microsoft.EntityFrameworkCore": "1.1.0",
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.1.0"
   }
 }
