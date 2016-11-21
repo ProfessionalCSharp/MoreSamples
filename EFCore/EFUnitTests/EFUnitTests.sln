@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksWebApp", "BooksWebApp\BooksWebApp.csproj", "{F41ED740-289C-4769-A266-E522C1A5E065}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8C52D74D-B2F3-4ADF-91AC-C3C1C545103D}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksWebAppTests", "BooksWebAppTests\BooksWebAppTests.csproj", "{9571797C-6A2B-4C64-B404-1C5C614B92CA}"
 EndProject

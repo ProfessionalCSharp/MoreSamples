@@ -19,17 +19,11 @@ namespace BooksWebApp.Controllers
         }
         // GET: api/values
         [HttpGet]
-        public IEnumerable<Book> Get()
-        {
-            return _booksContext.Books;
-        }
+        public IEnumerable<Book> Get() => _booksContext.Books;
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public Book Get(int id)
-        {
-            return _booksContext.Books.Find(id);
-        }
+        public Book Get(int id) => _booksContext.Books.Find(id);
 
         // POST api/values
         [HttpPost]
