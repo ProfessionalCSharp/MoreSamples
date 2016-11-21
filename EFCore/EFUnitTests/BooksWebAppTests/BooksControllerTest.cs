@@ -19,13 +19,8 @@ namespace BooksWebAppTests
 
         public void InitContext()
         {
-            var services = new ServiceCollection();
-            services.AddEntityFrameworkInMemoryDatabase();
-
-            IServiceProvider container = services.BuildServiceProvider();
-            var builder = new DbContextOptionsBuilder<BooksContext>();
-            builder.UseInMemoryDatabase()
-                .UseInternalServiceProvider(container);
+            var builder = new DbContextOptionsBuilder<BooksContext>()
+                .UseInMemoryDatabase();
 
             var context = new BooksContext(builder.Options);
             var books = Enumerable.Range(1, 10)
