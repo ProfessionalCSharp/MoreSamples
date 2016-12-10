@@ -4,7 +4,6 @@ using System.Threading;
 
 namespace SignalRService
 {
-
     public class ClientInfo
     {
         public ClientInfo(string connectionId, string name)
@@ -17,6 +16,7 @@ namespace SignalRService
 
         public int Counter { get; set; } = 0;
     }
+
     public static class Messenger
     {      
         private static ConcurrentDictionary<string, ClientInfo> s_ClientInfos = new ConcurrentDictionary<string, ClientInfo>();

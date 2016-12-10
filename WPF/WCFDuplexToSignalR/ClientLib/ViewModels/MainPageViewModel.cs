@@ -1,7 +1,5 @@
-﻿using ClientLib.Events;
-using ClientLib.Services;
+﻿using ClientLib.Services;
 using Prism.Commands;
-using Prism.Events;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;

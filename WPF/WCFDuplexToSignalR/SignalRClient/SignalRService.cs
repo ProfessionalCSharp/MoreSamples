@@ -5,8 +5,6 @@ using System.Threading.Tasks;
 
 namespace SignalRClient
 {
-
-
     public class SignalRService : ICommunicationService
     {
         private HubConnection _hubConnection;
