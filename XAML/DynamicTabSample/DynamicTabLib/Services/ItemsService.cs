@@ -20,7 +20,7 @@ namespace DynamicTabLib.Services
                 {
                     ItemId = x,
                     Title = $"title {x}",
-                    Details = Enumerable.Range(1, random.Next(1, 3)).Select(x1 => new ItemDetail
+                    Details = Enumerable.Range(1, random.Next(1, 5)).Select(x1 => new ItemDetail
                     {
                         ItemDetailId = Guid.NewGuid().ToString(),
                         Title = $"{x} detail {x1}"

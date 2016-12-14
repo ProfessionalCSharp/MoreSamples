@@ -38,8 +38,15 @@ namespace DynamicTabLib.Services
             _currentItemDetails.Remove(detail);
             if (updateCurrentChanged)
             {
-                ItemDetailViewModel lastItem = _currentItemDetails[_currentItemDetails.Count - 1];
-                CurrentItemChanged?.Invoke(this, new ItemDetailViewModelEventArgs { Item = lastItem });
+                if (_currentItemDetails.Count == 0)
+                {
+                    CurrentItemChanged?.Invoke(this, new ItemDetailViewModelEventArgs {  Item = null});
+                }
+                else
+                {
+                    ItemDetailViewModel lastItem = _currentItemDetails[_currentItemDetails.Count - 1];
+                    CurrentItemChanged?.Invoke(this, new ItemDetailViewModelEventArgs { Item = lastItem });
+                }
             }
         }
     }

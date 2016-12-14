@@ -11,7 +11,6 @@ namespace DynamicTabLib.ViewModels
     public class ItemDetailViewModel
     {
         private readonly IOpenItemsDetailService _openItemsDetailService;
-        private readonly ItemDetail _itemDetail;
 
         public ItemDetailViewModel(IOpenItemsDetailService openItemsDetailService)
         {

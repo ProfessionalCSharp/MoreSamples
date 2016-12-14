@@ -15,12 +15,12 @@ namespace DynamicTabLib.Framework
         {
             lock (_events)
             {
-                EventBase existingEvent = null;
-
-                if (!_events.TryGetValue(typeof(T), out existingEvent))
+                if (!_events.TryGetValue(typeof(T), out EventBase existingEvent))
                 {
-                    T newEvent = new T();
-                    newEvent.SynchronizationContext = _syncContext;
+                    T newEvent = new T
+                    {
+                        SynchronizationContext = _syncContext
+                    };
                     _events[typeof(T)] = newEvent;
 
                     return newEvent;
