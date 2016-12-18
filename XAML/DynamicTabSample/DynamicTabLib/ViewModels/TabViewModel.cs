@@ -4,15 +4,12 @@ using System.Collections.Generic;
 
 namespace DynamicTabLib.ViewModels
 {
-
     public class TabViewModel : BindableBase
     {
-        private readonly IItemsService _itemsService;
         private readonly IOpenItemsDetailService _openItemsDetailService;
 
-        public TabViewModel(IItemsService itemsService, IOpenItemsDetailService openItemsDetailService)
+        public TabViewModel(IOpenItemsDetailService openItemsDetailService)
         {
-            _itemsService = itemsService;
             _openItemsDetailService = openItemsDetailService;
             _openItemsDetailService.CurrentItemChanged += (sender, e) =>
             {
@@ -26,9 +23,8 @@ namespace DynamicTabLib.ViewModels
 
         public ItemDetailViewModel CurrentItem
         {
-            get { return _currentItem; }
-            set { SetProperty(ref _currentItem, value); }
+            get => _currentItem;
+            set => SetProperty(ref _currentItem, value);
         }
-
     }
 }

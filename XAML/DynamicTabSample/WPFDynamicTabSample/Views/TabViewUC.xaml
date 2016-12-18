@@ -24,7 +24,6 @@
                     </StackPanel>
                 </DataTemplate>
             </TabControl.ContentTemplate>
-
         </TabControl>
     </Grid>
 </UserControl>
