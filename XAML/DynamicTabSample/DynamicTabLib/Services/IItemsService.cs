@@ -6,6 +6,5 @@ namespace DynamicTabLib.Services
     public interface IItemsService
     {
         IEnumerable<ItemInfo> GetItemInfos();
-        ItemInfo CurrentItemInfo { get; set; }
     }
 }

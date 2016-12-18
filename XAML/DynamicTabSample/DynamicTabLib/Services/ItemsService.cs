@@ -7,10 +7,9 @@ using System.Linq;
 
 namespace DynamicTabLib.Services
 {
-    public class ItemsService : BindableBase, IItemsService
+    public class ItemsService : IItemsService
     {
         private readonly List<ItemInfo> _itemInfos;
-        private readonly ObservableCollection<ItemDetail> _currentDetails = new ObservableCollection<ItemDetail>();
 
         public ItemsService()
         {
@@ -30,23 +29,5 @@ namespace DynamicTabLib.Services
         }
 
         public IEnumerable<ItemInfo> GetItemInfos() => _itemInfos;
-
-        public IEnumerable<ItemDetail> CurrentDetails => _currentDetails;
-
-        private ItemInfo _currentItemInfo;
-        public ItemInfo CurrentItemInfo
-        {
-            get { return _currentItemInfo; }
-            set
-            {
-                if (SetProperty(ref _currentItemInfo, value))
-                {
-                    foreach (var detail in _currentItemInfo.Details)
-                    {
-                        _currentDetails.Add(detail);
-                    }
-                }
-            }
-        }
     }
 }

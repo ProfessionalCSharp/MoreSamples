@@ -1,9 +1,6 @@
 ﻿using DynamicTabLib.Framework;
-using DynamicTabLib.Models;
 using DynamicTabLib.Services;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Windows.Input;
 
 namespace DynamicTabLib.ViewModels
 {
@@ -12,7 +9,6 @@ namespace DynamicTabLib.ViewModels
     {
         private readonly IItemsService _itemsService;
         private readonly IOpenItemsDetailService _openItemsDetailService;
-        private readonly ObservableCollection<ItemDetailViewModel> _itemDetails = new ObservableCollection<ItemDetailViewModel>();
 
         public TabViewModel(IItemsService itemsService, IOpenItemsDetailService openItemsDetailService)
         {
