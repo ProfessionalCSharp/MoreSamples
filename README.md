@@ -40,3 +40,4 @@ Enjoy!
 ## WPF
 
 * 3D with WPF
+* Open tabs dynamically
