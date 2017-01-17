@@ -49,3 +49,11 @@ Folder: DeepLinkingSample
 This sample shows *deep linking* with UWP.
 
 See the blog article [Deep Linking with UWP](https://csharp.christiannagel.com/2016/11/15/deeplinking/ "Deep Linking")
+
+## Dynamic Tab Sample
+
+Folder: DynamicTabSample
+
+The sample shows dynamic tabs using the Pivot control with UWP
+
+See the blog article [Open Tab Items Dynamically with UWP](https://csharp.christiannagel.com/2017/01/17/dynamictabswithuwp/ "Dynamic Tabs with UWP")

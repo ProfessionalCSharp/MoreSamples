@@ -36,8 +36,9 @@ Enjoy!
 * Grouped ListView
 * Hamburger and SplitView
 * Deep Linking
+* Open Tab Items Dynamically
 
 ## WPF
 
 * 3D with WPF
-* Open tabs dynamically
+* Open Tab Items Dynamically
