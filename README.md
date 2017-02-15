@@ -14,6 +14,9 @@ Enjoy!
 
 * Literals
 * Tuples
+* Out Vars and Ref Returns
+* Expression Bodied Members
+* Pattern Matching
 
 ## .NET Core
 
