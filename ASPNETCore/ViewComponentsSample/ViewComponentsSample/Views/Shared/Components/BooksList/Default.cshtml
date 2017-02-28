@@ -1,0 +1,11 @@
+﻿@using ComponentsLibrary.Models
+@model IEnumerable<Book>
+
+<h2>Books View Component</h2>
+
+<ul>
+    @foreach (var book in Model)
+    {
+        <li>@book.Title</li>
+    }
+</ul>

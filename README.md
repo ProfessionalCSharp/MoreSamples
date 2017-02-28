@@ -5,6 +5,7 @@ This repository contains additional code samples for the book Professional C# 6.
 * C# 7.0
 * .NET Core
 * Entity Framework Core
+* ASP.NET Core
 * Universal Windows Platform (UWP)
 * WPF
 
@@ -31,6 +32,10 @@ Enjoy!
 
 * Inheritance (TPH)
 * Mapping to Getter Only Properties
+
+## ASP.NET Core
+
+* View Components
 
 ## Universal Windows Platform (UWP)
 
