@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateZipFiles", "CreateZipFiles\CreateZipFiles.csproj", "{9793BAB8-B438-4F0D-8D43-4F8B1B1DB312}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9793BAB8-B438-4F0D-8D43-4F8B1B1DB312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9793BAB8-B438-4F0D-8D43-4F8B1B1DB312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9793BAB8-B438-4F0D-8D43-4F8B1B1DB312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9793BAB8-B438-4F0D-8D43-4F8B1B1DB312}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7FA8F4B-7B74-42AB-9EB3-80AA3006D931}
+	EndGlobalSection
+EndGlobal
