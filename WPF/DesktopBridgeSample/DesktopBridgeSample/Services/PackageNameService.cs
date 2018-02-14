@@ -1,23 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BooksLib.Services;
+using System;
+using Windows.ApplicationModel;
 
 namespace DesktopBridgeSample.Services
 {
-    public class PackageNameService
+    public class PackageNameService : IPackageNameService
     {
-        public (string , string) GetPackageName()
+        public (string name, string id) GetPackageName()
         {
             try
             {
-                
+                Package package = Package.Current;
+                return (package.DisplayName, package.Id.FullName);
             }
             catch (InvalidOperationException)
             {
-
-                throw;
+                return ("no package", "");
             }
         }
     }

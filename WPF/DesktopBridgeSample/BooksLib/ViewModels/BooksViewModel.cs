@@ -11,12 +11,16 @@ namespace BooksLib.ViewModels
     {
         private readonly IBooksService _booksService;
         private readonly ILaunchProtocolService _launchProtocolService;
+        private readonly IPackageNameService _packageNameService;
+        private readonly (string packageName, string id) _package;
 
-        public BooksViewModel(IBooksService booksService, ILaunchProtocolService launchProtocolService)
+        public BooksViewModel(IBooksService booksService, ILaunchProtocolService launchProtocolService, IPackageNameService packageNameService)
         {
             _booksService = booksService ?? throw new ArgumentNullException(nameof(booksService));
             _launchProtocolService = launchProtocolService ?? throw new ArgumentNullException(nameof(launchProtocolService));
+            _packageNameService = packageNameService ?? throw new ArgumentNullException(nameof(packageNameService));
 
+            _package = packageNameService.GetPackageName();
             LaunchUWPCommand = new DelegateCommand(OnLaunchUWP);
         }
 
@@ -29,13 +33,8 @@ namespace BooksLib.ViewModels
             await _launchProtocolService.LaunchAppAsync("sampleapp");
         }
 
-        private string _packageInformation;
-
-        public string PackageInformation
-        {
-            get => _packageInformation;
-            set => _packageInformation = value;
-        }
+        public string PackageName => _package.packageName;
+        public string PackageId => _package.id;
 
     }
 }

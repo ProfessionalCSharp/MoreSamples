@@ -12,7 +12,12 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="{Binding ViewModel.PackageInformation, Mode=OneTime}" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Text="{Binding ViewModel.PackageName, Mode=OneTime}" />
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding ViewModel.PackageId, Mode=OneTime}" />
         <StackPanel Orientation="Horizontal" Grid.Row="1">
             <Button Content="Launch UWP" Command="{Binding ViewModel.LaunchUWPCommand, Mode=OneTime}" />
         </StackPanel>

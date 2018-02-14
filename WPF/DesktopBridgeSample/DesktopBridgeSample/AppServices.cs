@@ -3,10 +3,6 @@ using BooksLib.ViewModels;
 using DesktopBridgeSample.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static DesktopBridgeSample.Extensions.FunctionalExtensions;
 
 namespace DesktopBridgeSample
@@ -20,11 +16,10 @@ namespace DesktopBridgeSample
             services.AddSingleton<IBooksService, BooksService>();
             services.AddTransient<BooksViewModel>();
             services.AddSingleton<ILaunchProtocolService, LaunchProtocolService>();
+            services.AddSingleton<IPackageNameService, PackageNameService>();
             //services.AddSingleton<IMessageService, UWPMessageService>();
             ServiceProvider = services.BuildServiceProvider();
         }
-
-
 
         private static AppServices _instance;
 
