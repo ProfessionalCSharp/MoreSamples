@@ -11,24 +11,23 @@ namespace BooksLib.ViewModels
     {
         private readonly IBooksService _booksService;
         private readonly ILaunchProtocolService _launchProtocolService;
-        private readonly IPackageNameService _packageNameService;
         private readonly IUpdateTileService _updateTileService;
-        private readonly (string packageName, string id) _package;
+
 
         public BooksViewModel(IBooksService booksService, ILaunchProtocolService launchProtocolService, IPackageNameService packageNameService, IUpdateTileService updateTileService)
         {
             _booksService = booksService ?? throw new ArgumentNullException(nameof(booksService));
             _launchProtocolService = launchProtocolService ?? throw new ArgumentNullException(nameof(launchProtocolService));
-            _packageNameService = packageNameService ?? throw new ArgumentNullException(nameof(packageNameService));
             _updateTileService = updateTileService ?? throw new ArgumentNullException(nameof(updateTileService));
-
-            _package = packageNameService.GetPackageName();
+            _package = packageNameService?.GetPackageName() ?? throw new ArgumentNullException(nameof(packageNameService));
             LaunchUWPCommand = new DelegateCommand(OnLaunchUWP);
             UpdateTileCommand = new DelegateCommand(OnUpdateTile);
+            ConnectCommand = new DelegateCommand(OnConnect);
         }
 
         public DelegateCommand LaunchUWPCommand { get; }
         public DelegateCommand UpdateTileCommand { get; }
+        public DelegateCommand ConnectCommand { get; }
 
         public IEnumerable<Book> Books => _booksService.Books;
 
@@ -42,8 +41,15 @@ namespace BooksLib.ViewModels
             _updateTileService.UpdateTile();
         }
 
-        public string PackageName => _package.packageName;
-        public string PackageId => _package.id;
+        public void OnConnect()
+        {
 
+        }
+
+        public string PackageName => Package.name;
+        public string PackageId => Package.id;
+
+        private readonly (string name, string id) _package;
+        public (string name, string id) Package => _package;
     }
 }

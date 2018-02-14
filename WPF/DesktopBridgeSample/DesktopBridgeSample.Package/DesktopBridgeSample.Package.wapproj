@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DesktopBridgeSample\DesktopBridgeSample.csproj" />
+    <ProjectReference Include="..\UWPApp\UWPApp.csproj" />
   </ItemGroup>
   <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
 </Project>

@@ -21,6 +21,9 @@
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
       <Extensions>
+        <uap:Extension Category="windows.appService" EntryPoint="UWPApp.AppServiceTask">
+          <uap:AppService Name="com.cninnovation.bridgesample" />
+        </uap:Extension>
         <uap:Extension Category="windows.protocol">
           <uap:Protocol Name="sampleapp" />
         </uap:Extension>

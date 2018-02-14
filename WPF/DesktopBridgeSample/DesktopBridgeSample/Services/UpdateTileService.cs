@@ -1,14 +1,9 @@
 ﻿using BooksLib.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using Windows.Data.Xml.Dom;
 using Windows.UI.Notifications;
-using static DesktopBridgeSample.Extensions.FunctionalExtensions;
 
 namespace DesktopBridgeSample.Services
 {

@@ -21,6 +21,7 @@
         <StackPanel Orientation="Horizontal" Grid.Row="1">
             <Button Content="Launch UWP" Command="{Binding ViewModel.LaunchUWPCommand, Mode=OneTime}" />
             <Button Content="Update Tile" Command="{Binding ViewModel.UpdateTileCommand, Mode=OneTime}" />
+            <Button Content="Connect" Command="{Binding ViewModel.ConnectCommand, Mode=OneTime}" />
         </StackPanel>
         <ListView ItemsSource="{Binding ViewModel.Books}" Grid.Row="2" />
     </Grid>
