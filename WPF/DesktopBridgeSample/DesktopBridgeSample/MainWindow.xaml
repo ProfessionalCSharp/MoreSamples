@@ -20,6 +20,7 @@
         <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding ViewModel.PackageId, Mode=OneTime}" />
         <StackPanel Orientation="Horizontal" Grid.Row="1">
             <Button Content="Launch UWP" Command="{Binding ViewModel.LaunchUWPCommand, Mode=OneTime}" />
+            <Button Content="Update Tile" Command="{Binding ViewModel.UpdateTileCommand, Mode=OneTime}" />
         </StackPanel>
         <ListView ItemsSource="{Binding ViewModel.Books}" Grid.Row="2" />
     </Grid>

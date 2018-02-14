@@ -75,6 +75,7 @@
     </ApplicationDefinition>
     <Compile Include="Services\LaunchProtocolService.cs" />
     <Compile Include="Services\PackageNameService.cs" />
+    <Compile Include="Services\UpdateTileService.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

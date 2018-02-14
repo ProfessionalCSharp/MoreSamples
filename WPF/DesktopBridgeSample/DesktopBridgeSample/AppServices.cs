@@ -17,6 +17,7 @@ namespace DesktopBridgeSample
             services.AddTransient<BooksViewModel>();
             services.AddSingleton<ILaunchProtocolService, LaunchProtocolService>();
             services.AddSingleton<IPackageNameService, PackageNameService>();
+            services.AddSingleton<IUpdateTileService, UpdateTileService>();
             //services.AddSingleton<IMessageService, UWPMessageService>();
             ServiceProvider = services.BuildServiceProvider();
         }
