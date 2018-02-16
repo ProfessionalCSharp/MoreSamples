@@ -2,12 +2,16 @@
 using Windows.ApplicationModel.AppService;
 using Windows.ApplicationModel.Background;
 using Windows.Foundation.Collections;
-using Windows.UI.Popups;
 
 namespace UWPApp
 {
     public sealed class AppServiceTask : IBackgroundTask
     {
+        public AppServiceTask()
+        {
+
+        }
+
         private BackgroundTaskDeferral _taskDeferral;
         public void Run(IBackgroundTaskInstance taskInstance)
         {
@@ -23,7 +27,9 @@ namespace UWPApp
         {
             var deferral = args.GetDeferral();
             ValueSet message = args.Request.Message;
-            await new MessageDialog("received message").ShowAsync();
+            ValueSet response = new ValueSet();
+            response.Add("answer", "from UWP");
+            await args.Request.SendResponseAsync(response);
 
             deferral.Complete();
         }

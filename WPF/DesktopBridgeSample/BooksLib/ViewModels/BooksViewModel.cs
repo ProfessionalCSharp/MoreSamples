@@ -12,22 +12,24 @@ namespace BooksLib.ViewModels
         private readonly IBooksService _booksService;
         private readonly ILaunchProtocolService _launchProtocolService;
         private readonly IUpdateTileService _updateTileService;
+        private readonly IAppServiceClientService _appServiceClientService;
 
 
-        public BooksViewModel(IBooksService booksService, ILaunchProtocolService launchProtocolService, IPackageNameService packageNameService, IUpdateTileService updateTileService)
+        public BooksViewModel(IBooksService booksService, ILaunchProtocolService launchProtocolService, IPackageNameService packageNameService, IUpdateTileService updateTileService, IAppServiceClientService appServiceClientService)
         {
             _booksService = booksService ?? throw new ArgumentNullException(nameof(booksService));
             _launchProtocolService = launchProtocolService ?? throw new ArgumentNullException(nameof(launchProtocolService));
             _updateTileService = updateTileService ?? throw new ArgumentNullException(nameof(updateTileService));
+            _appServiceClientService = appServiceClientService ?? throw new ArgumentNullException(nameof(appServiceClientService));
             _package = packageNameService?.GetPackageName() ?? throw new ArgumentNullException(nameof(packageNameService));
             LaunchUWPCommand = new DelegateCommand(OnLaunchUWP);
             UpdateTileCommand = new DelegateCommand(OnUpdateTile);
-            ConnectCommand = new DelegateCommand(OnConnect);
+            AppServiceCommand = new DelegateCommand(OnAppService);
         }
 
         public DelegateCommand LaunchUWPCommand { get; }
         public DelegateCommand UpdateTileCommand { get; }
-        public DelegateCommand ConnectCommand { get; }
+        public DelegateCommand AppServiceCommand { get; }
 
         public IEnumerable<Book> Books => _booksService.Books;
 
@@ -41,9 +43,9 @@ namespace BooksLib.ViewModels
             _updateTileService.UpdateTile();
         }
 
-        public void OnConnect()
+        public void OnAppService()
         {
-
+            _appServiceClientService.SendMessageAsync("Message from WPF");
         }
 
         public string PackageName => Package.name;

@@ -32,6 +32,11 @@ namespace UWPApp
             this.Suspending += OnSuspending;
         }
 
+        protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
+        {
+            base.OnBackgroundActivated(args);
+        }
+
         protected override void OnActivated(IActivatedEventArgs args)
         {
             base.OnActivated(args);

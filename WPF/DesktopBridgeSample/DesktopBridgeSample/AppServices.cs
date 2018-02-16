@@ -18,7 +18,8 @@ namespace DesktopBridgeSample
             services.AddSingleton<ILaunchProtocolService, LaunchProtocolService>();
             services.AddSingleton<IPackageNameService, PackageNameService>();
             services.AddSingleton<IUpdateTileService, UpdateTileService>();
-            //services.AddSingleton<IMessageService, UWPMessageService>();
+            services.AddSingleton<IDialogService, WPFDialogService>();
+            services.AddSingleton<IAppServiceClientService, AppServiceClientService>();
             ServiceProvider = services.BuildServiceProvider();
         }
 

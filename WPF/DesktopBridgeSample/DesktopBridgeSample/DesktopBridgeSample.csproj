@@ -73,9 +73,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Services\AppServiceClientService.cs" />
     <Compile Include="Services\LaunchProtocolService.cs" />
     <Compile Include="Services\PackageNameService.cs" />
     <Compile Include="Services\UpdateTileService.cs" />
+    <Compile Include="Services\WPFDialogService.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
