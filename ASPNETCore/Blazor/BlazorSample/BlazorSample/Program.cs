@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Blazor.Browser.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace BlazorHosting.Client
+namespace BlazorSample
 {
-    public class Program
+    class Program
     {
         static void Main(string[] args)
         {
