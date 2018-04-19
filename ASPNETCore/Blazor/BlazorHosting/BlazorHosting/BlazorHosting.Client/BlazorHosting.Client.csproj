@@ -15,4 +15,20 @@
     <ProjectReference Include="..\BlazorHosting.Shared\BlazorHosting.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <BlazorGenerate Remove="Pages\BookList.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <BlazorGenerate Remove="Pages\AddBook.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\AddBook.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\AddBook.cshtml" />
+  </ItemGroup>
+
 </Project>

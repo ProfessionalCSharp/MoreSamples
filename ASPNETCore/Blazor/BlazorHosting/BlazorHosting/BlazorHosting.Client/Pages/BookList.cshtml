@@ -1,0 +1,43 @@
+﻿@using BlazorHosting.Shared
+@page "/booklist"
+@inject HttpClient Http
+
+<h1>List Books</h1>
+
+<p>Get books from the server.</p>
+
+@if (_books == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>TTitle</th>
+                <th>Publisher</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in _books)
+            {
+                <tr>
+                    <td>@book.BookId</td>
+                    <td>@book.Title</td>
+                    <td>@book.Publisher</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@functions {
+    Book[] _books;
+
+    protected override async Task OnInitAsync()
+    {
+        _books = await Http.GetJsonAsync<Book[]>("/api/Books");
+    }
+}

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27604.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHosting.Server", "BlazorHosting\BlazorHosting.Server\BlazorHosting.Server.csproj", "{6F94AC19-8950-4433-9A33-07E5171E5ABE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorHosting.Server", "BlazorHosting\BlazorHosting.Server\BlazorHosting.Server.csproj", "{6F94AC19-8950-4433-9A33-07E5171E5ABE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHosting.Client", "BlazorHosting\BlazorHosting.Client\BlazorHosting.Client.csproj", "{B4AE720D-3990-47B4-A425-5B589C3D283F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorHosting.Client", "BlazorHosting\BlazorHosting.Client\BlazorHosting.Client.csproj", "{B4AE720D-3990-47B4-A425-5B589C3D283F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHosting.Shared", "BlazorHosting\BlazorHosting.Shared\BlazorHosting.Shared.csproj", "{412CD7DE-C129-4324-A258-001468B885A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorHosting.Shared", "BlazorHosting\BlazorHosting.Shared\BlazorHosting.Shared.csproj", "{412CD7DE-C129-4324-A258-001468B885A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
