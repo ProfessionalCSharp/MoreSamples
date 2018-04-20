@@ -11,6 +11,17 @@
     <app>Loading...</app>
 
     <script src="css/bootstrap/bootstrap-native.min.js"></script>
-    <script type="blazor-boot"></script>
+    <script type="blazor-boot">
+    </script>
+
+    <script>
+        Blazor.registerFunction("say", (data) => {
+            console.log(data);
+            debugger;
+
+            return true;
+        });
+    </script>
+
 </body>
 </html>
