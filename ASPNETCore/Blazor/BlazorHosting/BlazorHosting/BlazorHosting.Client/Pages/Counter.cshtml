@@ -7,10 +7,12 @@
 <button onclick="@IncrementCount">Click me</button>
 
 @functions {
+    public int IncrementBy { get; set; } = 1;
+
     int currentCount = 0;
 
     void IncrementCount()
     {
-        currentCount++;
+        currentCount += IncrementBy;
     }
 }
