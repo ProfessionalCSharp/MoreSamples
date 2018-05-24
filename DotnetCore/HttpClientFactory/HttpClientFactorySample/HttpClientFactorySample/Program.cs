@@ -11,6 +11,7 @@ namespace HttpClientFactorySample
             app.FullName = "HttpClient Factory Sample";
             FactorySample.Register(app);
             TypedClientSample.Register(app);
+            PolicySample.Register(app);
 
             app.Command("help", cmd =>
             {
