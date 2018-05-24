@@ -36,6 +36,7 @@ Enjoy!
 ## ASP.NET Core
 
 * View Components
+* GDPR Support with ASP.NET Core 2.1
 
 ## Universal Windows Platform (UWP)
 

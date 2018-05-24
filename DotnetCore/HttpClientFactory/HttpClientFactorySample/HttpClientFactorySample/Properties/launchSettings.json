@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "HttpClientFactorySample": {
+      "commandName": "Project",
+      "commandLineArgs": "policy"
+    }
+  }
+}
