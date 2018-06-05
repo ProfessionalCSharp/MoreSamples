@@ -36,8 +36,7 @@ namespace HttpClientFactorySample
             services.AddHttpClient("cni", client =>
             {
                 client.BaseAddress = new Uri("https://www.cninnovation.com");
-            })
-            .AddTypedClient<TypedClient>();
+            }).AddTypedClient<TypedClient>();
             AppServices = services.BuildServiceProvider();
         }
 
