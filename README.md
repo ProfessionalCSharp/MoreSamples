@@ -25,6 +25,7 @@ Enjoy!
 * Dependency Injection with Options
 * Configuration
 * Dependency Injection with Configuration
+* HTTP Client Factory
 * Markdown
 * Self-contained
 

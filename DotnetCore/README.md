@@ -6,6 +6,7 @@
 * Dependency Injection with Options
 * Configuration
 * Dependency Injection with Configuration
+* HTTP Client Factory
 * Markdown
 * Self-contained
 
@@ -44,6 +45,14 @@ Folder: DependencyInjectionWithConfig
 This sample extends on the Dependency Injection with Options to instantiate the injected service using JSON configuration.
 
 See the blog article [.NET Core Dependency Injection with Configuration](https://csharp.christiannagel.com/2016/08/16/diwithconfiguration/ "DI with Configuration") for more information.
+
+## HTTP Client Factory
+
+Folder: HttpClientFactory
+
+This sample shows how the HttpClient can be injected using the HTTP Client Factory available with .NET Core 2.1.
+
+See the blog article [HTTP Client Factory](https://csharp.christiannagel.com/2018/06/05/httpclient/ "HTTP Client Factory") for more information.
 
 ## Markdown
 
