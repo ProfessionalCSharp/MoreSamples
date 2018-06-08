@@ -14,6 +14,7 @@ namespace HttpClientFactorySample
             FactorySample.Register(app);
             TypedClientSample.Register(app);
             PolicySample.Register(app);
+            UseClientHandlerSample.Register(app);
 
             app.Command("help", cmd =>
             {
