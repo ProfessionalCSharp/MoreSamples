@@ -1,12 +1,13 @@
-# C# 7.0 Code Samples
+# C# Code Samples
 
-> Enjoy the following C# 7.0 samples
+> Enjoy the following C# 7 and C# 8 samples
 
 * Literals
 * Tuples
 * Out Vars and Ref Returns
 * Expression Bodied Members
 * Pattern Matching
+* Non-Nullable Reference Types (C# 8)
 
 ## Binary Literals
 
@@ -48,3 +49,10 @@ C# 7.0 with *is* operator and *switch* statement and *const pattern*, *type patt
 
 See the blog article [C# 7.0 - Pattern Matching](https://csharp.christiannagel.com/2017/02/15/patternmatching/ "Pattern Matching") for more information.
 
+## Non-Nullable Reference Types
+
+Folder: NullableReferenceTypesSamples
+
+With C# 8, reference types are non-nullable by default.
+
+See the blog article [C# 8 & No More NullReferenceExceptions - What about legacy code?]() for more information.

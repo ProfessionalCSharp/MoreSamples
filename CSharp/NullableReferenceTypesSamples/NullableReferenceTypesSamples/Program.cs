@@ -43,7 +43,7 @@ namespace NullableReferenceTypesSamples
 
         }
 
-        static string GetIsbn(Book book)
+        static string GetIsbn1(Book book)
         {
             string? isbn = book.Isbn;
             if (isbn == null)
