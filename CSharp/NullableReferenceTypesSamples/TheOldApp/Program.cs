@@ -1,11 +1,10 @@
 ﻿using NewAndGloryLib;
-using System;
 
 namespace TheOldApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var glory = new NewAndGlory();
             string s1 = glory.GetANullString();
