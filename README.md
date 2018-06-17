@@ -2,7 +2,7 @@
 
 This repository contains additional code samples for the book Professional C# 6. Currently you'll find samples in these categories:
 
-* C# 7.0
+* C#
 * .NET Core
 * Entity Framework Core
 * ASP.NET Core
@@ -11,13 +11,14 @@ This repository contains additional code samples for the book Professional C# 6.
 
 Enjoy!
 
-## C# 7.0
+## C#
 
 * Literals
 * Tuples
 * Out Vars and Ref Returns
 * Expression Bodied Members
 * Pattern Matching
+* Non-nullable Reference Types
 
 ## .NET Core
 

@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <LangVersion>7</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NewAndGloryLib\NewAndGloryLib.csproj" />
+    <ProjectReference Include="..\TheOldLib\TheOldLib.csproj" />
+  </ItemGroup>
+
+</Project>
