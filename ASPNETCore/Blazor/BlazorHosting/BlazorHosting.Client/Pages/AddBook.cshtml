@@ -1,0 +1,35 @@
+﻿@using BlazorHosting.Shared
+@using Microsoft.AspNetCore.Blazor.Services
+@page "/addbook"
+
+@inject HttpClient Http
+@inject IUriHelper UriHelper
+
+<div>
+    <label for="title">Title</label>
+    <input id="title" bind="@Title" />
+</div>
+<div>
+    <label for="publisher">Publisher</label>
+    <input id="publisher" bind="@Publisher" />
+</div>
+
+<button onclick="@OnAddBook">Add book</button>
+
+@functions {
+
+public string Title { get; set; }
+public string Publisher { get; set; }
+public async void OnAddBook()
+{
+    Book newBook = new Book
+    {
+        BookId = -1,
+        Title = Title,
+        Publisher = Publisher
+    };
+    await Http.PostJsonAsync("/api/books", newBook);
+    UriHelper.NavigateTo("/booklist");
+}
+
+}

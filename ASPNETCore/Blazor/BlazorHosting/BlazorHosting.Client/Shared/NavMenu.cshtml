@@ -1,5 +1,5 @@
 ﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">BlazorSample</a>
+    <a class="navbar-brand" href="">BlazorHosting</a>
     <button class="navbar-toggler" onclick=@ToggleNavMenu>
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,6 +20,16 @@
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="fetchdata">
                 <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="/booklist">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Get Books
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="/addbook">
+                <span class="oi oi-plus" aria-hidden="true"></span> Add Book
             </NavLink>
         </li>
     </ul>
