@@ -55,4 +55,4 @@ Folder: NullableReferenceTypesSamples
 
 With C# 8, reference types are non-nullable by default.
 
-See the blog article [C# 8 & No More NullReferenceExceptions - What about legacy code?]() for more information.
+See the blog article [C# 8 & No More NullReferenceExceptions - What about legacy code?](https://csharp.christiannagel.com/2018/06/20/nonnullablereferencetypes/) for more information.
