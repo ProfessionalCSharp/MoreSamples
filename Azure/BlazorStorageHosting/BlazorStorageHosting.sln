@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksFunctionsApp", "BooksF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksLib", "BooksLib\BooksLib.csproj", "{AC6EC78E-9055-46F6-A778-9E636B1D725C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksFunctionsAppv1", "BooksFunctionsAppv1\BooksFunctionsAppv1.csproj", "{090DAF13-35C6-4340-A0BA-395160F01533}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{AC6EC78E-9055-46F6-A778-9E636B1D725C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC6EC78E-9055-46F6-A778-9E636B1D725C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC6EC78E-9055-46F6-A778-9E636B1D725C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{090DAF13-35C6-4340-A0BA-395160F01533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{090DAF13-35C6-4340-A0BA-395160F01533}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{090DAF13-35C6-4340-A0BA-395160F01533}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{090DAF13-35C6-4340-A0BA-395160F01533}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

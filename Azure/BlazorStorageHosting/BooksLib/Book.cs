@@ -4,9 +4,9 @@ namespace BooksLib
 {
     public class Book
     {
+        // WASM JSON deserialization from Blazor needs a public default constructor
         public Book()
         {
-
         }
         public Book(int bookId, string title, string publisher)
             => (BookId, Title, Publisher) = (bookId, title, publisher);
