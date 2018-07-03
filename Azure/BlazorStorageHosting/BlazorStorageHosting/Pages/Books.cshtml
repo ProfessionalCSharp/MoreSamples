@@ -1,0 +1,47 @@
+﻿@page "/books"
+@using BooksLib
+@inject HttpClient Http
+
+<h1>Books Sample</h1>
+
+<p>This component demonstrates fetching data from Azure Functions.</p>
+
+<p>Status: @message</p>
+
+@if (books == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Publisher</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in books)
+            {
+                <tr>
+                    <td>@book.Title</td>
+                    <td>@book.Publisher</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@functions {
+    Book[] books;
+    string message;
+
+    protected override async Task OnInitAsync()
+    {
+        message = "OnInitAsync";
+        Http.BaseAddress = new Uri("https://blazorapi.azurewebsites.net");
+        books = await Http.GetJsonAsync<Book[]>("/api/BooksFunction");
+        message = "downloaded books";
+    }
+}
