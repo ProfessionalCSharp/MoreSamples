@@ -18,7 +18,8 @@ Enjoy!
 * Out Vars and Ref Returns
 * Expression Bodied Members
 * Pattern Matching
-* Non-nullable Reference Types
+* Non-nullable Reference Types (C# 8)
+* Pattern matching extended (C# 8)
 
 ## .NET Core
 
