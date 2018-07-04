@@ -8,6 +8,7 @@
 * Expression Bodied Members
 * Pattern Matching
 * Non-Nullable Reference Types (C# 8)
+* Pattern matching extended (C# 8)
 
 ## Binary Literals
 
@@ -49,10 +50,18 @@ C# 7.0 with *is* operator and *switch* statement and *const pattern*, *type patt
 
 See the blog article [C# 7.0 - Pattern Matching](https://csharp.christiannagel.com/2017/02/15/patternmatching/ "Pattern Matching") for more information.
 
-## Non-Nullable Reference Types
+## Non-Nullable Reference Types (C# 8)
 
 Folder: NullableReferenceTypesSamples
 
 With C# 8, reference types are non-nullable by default.
 
 See the blog article [C# 8 & No More NullReferenceExceptions - What about legacy code?](https://csharp.christiannagel.com/2018/06/20/nonnullablereferencetypes/) for more information.
+
+## Pattern Matching Extended (C# 8)
+
+Folder: CSharp8Patterns
+
+C# 8 offers a new *switch expression* as well as extensions to pattern matching: *property pattern* and *recursive pattern*.
+
+See the blog article [C# 8: Pattern Matching extended](https://csharp.christiannagel.com/2018/07/03/patternmatchingcs8/) for more information.
