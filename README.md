@@ -53,3 +53,10 @@ Enjoy!
 
 * 3D with WPF
 * Open Tab Items Dynamically
+
+## .NET Framework (samples from older Professional C# book editions)
+
+* WCF - various WCF samples (Professional C# 5 and .NET 4.5.1)
+* Transactions - various System.Transactions samples (Professional C# 5 and .NET 4.5.1)
+* Assemblies - create code dynamically, and other samples (Professional C# 5 and .NET 4.5.1)
+* Entity Framework (Professional C# 5 and .NET 4.5.1)
