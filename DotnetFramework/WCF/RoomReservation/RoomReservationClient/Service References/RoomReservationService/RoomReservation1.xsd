@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.cninnovation.com/RoomReservation/2012" elementFormDefault="qualified" targetNamespace="http://www.cninnovation.com/RoomReservation/2012" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:9000/RoomReservation?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Wrox.ProCSharp.WCF.Contracts" />
+  <xs:element name="ReserveRoom">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Wrox.ProCSharp.WCF.Contracts" minOccurs="0" name="roomReservation" nillable="true" type="q1:RoomReservation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReserveRoomResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReserveRoomResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoomReservations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fromDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="toDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoomReservationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Wrox.ProCSharp.WCF.Contracts" minOccurs="0" name="GetRoomReservationsResult" nillable="true" type="q2:ArrayOfRoomReservation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

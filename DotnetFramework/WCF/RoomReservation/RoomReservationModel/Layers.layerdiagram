@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="4d70f65c-7dbc-4ad8-91aa-522c4545f99d" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="f9a2bc0d-a60e-466f-ac60-18e82118287c" name="RoomReservationContracts">
+      <references>
+        <reference Id="586586c3-eb4d-4f56-a6f7-7f836f7b5237" name="RoomReservationContracts">
+          <ArtifactNode Label="RoomReservationContracts" Category="CodeSchema_Project" Id="(Assembly=../RoomReservationContracts/RoomReservationContracts.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=RoomReservationContracts)" Label="RoomReservationContracts.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="06a73f42-4ef8-451e-abc1-1479dbc16c7e" name="IRoomService.cs">
+          <ArtifactNode Label="IRoomService.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../RoomReservationContracts/RoomReservationContracts.csproj File=../RoomReservationContracts/IRoomService.cs)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=RoomReservationContracts Namespace=Wrox.ProCSharp.WCF.Service Type=IRoomService)" Label="IRoomService" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="5782ceff-fbc8-43c5-a2b1-30f29181836e" name="RoomReservation">
+          <ArtifactNode Label="RoomReservation" Category="CodeSchema_Class" Id="(Assembly=../RoomReservationContracts/bin/Debug/RoomReservationContracts.dll Namespace=Wrox.ProCSharp.WCF.Data Type=RoomReservation)" />
+          <ExpandedNode Id="(Assembly=RoomReservationContracts Namespace=Wrox.ProCSharp.WCF.Data Type=RoomReservation)" Label="RoomReservation" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="3d3e04b3-5fec-48ca-8e3b-75510633ec0b" name="RoomReservationData">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="12849c0e-fcca-4e6e-ad87-3c2f34e96fc6" direction="Forward">
+          <layerMoniker Id="f9a2bc0d-a60e-466f-ac60-18e82118287c" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="0a2f00a2-941d-435e-af38-9aac61b999ba" name="RoomReservationData">
+          <ArtifactNode Label="RoomReservationData" Category="CodeSchema_Project" Id="(Assembly=../RoomReservationData/RoomReservationData.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=RoomReservationData)" Label="RoomReservationData.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="19f0acdc-6dfd-433c-9505-e772f70d4a19" name="RoomReservationEntities">
+          <ArtifactNode Label="RoomReservationEntities" Category="CodeSchema_Class" Id="(Assembly=../RoomReservationData/bin/Debug/RoomReservationData.dll Namespace=Wrox.ProCSharp.WCF.Data Type=RoomReservationEntities)" />
+          <ExpandedNode Id="(Assembly=RoomReservationData Namespace=Wrox.ProCSharp.WCF.Data Type=RoomReservationEntities)" Label="RoomReservationEntities" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="c1440a32-c1c4-4438-b8df-0b8fbf442cac" name="RoomReservationData1">
+          <ArtifactNode Label="RoomReservationData" Category="CodeSchema_Class" Id="(Assembly=../RoomReservationData/bin/Debug/RoomReservationData.dll Namespace=Wrox.ProCSharp.WCF.Data Type=RoomReservationData)" />
+          <ExpandedNode Id="(Assembly=RoomReservationData Namespace=Wrox.ProCSharp.WCF.Data Type=RoomReservationData)" Label="RoomReservationData" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="ad1bb486-09b7-48e5-ad51-983a38a3a5fa" name="RoomReservationService">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="5fb8f581-2e0f-4739-9fdc-155f2bb9ed71" direction="Forward">
+          <layerMoniker Id="f9a2bc0d-a60e-466f-ac60-18e82118287c" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="d47aa19b-2ee1-40bd-93c0-309d82f67c8a" direction="Forward">
+          <layerMoniker Id="3d3e04b3-5fec-48ca-8e3b-75510633ec0b" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="0eab9eeb-41c5-4a86-932c-1d5e42976fbe" name="RoomReservationService">
+          <ArtifactNode Label="RoomReservationService" Category="CodeSchema_Project" Id="(Assembly=../RoomReservationService/RoomReservationService.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=RoomReservationService)" Label="RoomReservationService.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="25691e07-0865-4078-aec4-b52e077d4c0c" name="RoomReservationHost">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="3b50b1b8-d7d0-46f8-8be6-5e38e2fd7740" direction="Forward">
+          <layerMoniker Id="ad1bb486-09b7-48e5-ad51-983a38a3a5fa" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="276b924a-08f4-4816-bfef-9fc163188062" name="RoomReservationHost">
+          <ArtifactNode Label="RoomReservationHost" Category="CodeSchema_Project" Id="(Assembly=../RoomReservationHost/RoomReservationHost.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=RoomReservationHost)" Label="RoomReservationHost.exe" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.exe" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

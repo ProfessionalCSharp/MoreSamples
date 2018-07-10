@@ -2,7 +2,7 @@
   "profiles": {
     "HttpClientFactorySample": {
       "commandName": "Project",
-      "commandLineArgs": "policy"
+      "commandLineArgs": "usehandler"
     }
   }
 }

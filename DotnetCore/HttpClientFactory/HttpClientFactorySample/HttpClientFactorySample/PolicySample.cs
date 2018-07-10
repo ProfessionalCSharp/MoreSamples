@@ -19,14 +19,15 @@ namespace HttpClientFactorySample
                 cmd.OnExecute(async () =>
                 {
                     var sample = new PolicySample();
-                    sample.ConfigureServices();
                     await sample.RunAsync();
                     return 0;
                 });
             });
         }
 
-        private void ConfigureServices()
+        public PolicySample() => AppServices = ConfigureServices();
+
+        private ServiceProvider ConfigureServices()
         {
             var services = new ServiceCollection();
             services.AddLogging(builder =>
@@ -41,7 +42,7 @@ namespace HttpClientFactorySample
             //.AddPolicyHandler(Policy.TimeoutAsync<HttpResponseMessage>(TimeSpan.FromSeconds(10)))
             .AddTransientHttpErrorPolicy(policy => policy.WaitAndRetryAsync(new [] { TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(5), TimeSpan.FromSeconds(10) }))  // network failures, HTTP 5xx, HTTP 408
             .AddTypedClient<PolicyClient>();
-            AppServices = services.BuildServiceProvider();
+            return services.BuildServiceProvider();
         }
 
         public IServiceProvider AppServices { get; private set; }

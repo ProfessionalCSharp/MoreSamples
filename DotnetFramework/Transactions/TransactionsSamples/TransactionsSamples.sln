@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{4659B929-F51E-4CF3-9F91-B9ABA59691CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemTransactions", "FileSystemTransactions\FileSystemTransactions.csproj", "{7F2BCEC1-35E4-4AC8-A3EA-A5102B2B0EBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLib", "DataLib\DataLib.csproj", "{EBD3CE88-16C8-4ECD-90B5-371445747D91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionSamples", "TransactionSamples\TransactionSamples.csproj", "{FA65365E-183B-45F1-A804-B208635C186C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultithreadingAmbientTx", "MultithreadingAmbientTx\MultithreadingAmbientTx.csproj", "{63ABE543-9D6E-4017-8451-231C69049930}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomResource", "CustomResource\CustomResource.csproj", "{4B4F1699-1A55-415E-BE2E-936268E5DBE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Windows8Transactions", "Windows8Transactions\Windows8Transactions.csproj", "{2A9C52FB-F0CC-492F-8472-6115491DFAF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A9C52FB-F0CC-492F-8472-6115491DFAF1}.Debug|x86.ActiveCfg = Debug|x86
+		{2A9C52FB-F0CC-492F-8472-6115491DFAF1}.Debug|x86.Build.0 = Debug|x86
+		{2A9C52FB-F0CC-492F-8472-6115491DFAF1}.Release|x86.ActiveCfg = Release|x86
+		{2A9C52FB-F0CC-492F-8472-6115491DFAF1}.Release|x86.Build.0 = Release|x86
+		{4659B929-F51E-4CF3-9F91-B9ABA59691CE}.Debug|x86.ActiveCfg = Debug|x86
+		{4659B929-F51E-4CF3-9F91-B9ABA59691CE}.Debug|x86.Build.0 = Debug|x86
+		{4659B929-F51E-4CF3-9F91-B9ABA59691CE}.Release|x86.ActiveCfg = Release|x86
+		{4659B929-F51E-4CF3-9F91-B9ABA59691CE}.Release|x86.Build.0 = Release|x86
+		{4B4F1699-1A55-415E-BE2E-936268E5DBE3}.Debug|x86.ActiveCfg = Debug|x86
+		{4B4F1699-1A55-415E-BE2E-936268E5DBE3}.Debug|x86.Build.0 = Debug|x86
+		{4B4F1699-1A55-415E-BE2E-936268E5DBE3}.Release|x86.ActiveCfg = Release|x86
+		{4B4F1699-1A55-415E-BE2E-936268E5DBE3}.Release|x86.Build.0 = Release|x86
+		{63ABE543-9D6E-4017-8451-231C69049930}.Debug|x86.ActiveCfg = Debug|x86
+		{63ABE543-9D6E-4017-8451-231C69049930}.Debug|x86.Build.0 = Debug|x86
+		{63ABE543-9D6E-4017-8451-231C69049930}.Release|x86.ActiveCfg = Release|x86
+		{63ABE543-9D6E-4017-8451-231C69049930}.Release|x86.Build.0 = Release|x86
+		{7F2BCEC1-35E4-4AC8-A3EA-A5102B2B0EBA}.Debug|x86.ActiveCfg = Debug|x86
+		{7F2BCEC1-35E4-4AC8-A3EA-A5102B2B0EBA}.Debug|x86.Build.0 = Debug|x86
+		{7F2BCEC1-35E4-4AC8-A3EA-A5102B2B0EBA}.Release|x86.ActiveCfg = Release|x86
+		{7F2BCEC1-35E4-4AC8-A3EA-A5102B2B0EBA}.Release|x86.Build.0 = Release|x86
+		{EBD3CE88-16C8-4ECD-90B5-371445747D91}.Debug|x86.ActiveCfg = Debug|x86
+		{EBD3CE88-16C8-4ECD-90B5-371445747D91}.Debug|x86.Build.0 = Debug|x86
+		{EBD3CE88-16C8-4ECD-90B5-371445747D91}.Release|x86.ActiveCfg = Release|x86
+		{EBD3CE88-16C8-4ECD-90B5-371445747D91}.Release|x86.Build.0 = Release|x86
+		{FA65365E-183B-45F1-A804-B208635C186C}.Debug|x86.ActiveCfg = Debug|x86
+		{FA65365E-183B-45F1-A804-B208635C186C}.Debug|x86.Build.0 = Debug|x86
+		{FA65365E-183B-45F1-A804-B208635C186C}.Release|x86.ActiveCfg = Release|x86
+		{FA65365E-183B-45F1-A804-B208635C186C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

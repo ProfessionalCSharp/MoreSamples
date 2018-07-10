@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="15522f17-7a0c-4831-80ac-c820bd94041c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="81c0f557-ef35-4560-861f-66fa7bc3924d" name="Client">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="0ad2641b-e918-4494-8682-0a72fdef70b0" direction="Forward">
+          <layerMoniker Id="28fd7d9c-386f-46cf-a3b8-c695cf4fed54" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="28fd7d9c-386f-46cf-a3b8-c695cf4fed54" name="Router">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="69b592ee-6f67-4b37-86f2-776226a22543" direction="Forward">
+          <layerMoniker Id="eb31f1d7-9c82-4706-a3a8-041a6ef2dc98" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="3a38e9e7-24c5-4c75-b457-67fc74952910" direction="Forward">
+          <layerMoniker Id="cc867c23-8274-4eb6-8ed6-5aacfb3f0bd6" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="53f1328a-f642-440d-bf9a-f8f3caceadfa" direction="Forward">
+          <layerMoniker Id="a70bc309-910f-4b9d-bf73-4b3fe2911fed" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="eb31f1d7-9c82-4706-a3a8-041a6ef2dc98" name="Service A-F" />
+    <layer Id="cc867c23-8274-4eb6-8ed6-5aacfb3f0bd6" name="Service G-N" />
+    <layer Id="a70bc309-910f-4b9d-bf73-4b3fe2911fed" name="Service O-Z" />
+  </layers>
+</layerModel>

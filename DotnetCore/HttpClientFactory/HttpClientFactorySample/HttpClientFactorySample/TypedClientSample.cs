@@ -18,14 +18,15 @@ namespace HttpClientFactorySample
                 cmd.OnExecute(async () =>
                 {
                     var sample = new TypedClientSample();
-                    sample.ConfigureServices();
                     await sample.RunAsync();
                     return 0;
                 });
             });
         }
 
-        private void ConfigureServices()
+        public TypedClientSample() => AppServices = ConfigureServices();
+
+        private ServiceProvider ConfigureServices()
         {
             var services = new ServiceCollection();
             services.AddLogging(builder =>
@@ -36,9 +37,8 @@ namespace HttpClientFactorySample
             services.AddHttpClient("cni", client =>
             {
                 client.BaseAddress = new Uri("https://www.cninnovation.com");
-            })
-            .AddTypedClient<TypedClient>();
-            AppServices = services.BuildServiceProvider();
+            }).AddTypedClient<TypedClient>();
+            return services.BuildServiceProvider();
         }
 
         public IServiceProvider AppServices { get; private set; }
