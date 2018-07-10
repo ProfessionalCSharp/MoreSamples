@@ -2,6 +2,7 @@
 
 This repository contains additional code samples for the book Professional C# 6. Currently you'll find samples in these categories:
 
+* Azure
 * C#
 * .NET Core
 * Entity Framework Core
@@ -10,6 +11,10 @@ This repository contains additional code samples for the book Professional C# 6.
 * WPF
 
 Enjoy!
+
+## Azure
+
+* Hosting Blazor on Azure Storage Websites with Azure Functions in the backend
 
 ## C#
 
