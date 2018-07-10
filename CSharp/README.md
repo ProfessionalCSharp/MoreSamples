@@ -9,6 +9,7 @@
 * Pattern Matching
 * Non-Nullable Reference Types (C# 8)
 * Pattern matching extended (C# 8)
+* Indexes and Ranges (C# 8)
 
 ## Binary Literals
 
@@ -65,3 +66,9 @@ Folder: CSharp8Patterns
 C# 8 offers a new *switch expression* as well as extensions to pattern matching: *property pattern* and *recursive pattern*.
 
 See the blog article [C# 8: Pattern Matching extended](https://csharp.christiannagel.com/2018/07/03/patternmatchingcs8/) for more information.
+
+## Indexes and Ranges (C# 8)
+
+Folder: RangesSample
+
+C# 8 offers a range that can be used with strings and collections.
