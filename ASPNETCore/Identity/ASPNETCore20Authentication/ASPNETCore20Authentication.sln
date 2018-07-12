@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNETCore20Authentication", "ASPNETCore20Authentication\ASPNETCore20Authentication.csproj", "{7A2EAE8A-69B1-40AB-AFC3-E83450F74101}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNETCore21Authentication", "ASPNETCore21Authentication\ASPNETCore21Authentication.csproj", "{19340F62-FB08-4053-90FE-3FAF1D26074B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A2EAE8A-69B1-40AB-AFC3-E83450F74101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A2EAE8A-69B1-40AB-AFC3-E83450F74101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A2EAE8A-69B1-40AB-AFC3-E83450F74101}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A2EAE8A-69B1-40AB-AFC3-E83450F74101}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19340F62-FB08-4053-90FE-3FAF1D26074B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19340F62-FB08-4053-90FE-3FAF1D26074B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19340F62-FB08-4053-90FE-3FAF1D26074B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19340F62-FB08-4053-90FE-3FAF1D26074B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9565F20-5268-49E1-AFFD-8D76816F9631}
+	EndGlobalSection
+EndGlobal
