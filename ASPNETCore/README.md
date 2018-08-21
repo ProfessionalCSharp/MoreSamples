@@ -5,6 +5,7 @@
 * View Components
 * GDPR Support with ASP.NET Core 2.1
 * Identity Pages with ASP.NET Core 2.1
+* Library Manager with Visual Studio 2017 Update 8
 
 ## View Components
 
@@ -29,3 +30,11 @@ Folder: Identity
 What's changed with ASP.NET Core 2.1 and identity pages.
 
 See the blog article [ASP.NET Core Identity Pages with ASP.NET Core 2.1](https://csharp.christiannagel.com/2018/07/18/identitypages/)
+
+## Library Manager
+
+Folder: LibraryManagerSample
+
+Use the Library Manager instead of Bower.
+
+See the blog article [Library Manager to manage client-side packages](https://csharp.christiannagel.com)
