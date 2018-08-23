@@ -7,6 +7,7 @@
 * Grouped ListView
 * Hamburger and SplitView
 * Deep Linking
+* Lost Focus
 
 ## Ink Sample
 
@@ -57,3 +58,11 @@ Folder: DynamicTabSample
 The sample shows dynamic tabs using the Pivot control with UWP
 
 See the blog article [Open Tab Items Dynamically with UWP](https://csharp.christiannagel.com/2017/01/17/dynamictabswithuwp/ "Dynamic Tabs with UWP")
+
+## Lost Focus Sample
+
+Folder: LostFocusSample
+
+The sample shows using missing TextBox bindings to source with the `AppBarButton`, and solving it setting the `AllowFocusOnInteraction` property.
+
+See the blog article [Binding to Source Updates not happening with TextBox and AppBarButton](https://csharp.christiannagel.com/2018/08/14/lostfocus/)

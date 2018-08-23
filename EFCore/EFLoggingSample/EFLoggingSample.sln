@@ -1,16 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{425F5F27-F4C3-4D0A-95D8-5215E3076EBC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A97CFBC3-39FC-4F0A-940E-BB52EBF95A98}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EFLoggingSample", "src\EFLoggingSample\EFLoggingSample.xproj", "{BF5D70DD-537D-498F-A4BB-D039FC6DC1EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFLoggingSample", "src\EFLoggingSample\EFLoggingSample.csproj", "{BF5D70DD-537D-498F-A4BB-D039FC6DC1EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,5 +25,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BF5D70DD-537D-498F-A4BB-D039FC6DC1EA} = {425F5F27-F4C3-4D0A-95D8-5215E3076EBC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B38026A-A2CF-4645-9C4B-6295C3CDC4BA}
 	EndGlobalSection
 EndGlobal

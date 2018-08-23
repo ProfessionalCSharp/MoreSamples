@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WebSocketsSample.DemoService" CodeBehind="DemoService.svc.cs" %>

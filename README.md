@@ -2,6 +2,7 @@
 
 This repository contains additional code samples for the book Professional C# 6. Currently you'll find samples in these categories:
 
+* Azure
 * C#
 * .NET Core
 * Entity Framework Core
@@ -11,6 +12,10 @@ This repository contains additional code samples for the book Professional C# 6.
 
 Enjoy!
 
+## Azure
+
+* Hosting Blazor on Azure Storage Websites with Azure Functions in the backend
+
 ## C#
 
 * Literals
@@ -18,7 +23,8 @@ Enjoy!
 * Out Vars and Ref Returns
 * Expression Bodied Members
 * Pattern Matching
-* Non-nullable Reference Types
+* Non-nullable Reference Types (C# 8)
+* Pattern matching extended (C# 8)
 
 ## .NET Core
 
@@ -53,3 +59,10 @@ Enjoy!
 
 * 3D with WPF
 * Open Tab Items Dynamically
+
+## .NET Framework (samples from older Professional C# book editions)
+
+* WCF - various WCF samples (Professional C# 5 and .NET 4.5.1)
+* Transactions - various System.Transactions samples (Professional C# 5 and .NET 4.5.1)
+* Assemblies - create code dynamically, and other samples (Professional C# 5 and .NET 4.5.1)
+* Entity Framework (Professional C# 5 and .NET 4.5.1)

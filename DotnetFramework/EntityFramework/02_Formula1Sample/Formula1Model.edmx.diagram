@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7b118d4c50254c3bbd63862cacdaf6f9" Name="Diagram1">
+        <EntityTypeShape EntityType="Formula1Model.Circuit" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Formula1Model.RaceResult" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Formula1Model.Racer" Width="1.5" PointX="2.875" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Formula1Model.Race" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <AssociationConnector Association="Formula1Model.FK_Race_Circuit" ManuallyRouted="false" />
+        <AssociationConnector Association="Formula1Model.FK_RaceResults_Race" ManuallyRouted="false" />
+        <AssociationConnector Association="Formula1Model.FK_RaceResults_Racers" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
