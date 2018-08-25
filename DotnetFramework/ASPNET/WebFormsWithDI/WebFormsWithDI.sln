@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormsWithDI", "WebFormsWithDI\WebFormsWithDI.csproj", "{1961E9E1-5DAD-45CE-BE14-122621DACE2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormsDependencyInjection.MicrosoftExtensionsDependencyInjection", "WebFormsDependencyInjection.MicrosoftExtensionsDependencyInjection\WebFormsDependencyInjection.MicrosoftExtensionsDependencyInjection.csproj", "{28750DB5-E86E-4248-9509-99016BCF0A0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1961E9E1-5DAD-45CE-BE14-122621DACE2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1961E9E1-5DAD-45CE-BE14-122621DACE2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1961E9E1-5DAD-45CE-BE14-122621DACE2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1961E9E1-5DAD-45CE-BE14-122621DACE2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28750DB5-E86E-4248-9509-99016BCF0A0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28750DB5-E86E-4248-9509-99016BCF0A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28750DB5-E86E-4248-9509-99016BCF0A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28750DB5-E86E-4248-9509-99016BCF0A0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66C3E342-56AE-482A-8C40-570E063C75AE}
+	EndGlobalSection
+EndGlobal
