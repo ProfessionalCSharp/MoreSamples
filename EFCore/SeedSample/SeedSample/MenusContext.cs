@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using static SeedSample.MenusContext.ColumnNames;
@@ -18,13 +16,12 @@ namespace SeedSample
 
         private const string ConnectionString = @"server=(localdb)\mssqllocaldb;database=Restaurant1;trusted_connection=true";
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => 
             optionsBuilder.UseSqlServer(ConnectionString);
-        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // shadow state
             modelBuilder.Entity<MenuItem>().Property<DateTime>(LastUpdated);
 
             modelBuilder.Entity<MenuItem>().Property(m => m.Text).IsRequired().HasMaxLength(40);
@@ -48,6 +45,7 @@ namespace SeedSample
 
             return base.SaveChangesAsync(cancellationToken);
         }
+
         public override int SaveChanges() => SaveChangesAsync().Result;
     }
 }
