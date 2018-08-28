@@ -30,8 +30,6 @@ namespace SeedSample
                 new Book { BookId = 2, Title = "Professional C# 7", Publisher = "Wrox Press"},
                 new Book { BookId = 3, Title = "Professional C# 8", Publisher = "Wrox Press"}
             );
-
         }
-
     }
 }

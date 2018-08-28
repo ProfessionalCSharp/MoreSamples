@@ -26,9 +26,10 @@ namespace SeedSample
 
             modelBuilder.Entity<MenuItem>().Property(m => m.Text).IsRequired().HasMaxLength(40);
 
+            // use anonymous types to pass shadow state information
             modelBuilder.Entity<MenuItem>().HasData(
-                new { MenuItemId = 1, Text = "Wiener Schnitzel mit Kartoffelsalat", MenuDate = new DateTime(2018, 7, 4), LastUpdated = DateTime.Now },
-                new { MenuItemId = 2, Text = "Faschierter Braten mit Karoffelpüree", MenuDate = new DateTime(2018, 7, 5), LastUpdated = DateTime.Now });
+                new { MenuItemId = 1, Text = "Wiener Schnitzel mit Kartoffelsalat", MenuDate = new DateTime(2018, 8, 27), LastUpdated = DateTime.Now },
+                new { MenuItemId = 2, Text = "Faschierter Braten mit Karoffelpüree", MenuDate = new DateTime(2018, 8, 28), LastUpdated = DateTime.Now });
         }
 
         public DbSet<MenuItem> MenuItems { get; set; }

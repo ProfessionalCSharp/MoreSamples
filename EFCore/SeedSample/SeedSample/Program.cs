@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace SeedSample
 {
@@ -8,6 +9,16 @@ namespace SeedSample
         {
             SeedWithSimpleTypes();
             SeedWithShadowState();
+            SeedWithMigrations();
+        }
+
+        private static void SeedWithMigrations()
+        {
+            using (var context = new F1Context())
+            {
+                context.Database.Migrate();
+                Console.WriteLine("F1 database created, seeded, and updated");
+            }
         }
 
         private static void SeedWithShadowState()
