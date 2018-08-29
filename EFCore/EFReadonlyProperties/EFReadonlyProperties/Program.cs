@@ -8,23 +8,28 @@ namespace EFReadonlyProperties
         {
             Sample1();
             Sample2();
+            DeleteDatabases();
             Console.WriteLine("Main end");
 
             Console.ReadLine();
+        }
+
+        private static void DeleteDatabases()
+        {
+            DeleteDatabase();
+            DeleteDatabase2();
         }
 
         private static void Sample2()
         {
             CreateDatabase2();
             ReadData2();
-            DeleteDatabase2();
         }
 
         private static void Sample1()
         {
             CreateDatabase();
             ReadData();
-            DeleteDatabase();
         }
 
         private static void DeleteDatabase()
@@ -52,7 +57,7 @@ namespace EFReadonlyProperties
             using (var context = new BooksContext())
             {
                 context.Database.EnsureCreated();
-                context.Books.Add(new Book("Professional C# 6", "Wrox Press"));
+                context.Books.Add(new Book("Professional C# 7 and .NET Core 2.0", "Wrox Press", "Christian Nagel"));
                 context.SaveChanges();
             }
         }
@@ -82,7 +87,7 @@ namespace EFReadonlyProperties
             using (var context = new BooksContext2())
             {
                 context.Database.EnsureCreated();
-                context.Books.Add(new Book("Professional C# 6", "Wrox Press"));
+                context.Books.Add(new Book("Professional C# 7 and .NET Core 2.0", "Wrox Press", "Christian Nagel"));
                 context.SaveChanges();
             }
         }

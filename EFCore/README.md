@@ -6,6 +6,7 @@
 * Mapping to Getter Only Properties
 * Unit Tests
 * Logging
+* Seed
 
 ## Inheritance (TPH)
 
@@ -19,8 +20,7 @@ See the blog article [Entity Framework Core - Table per Hierarchy](https://cshar
 
 Folder: EFReadOnlyProperties
 
-Maping to fields of getter only properties.
-This sample requires a preview of Entity Framework Core 1.1.
+Mapping to fields of getter only properties.
 
 See the blog article [Mapping to Getter-only Properties with EF Core](https://csharp.christiannagel.com/2016/11/07/efcorefields/ "EF Core mapping to fields") for more information.
 
@@ -35,3 +35,12 @@ Unit tests with the Entity Framework Core Memory Provider
 Folder: EFLoggingSample
 
 Generate logging output from Entity Framework Core
+
+## Seed
+
+Folder: SeedSample
+
+Seeding data on creation of the database.
+This sample requries Entity Framework Core 2.1.
+
+See the blog article [Seeding data with EF Core](https://csharp.christiannagel.com) for more information.
