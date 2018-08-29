@@ -21,7 +21,6 @@ See the blog article [Entity Framework Core - Table per Hierarchy](https://cshar
 Folder: EFReadOnlyProperties
 
 Mapping to fields of getter only properties.
-This sample requires a preview of Entity Framework Core 1.1.
 
 See the blog article [Mapping to Getter-only Properties with EF Core](https://csharp.christiannagel.com/2016/11/07/efcorefields/ "EF Core mapping to fields") for more information.
 
@@ -42,5 +41,6 @@ Generate logging output from Entity Framework Core
 Folder: SeedSample
 
 Seeding data on creation of the database.
+This sample requries Entity Framework Core 2.1.
 
 See the blog article [Seeding data with EF Core](https://csharp.christiannagel.com) for more information.
