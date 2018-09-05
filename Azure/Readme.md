@@ -36,4 +36,4 @@ Folder: CosmosDBWithEFCore
 
 Using Azure Cosmos DB with Entity Framework Core 2.2.
 
-See the blog article [Using EF Core with Azure Cosmos DB](https://csharp.christiannagel.com)
+See the blog article [Using EF Core with Azure Cosmos DB](https://csharp.christiannagel.com/2018/09/05/efcorecosmos/)
