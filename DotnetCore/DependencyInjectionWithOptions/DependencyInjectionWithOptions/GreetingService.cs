@@ -8,13 +8,9 @@ namespace DependencyInjectionWithOptions
         public string From { get; set; }
     }
 
-
     public class GreetingService : IGreetingService
     {
-        public GreetingService(IOptions<GreetingServiceOptions> options)
-        {
-            _from = options.Value.From;
-        }
+        public GreetingService(IOptions<GreetingServiceOptions> options) => _from = options.Value.From;
 
         private string _from;
         public string Greeting(string name)
