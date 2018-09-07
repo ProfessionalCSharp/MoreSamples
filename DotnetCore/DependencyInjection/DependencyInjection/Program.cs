@@ -6,15 +6,13 @@ namespace DependencyInjection
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             RegisterServices();
 
             WithoutUsingAContainer();
             UsingAContainer();
         }
-
-
 
         private static void RegisterServices()
         {
