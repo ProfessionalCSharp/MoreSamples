@@ -20,6 +20,7 @@ namespace CosmosDBWithEFCore
 
         public void ShowBooksWithShadowState()
         {
+            Console.WriteLine("show all shadow state");
             foreach (var book in Books)
             {
                 Console.WriteLine(book.Title);
@@ -29,10 +30,12 @@ namespace CosmosDBWithEFCore
                     Console.WriteLine($"{propEntry.Metadata.Name} {propEntry.CurrentValue}");
                 }
             }
+            Console.WriteLine();
         }
 
         public void ShowCosmosDBState()
         {
+            Console.WriteLine("selecte specific shadow state");
             foreach (var book in Books)
             {
                 Console.WriteLine($"{book.Title}, etag: {Entry<Book>(book).Property("_etag").CurrentValue}, " +
@@ -40,6 +43,7 @@ namespace CosmosDBWithEFCore
                     $"ts: {Entry(book).Property("_ts").CurrentValue}");
                 Console.WriteLine();
             }
+            Console.WriteLine();
         }
     }
 }
