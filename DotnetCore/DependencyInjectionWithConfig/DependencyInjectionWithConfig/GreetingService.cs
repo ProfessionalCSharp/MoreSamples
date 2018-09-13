@@ -1,20 +1,17 @@
 ﻿using Microsoft.Extensions.Options;
 using System;
 
-namespace DependencyInjectionWithOptions
+namespace DependencyInjectionWithConfig
 {
     public class GreetingServiceOptions
     {
         public string From { get; set; }
     }
 
-
     public class GreetingService : IGreetingService
     {
-        public GreetingService(IOptions<GreetingServiceOptions> options)
-        {
+        public GreetingService(IOptions<GreetingServiceOptions> options) => 
             _from = options.Value.From;
-        }
 
         private string _from;
         public string Greeting(string name)

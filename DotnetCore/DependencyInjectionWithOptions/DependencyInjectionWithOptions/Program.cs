@@ -12,7 +12,6 @@ namespace DependencyInjectionWithOptions
             UseServices();
         }
 
-
         private static void UseServices()
         {
             var controller = Container.GetService<HelloController>();

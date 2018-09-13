@@ -10,7 +10,6 @@ namespace Microsoft.Extensions.DependencyInjection
         {
             if (collection == null) throw new ArgumentNullException(nameof(collection));
             if (config == null) throw new ArgumentNullException(nameof(config));
-
             
             collection.Configure<GreetingServiceOptions>(config);
             return collection.AddTransient<IGreetingService, GreetingService>();

@@ -25,7 +25,6 @@ namespace CosmosDBWithEFCore
 
         public async Task WriteBooksAsync()
         {
-
             _booksContext.Books.Add(new Book { BookId = Guid.NewGuid(), Title = "Professional C# 7 and .NET Core 2.0", Publisher = "Wrox Press" });
             _booksContext.Books.Add(new Book { BookId = Guid.NewGuid(), Title = "Professional C# 6 and .NET Core 1.0", Publisher = "Wrox Press" });
             _booksContext.Books.Add(new Book { BookId = Guid.NewGuid(), Title = "Enterprise Services with the .NET Framework", Publisher = "Addison Wesley" });
@@ -41,6 +40,7 @@ namespace CosmosDBWithEFCore
                 Console.WriteLine($"{book.Title} {book.Publisher} {book.BookId}");
             }
 
+            _booksContext.ShowBooksWithShadowState();
             _booksContext.ShowCosmosDBState();
         }
     }
