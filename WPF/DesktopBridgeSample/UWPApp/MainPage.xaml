@@ -9,8 +9,10 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="packageFamilyName" Style="{StaticResource CaptionTextBlockStyle}" />
             <TextBlock x:Name="textInfo" Style="{StaticResource HeaderTextBlockStyle}" />
             <TextBlock x:Name="textParameter" Style="{StaticResource HeaderTextBlockStyle}" />
+            <Button Click="OnAppService">Communicate</Button>
         </StackPanel>
 
     </Grid>

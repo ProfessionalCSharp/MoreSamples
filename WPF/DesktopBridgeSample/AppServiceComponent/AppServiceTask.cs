@@ -3,7 +3,7 @@ using Windows.ApplicationModel.AppService;
 using Windows.ApplicationModel.Background;
 using Windows.Foundation.Collections;
 
-namespace UWPApp
+namespace AppServiceComponent
 {
     public sealed class AppServiceTask : IBackgroundTask
     {
