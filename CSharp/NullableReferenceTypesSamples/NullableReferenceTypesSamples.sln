@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheOldLib", "TheOldLib\TheO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewAndGloryLib", "NewAndGloryLib\NewAndGloryLib.csproj", "{DBBAD2E4-589D-459A-B750-E27674DED82C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheOldApp", "TheOldApp\TheOldApp.csproj", "{8B3C5EEB-A5D7-4B4B-B2C6-1F064CA87E1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheOldApp", "TheOldApp\TheOldApp.csproj", "{8B3C5EEB-A5D7-4B4B-B2C6-1F064CA87E1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

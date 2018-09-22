@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
+
+[module: NonNullTypes]
 
 namespace NewAndGloryLib
 {

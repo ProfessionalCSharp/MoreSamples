@@ -1,5 +1,8 @@
-﻿using NewAndGloryLib;
+﻿using System.Runtime.CompilerServices;
+using NewAndGloryLib;
 using TheOldLib;
+
+[module: NonNullTypes]
 
 namespace NullableReferenceTypesSamples
 {
