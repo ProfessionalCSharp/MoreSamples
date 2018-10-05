@@ -24,8 +24,8 @@
         <uap:Extension Category="windows.protocol">
           <uap:Protocol Name="sampleapp" />
         </uap:Extension>
-        <uap:Extension Category="windows.appService" EntryPoint="AppServiceComponent.AppServiceTask">
-          <uap3:AppService Name="com.cninnovation.bridgesample" uap4:SupportsMultipleInstances="true" />
+        <uap:Extension Category="windows.appService">
+          <uap:AppService Name="com.cninnovation.desktopbridgesample" />
         </uap:Extension>
       </Extensions>
     </Application>

@@ -23,6 +23,7 @@
             <Button Content="Update Tile" Command="{Binding ViewModel.UpdateTileCommand, Mode=OneTime}" />
             <Button Content="Use AppService" Command="{Binding ViewModel.AppServiceCommand, Mode=OneTime}" />
         </StackPanel>
-        <ListView ItemsSource="{Binding ViewModel.Books}" Grid.Row="2" />
+        <ListView ItemsSource="{Binding ViewModel.Books}" Grid.Column="0" Grid.Row="2" />
+        <ListView ItemsSource="{Binding ViewModel.Messages}" Grid.Column="1" Grid.Row="2" />
     </Grid>
 </Window>

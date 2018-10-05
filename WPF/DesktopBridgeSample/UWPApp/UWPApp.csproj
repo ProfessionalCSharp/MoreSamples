@@ -135,9 +135,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AppServiceComponent\AppServiceComponent.csproj">
-      <Project>{c782ca64-4c15-4bb1-bded-fae7b517495a}</Project>
-      <Name>AppServiceComponent</Name>
+    <ProjectReference Include="..\BooksLib\BooksLib.csproj">
+      <Project>{374A8037-3297-44DE-8B63-37B92BED26EE}</Project>
+      <Name>BooksLib</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

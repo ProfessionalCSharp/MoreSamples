@@ -4,6 +4,7 @@ using Prism.Commands;
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace BooksLib.ViewModels
 {
@@ -13,15 +14,31 @@ namespace BooksLib.ViewModels
         private readonly ILaunchProtocolService _launchProtocolService;
         private readonly IUpdateTileService _updateTileService;
         private readonly IAppServiceClientService _appServiceClientService;
+        private readonly IRunOnUIThreadService _runOnUIThreadService;
 
+        public ObservableCollection<string> Messages { get; } = new ObservableCollection<string>();
 
-        public BooksViewModel(IBooksService booksService, ILaunchProtocolService launchProtocolService, IPackageNameService packageNameService, IUpdateTileService updateTileService, IAppServiceClientService appServiceClientService)
+        public BooksViewModel(
+            IBooksService booksService, 
+            ILaunchProtocolService launchProtocolService, 
+            IPackageNameService packageNameService, 
+            IUpdateTileService updateTileService, 
+            IAppServiceClientService appServiceClientService,
+            IRunOnUIThreadService runOnUIThreadService)
         {
             _booksService = booksService ?? throw new ArgumentNullException(nameof(booksService));
             _launchProtocolService = launchProtocolService ?? throw new ArgumentNullException(nameof(launchProtocolService));
             _updateTileService = updateTileService ?? throw new ArgumentNullException(nameof(updateTileService));
             _appServiceClientService = appServiceClientService ?? throw new ArgumentNullException(nameof(appServiceClientService));
+            _runOnUIThreadService = runOnUIThreadService ?? throw new ArgumentNullException(nameof(runOnUIThreadService));
             _package = packageNameService?.GetPackageName() ?? throw new ArgumentNullException(nameof(packageNameService));
+
+            _appServiceClientService.MessageReceived += (sender, e) =>
+            {
+                // app service event is coming on a different thread, switch thread
+                _runOnUIThreadService.RunOnUIThreadAsync(() => Messages.Add(e));
+            };
+
             LaunchUWPCommand = new DelegateCommand(OnLaunchUWP);
             UpdateTileCommand = new DelegateCommand(OnUpdateTile);
             AppServiceCommand = new DelegateCommand(OnAppService);
@@ -45,7 +62,7 @@ namespace BooksLib.ViewModels
 
         public void OnAppService()
         {
-            _appServiceClientService.SendMessageAsync("Message from WPF");
+            _appServiceClientService.SendMessageAsync("StartEvents");
         }
 
         public string PackageName => Package.name;

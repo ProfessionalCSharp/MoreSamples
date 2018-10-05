@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.AppService;
+using Windows.ApplicationModel.Background;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,6 +24,9 @@ namespace UWPApp
     /// </summary>
     sealed partial class App : Application
     {
+        private AppServiceConnection _appServiceConnection;
+        private BackgroundTaskDeferral _appServiceDeferral;
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -35,6 +40,63 @@ namespace UWPApp
         protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
         {
             base.OnBackgroundActivated(args);
+
+            IBackgroundTaskInstance taskInstance = args.TaskInstance;
+            AppServiceTriggerDetails appService = taskInstance.TriggerDetails as AppServiceTriggerDetails;
+            _appServiceDeferral = taskInstance.GetDeferral();
+            taskInstance.Canceled += OnAppServicesCanceled;
+            _appServiceConnection = appService.AppServiceConnection;
+            _appServiceConnection.RequestReceived += OnAppServiceRequestReceived;
+            _appServiceConnection.ServiceClosed += AppServiceConnection_ServiceClosed;
+        }
+
+        private AppServiceConnection _wpfConnection;
+
+        private async void OnAppServiceRequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
+        {
+            var deferral = args.GetDeferral();
+            ValueSet message = args.Request.Message;
+
+            if (_wpfConnection == null)
+            {
+                if (message.TryGetValue("command", out object val) && val.ToString() == "StartEvents")
+                {
+                    _wpfConnection = sender;
+
+                    var response = new ValueSet
+                    {
+                        { "result", "OK" }
+                    };
+                    await args.Request.SendResponseAsync(response);
+                }
+                // else nothing to do, WPF app not yet connected
+            }
+            else if (sender == _wpfConnection && message.TryGetValue("command", out object val) && val.ToString() == "StopEvents")
+            {
+                _wpfConnection.Dispose();
+                _wpfConnection = null;
+            }
+            else if (sender != _wpfConnection) // forward messages to WPF app
+            {
+                await _wpfConnection.SendMessageAsync(message);
+                var response = new ValueSet
+                {
+                    { "info", "forwarded message" }
+                };
+                await args.Request.SendResponseAsync(response);
+            }
+
+            deferral.Complete();
+        }
+
+        private void OnAppServicesCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
+        {
+            _appServiceDeferral.Complete();
+        }
+
+        private void AppServiceConnection_ServiceClosed(AppServiceConnection sender, AppServiceClosedEventArgs args)
+        {
+            _appServiceDeferral.Complete();
         }
 
         protected override void OnActivated(IActivatedEventArgs args)

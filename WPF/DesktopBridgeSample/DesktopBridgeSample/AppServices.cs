@@ -20,6 +20,7 @@ namespace DesktopBridgeSample
             services.AddSingleton<IUpdateTileService, UpdateTileService>();
             services.AddSingleton<IDialogService, WPFDialogService>();
             services.AddSingleton<IAppServiceClientService, AppServiceClientService>();
+            services.AddTransient<IRunOnUIThreadService, RunOnUIThreadService>();
             ServiceProvider = services.BuildServiceProvider();
         }
 

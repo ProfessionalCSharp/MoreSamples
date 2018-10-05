@@ -12,6 +12,7 @@
             <TextBlock x:Name="packageFamilyName" Style="{StaticResource CaptionTextBlockStyle}" />
             <TextBlock x:Name="textInfo" Style="{StaticResource HeaderTextBlockStyle}" />
             <TextBlock x:Name="textParameter" Style="{StaticResource HeaderTextBlockStyle}" />
+            <TextBox Header="Send to UWP" x:Name="textData" />
             <Button Click="OnAppService">Communicate</Button>
         </StackPanel>
 
