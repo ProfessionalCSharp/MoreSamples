@@ -31,7 +31,7 @@ namespace BooksLib.ViewModels
             _updateTileService = updateTileService ?? throw new ArgumentNullException(nameof(updateTileService));
             _appServiceClientService = appServiceClientService ?? throw new ArgumentNullException(nameof(appServiceClientService));
             _runOnUIThreadService = runOnUIThreadService ?? throw new ArgumentNullException(nameof(runOnUIThreadService));
-            _package = packageNameService?.GetPackageName() ?? throw new ArgumentNullException(nameof(packageNameService));
+            Package = packageNameService?.GetPackageName() ?? throw new ArgumentNullException(nameof(packageNameService));
 
             _appServiceClientService.MessageReceived += (sender, e) =>
             {
@@ -67,8 +67,6 @@ namespace BooksLib.ViewModels
 
         public string PackageName => Package.name;
         public string PackageId => Package.id;
-
-        private readonly (string name, string id) _package;
-        public (string name, string id) Package => _package;
+        public (string name, string id) Package { get; }
     }
 }

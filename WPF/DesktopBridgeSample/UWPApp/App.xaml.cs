@@ -1,20 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.AppService;
 using Windows.ApplicationModel.Background;
-using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace UWPApp
@@ -24,9 +15,6 @@ namespace UWPApp
     /// </summary>
     sealed partial class App : Application
     {
-        private AppServiceConnection _appServiceConnection;
-        private BackgroundTaskDeferral _appServiceDeferral;
-
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -37,17 +25,22 @@ namespace UWPApp
             this.Suspending += OnSuspending;
         }
 
+        private AppServiceConnection _appServiceConnection;
+        private BackgroundTaskDeferral _appServiceDeferral;
+
         protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
         {
             base.OnBackgroundActivated(args);
 
             IBackgroundTaskInstance taskInstance = args.TaskInstance;
-            AppServiceTriggerDetails appService = taskInstance.TriggerDetails as AppServiceTriggerDetails;
-            _appServiceDeferral = taskInstance.GetDeferral();
-            taskInstance.Canceled += OnAppServicesCanceled;
-            _appServiceConnection = appService.AppServiceConnection;
-            _appServiceConnection.RequestReceived += OnAppServiceRequestReceived;
-            _appServiceConnection.ServiceClosed += AppServiceConnection_ServiceClosed;
+            if (taskInstance.TriggerDetails is AppServiceTriggerDetails appService)
+            {
+                _appServiceDeferral = taskInstance.GetDeferral();
+                taskInstance.Canceled += OnAppServicesCanceled;
+                _appServiceConnection = appService.AppServiceConnection;
+                _appServiceConnection.RequestReceived += OnAppServiceRequestReceived;
+                _appServiceConnection.ServiceClosed += AppServiceConnection_ServiceClosed;
+            }
         }
 
         private AppServiceConnection _wpfConnection;
@@ -85,7 +78,6 @@ namespace UWPApp
                 };
                 await args.Request.SendResponseAsync(response);
             }
-
             deferral.Complete();
         }
 

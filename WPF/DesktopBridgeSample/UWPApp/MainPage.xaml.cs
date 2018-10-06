@@ -54,7 +54,7 @@ namespace UWPApp
             {
                 string answer = string.Join(", ", response.Message.Values.Cast<string>().ToArray());
                 await new MessageDialog($"received {answer}").ShowAsync();
-            }//
+            }
             else
             {
                 await new MessageDialog("error send").ShowAsync();

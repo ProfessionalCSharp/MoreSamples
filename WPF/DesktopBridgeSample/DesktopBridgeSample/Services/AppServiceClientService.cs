@@ -1,9 +1,6 @@
 ﻿using BooksLib.Services;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.AppService;
 using Windows.Foundation.Collections;
@@ -20,7 +17,6 @@ namespace DesktopBridgeSample.Services
             _dialogService = dialogService;
         }
 
-
         public void Dispose()
         {
             _connection?.Dispose();
@@ -32,9 +28,11 @@ namespace DesktopBridgeSample.Services
             {
                 if (_connection == null)
                 {
-                    _connection = new AppServiceConnection();
-                    _connection.AppServiceName = "com.cninnovation.desktopbridgesample";
-                    _connection.PackageFamilyName = "6d982834-6814-4d82-b331-8644a7f54418_2dq4k2rrbc0fy";
+                    _connection = new AppServiceConnection
+                    {
+                        AppServiceName = "com.cninnovation.desktopbridgesample",
+                        PackageFamilyName = "6d982834-6814-4d82-b331-8644a7f54418_2dq4k2rrbc0fy"
+                    };
 
                     AppServiceConnectionStatus status = await _connection.OpenAsync();
 
@@ -48,13 +46,11 @@ namespace DesktopBridgeSample.Services
                         if (response.Status == AppServiceResponseStatus.Success)
                         {
                             string answer = string.Join(", ", response.Message.Values.Cast<string>().ToArray());
-                            // await _dialogService.ShowMessageAsync($"received {answer}");
                             MessageReceived?.Invoke(this, $"received {answer}");
                         }
                         else
                         {
                             MessageReceived?.Invoke(this, $"error sending message { response.Status.ToString()}");
-//                            await _dialogService.ShowMessageAsync($"error sending message {response.Status.ToString()}");
                         }
                     }
                     else
@@ -65,7 +61,7 @@ namespace DesktopBridgeSample.Services
             }
             catch (Exception ex)
             {
-
+                await _dialogService.ShowMessageAsync(ex.Message);
             }
         }
 
