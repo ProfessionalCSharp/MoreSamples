@@ -17,3 +17,9 @@ This sample is from an older edition of *Professional C#" and demonstrates 3D fe
 Folder: DynamicTabSample
 
 This sample shows how tabs within a *TabControl* can be created dynamically by selecting items in a list. See the blog article [Open Tabs dynamically with WPF](https://csharp.christiannagel.com/2016/12/19/tabcontrolwpf/ "Open Tabs dynamically with WPF") for more information.
+
+## Desktop Bridge
+
+Folder: DesktopBridgeSample
+
+This sample enhances WPF by Windows Runtime APIs using a packaged app, launching a UWP app via a protocol, and communicating between UWP and WPF with app services. See the blog article [Desktop Applications with XAML. Part 2: Desktop Bridge](TBD) for more information.
