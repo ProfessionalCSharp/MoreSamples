@@ -39,6 +39,9 @@ TestResult.xml
 [Rr]eleasePS/
 dlldata.c
 
+# NPM
+package-lock.json
+
 # DNX
 project.lock.json
 artifacts/
