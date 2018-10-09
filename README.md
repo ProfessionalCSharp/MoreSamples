@@ -62,6 +62,7 @@ Enjoy!
 
 * 3D with WPF
 * Open Tab Items Dynamically
+* Desktop Bridge
 
 ## .NET Framework (samples from older Professional C# book editions)
 

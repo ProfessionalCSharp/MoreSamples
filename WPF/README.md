@@ -22,4 +22,4 @@ This sample shows how tabs within a *TabControl* can be created dynamically by s
 
 Folder: DesktopBridgeSample
 
-This sample enhances WPF by Windows Runtime APIs using a packaged app, launching a UWP app via a protocol, and communicating between UWP and WPF with app services. See the blog article [Desktop Applications with XAML. Part 2: Desktop Bridge](TBD) for more information.
+This sample enhances WPF by Windows Runtime APIs using a packaged app, launching a UWP app via a protocol, and communicating between UWP and WPF with app services. See the blog article [Desktop Applications with XAML. Part 2: Desktop Bridge](https://csharp.christiannagel.com/2018/10/09/desktopbridge/) for more information.
