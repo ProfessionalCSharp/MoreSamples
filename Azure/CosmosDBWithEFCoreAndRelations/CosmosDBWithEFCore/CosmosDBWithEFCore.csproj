@@ -8,14 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Cosmos.Sql" Version="2.2.0-preview2-35157" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="2.2.0-preview2-35157" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.0-preview2-35157" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0-preview2-35157" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.2.0-preview2-35157" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0-preview2-35157" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0-preview2-35157" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.2.0-preview2-35157" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Cosmos" Version="2.2.0-preview3-35497" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="2.2.0-preview3-35497" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.0-preview3-35497" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0-preview3-35497" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.2.0-preview3-35497" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0-preview3-35497" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0-preview3-35497" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.2.0-preview3-35497" />
   </ItemGroup>
 
   <ItemGroup>
