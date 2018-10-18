@@ -34,7 +34,7 @@ namespace CosmosDBWithEFCore
             IConfigurationSection configSection = config.GetSection("CosmosSettings");
 
             var services = new ServiceCollection();
-            services.AddDbContext<BooksContext>(options => options.UseCosmosSql(configSection["ServiceEndpoint"], configSection["AuthKey"], configSection["DatabaseName"]));
+            services.AddDbContext<BooksContext>(options => options.UseCosmos(configSection["ServiceEndpoint"], configSection["AuthKey"], configSection["DatabaseName"]));
             services.AddTransient<BooksService>();
 
             services.AddLogging(options =>
