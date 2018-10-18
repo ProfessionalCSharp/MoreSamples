@@ -17,6 +17,5 @@ namespace CosmosDBWithEFCore
         public int Number { get; set; }
         public string Title { get; set; }
         public int Pages { get; set; }
-        public Book Book { get; set; }
     }
 }

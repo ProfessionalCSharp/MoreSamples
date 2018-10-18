@@ -13,14 +13,13 @@ namespace CosmosDBWithEFCore
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Book>().ToContainer("BooksWithRelation");
+
             modelBuilder.Entity<Book>().Property<string>("_self").ValueGeneratedOnAdd();
             modelBuilder.Entity<Book>().Property<string>("_etag").ValueGeneratedOnAddOrUpdate();
             modelBuilder.Entity<Book>().Property<long>("_ts").ValueGeneratedOnAddOrUpdate();
 
-            //modelBuilder.Entity<Book>()
-            //    .HasMany(b => b.Chapters)
-            //    .WithOne(c => c.Book)
-            //    .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<Book>().OwnsMany<Chapter>(b => b.Chapters);
         }
 
         public void ShowBooksWithShadowState()
