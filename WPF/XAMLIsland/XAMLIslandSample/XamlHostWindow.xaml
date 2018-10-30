@@ -4,10 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XAMLIslandSample"
-                xmlns:XamlHost="clr-namespace:Microsoft.Toolkit.Wpf.UI.XamlHost;assembly=Microsoft.Toolkit.Wpf.UI.XamlHost" 
+        xmlns:XamlHost="clr-namespace:Microsoft.Toolkit.Wpf.UI.XamlHost;assembly=Microsoft.Toolkit.Wpf.UI.XamlHost" 
         mc:Ignorable="d"
         Title="XamlHostWindow" Height="450" Width="800">
     <Grid>
-        <XamlHost:WindowsXamlHost  x:Name="MyXamlHost" HorizontalAlignment="Left" Height="141" Margin="81,100,0,0" VerticalAlignment="Top" Width="449" InitialTypeName="Windows.UI.Xaml.Controls.Button" ChildChanged="OnHostChildChanged"/>
+        <XamlHost:WindowsXamlHost 
+            x:Name="MyXamlHost"  
+            Height="200" 
+            Width="400"
+            Margin="20" 
+            VerticalAlignment="Top"
+            InitialTypeName="Windows.UI.Xaml.Controls.Button" 
+            ChildChanged="OnHostChildChanged"/>
     </Grid>
 </Window>

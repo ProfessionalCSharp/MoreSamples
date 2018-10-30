@@ -17,17 +17,14 @@ namespace XAMLIslandSample
 
         private void OnHostChildChanged(object sender, EventArgs e)
         {
-            if (sender is WindowsXamlHost host)
+            if (sender is WindowsXamlHost host && host.Child is UWPControls.Button button)
             {
-                if (host.Child is UWPControls.Button button)
-                {
-                    button.Content = "My UWP Button";
+                button.Content = "My UWP Button";
 
-                    button.Click += (sender1, e1) =>
-                    {
-                        MessageBox.Show("UWP button clicked");
-                    };
-                }
+                button.Click += (sender1, e1) =>
+                {
+                    MessageBox.Show("UWP button clicked");
+                };
             }
         }
     }

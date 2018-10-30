@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:XAMLIslandSample"
         mc:Ignorable="d"
         Title="WebViewWindow" Height="450" Width="800">
-    <Grid x:Name="Grid1">
+    <Grid x:Name="Grid1" Loaded="OnGridLoaded">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
@@ -15,8 +15,8 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
-        <Controls:WebView Source="https://csharp.christiannagel.com" Margin="4" Loaded="WebView_Loaded" />
-        <!--<GridSplitter Grid.Row="0" Grid.Column="0" Width="8" HorizontalAlignment="Right" VerticalAlignment="Stretch" />-->
+        <!--<Controls:WebView Source="https://csharp.christiannagel.com" Margin="4" Loaded="WebView_Loaded" />-->
+        <GridSplitter Grid.Row="0" Grid.Column="0" Width="8" HorizontalAlignment="Right" VerticalAlignment="Stretch" />
         <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="4" Content="Close" Click="OnClose" />
     </Grid>
 </Window>

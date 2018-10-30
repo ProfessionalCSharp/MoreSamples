@@ -33,13 +33,32 @@ namespace XAMLIslandSample
 
         private void WebView_Loaded(object sender, RoutedEventArgs e)
         {
+            var cp = new WebViewControlProcess(new WebViewControlProcessOptions { PrivateNetworkClientServerCapability = WebViewControlProcessCapabilityState.Enabled });
             var webview2 = new WebView(new WebViewControlProcess());
-            webview2.BeginInit();
-            webview2.Source = new Uri("https://csharp.christiannagel.com");
-            webview2.EndInit();
+            webview2.Navigate("https://csharp.christiannagel.com");
+        
+            //webview2.BeginInit();
+            //webview2.Source = new Uri("https://csharp.christiannagel.com");
+            //webview2.EndInit();
 
             Grid.SetRow(webview2, 0);
             Grid.SetColumn(webview2, 1);
+
+            Grid1.Children.Add(webview2);
+        }
+
+        private void OnGridLoaded(object sender, RoutedEventArgs e)
+        {
+            var cp = new WebViewControlProcess(new WebViewControlProcessOptions { PrivateNetworkClientServerCapability = WebViewControlProcessCapabilityState.Enabled });
+            var webview2 = new WebView(new WebViewControlProcess());
+            webview2.Navigate("https://csharp.christiannagel.com");
+
+            //webview2.BeginInit();
+            //webview2.Source = new Uri("https://csharp.christiannagel.com");
+            //webview2.EndInit();
+
+            Grid.SetRow(webview2, 0);
+            Grid.SetColumn(webview2, 0);
 
             Grid1.Children.Add(webview2);
         }
