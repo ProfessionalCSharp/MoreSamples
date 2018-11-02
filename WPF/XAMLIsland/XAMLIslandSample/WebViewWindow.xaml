@@ -1,4 +1,6 @@
-﻿<Window xmlns:Controls="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls.WebView"  x:Class="XAMLIslandSample.WebViewWindow"
+﻿<RibbonWindow 
+        x:Class="XAMLIslandSample.WebViewWindow"
+        xmlns:Controls="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls.WebView"  
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,17 +8,43 @@
         xmlns:local="clr-namespace:XAMLIslandSample"
         mc:Ignorable="d"
         Title="WebViewWindow" Height="450" Width="800">
-    <Grid x:Name="Grid1" Loaded="OnGridLoaded">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
+    <Window.CommandBindings>
+        <CommandBinding Command="BrowseBack" Executed="OnBrowseBack" CanExecute="CanBrowseBack" />
+        <CommandBinding Command="BrowseForward" Executed="OnBrowseForward" CanExecute="CanBrowseForward" />
+        <CommandBinding Command="GoToPage" Executed="OnGoToPage" />
+    </Window.CommandBindings>
+    <Grid x:Name="Grid1">
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
-        <!--<Controls:WebView Source="https://csharp.christiannagel.com" Margin="4" Loaded="WebView_Loaded" />-->
-        <GridSplitter Grid.Row="0" Grid.Column="0" Width="8" HorizontalAlignment="Right" VerticalAlignment="Stretch" />
-        <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="4" Content="Close" Click="OnClose" />
+        <Ribbon>
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu>
+                    <RibbonApplicationMenuItem Header="Close" Click="OnClose" />
+                </RibbonApplicationMenu>
+
+            </Ribbon.ApplicationMenu>
+            <RibbonTab Header="Navigation">
+                <RibbonGroup>
+                    <RibbonTextBox x:Name="textUrl" />
+                    <RibbonButton Label="Navigate" Command="GoToPage" />
+                </RibbonGroup>
+                <RibbonGroup>
+                    <RibbonButton Label="Back" Command="BrowseBack" />
+                    <RibbonButton Label="Forward" Command="BrowseForward" />
+                </RibbonGroup>
+            </RibbonTab>
+        </Ribbon>
+        <Controls:WebView Grid.Row="1" 
+                          x:Name="webView1" 
+                          Source="https://csharp.christiannagel.com" 
+                          Margin="4" 
+                          IsJavaScriptEnabled="True"
+                          IsIndexedDBEnabled="True"
+                          IsScriptNotifyAllowed="True"
+                          Loaded="WebView_Loaded" />
+        <!--<Button Grid.Row="2" Margin="4" Content="Close" Click="OnClose" />-->
     </Grid>
-</Window>
+</RibbonWindow>

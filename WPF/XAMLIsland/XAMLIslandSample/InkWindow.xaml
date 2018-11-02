@@ -14,7 +14,7 @@
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
         <Controls:InkToolbar TargetInkCanvas="{x:Reference inkCanvas}" Grid.Row="0" Height="150" />
-        <Controls:InkCanvas x:Name="inkCanvas" HorizontalAlignment="Left" Margin="8" VerticalAlignment="Top" Grid.Row="1"/>
+        <Controls:InkCanvas x:Name="inkCanvas" HorizontalAlignment="Left" Margin="8" VerticalAlignment="Top" Grid.Row="1" Loaded="OnInkLoaded"/>
         <Button Grid.Row="1" Click="OnClose" />
     </Grid>
 </Window>

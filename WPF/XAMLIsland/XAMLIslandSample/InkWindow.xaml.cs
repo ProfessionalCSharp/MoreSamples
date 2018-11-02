@@ -19,14 +19,16 @@ namespace XAMLIslandSample
     /// </summary>
     public partial class InkWindow : Window
     {
-        public InkWindow()
-        {
-            InitializeComponent();
-        }
+        public InkWindow() => InitializeComponent();
 
-        private void OnClose(object sender, RoutedEventArgs e)
+        private void OnClose(object sender, RoutedEventArgs e) => Close();
+
+        private void OnInkLoaded(object sender, RoutedEventArgs e)
         {
-            Close();
+            if (sender is InkCanvas inkCanvas)
+            {
+                inkCanvas
+            }
         }
     }
 }

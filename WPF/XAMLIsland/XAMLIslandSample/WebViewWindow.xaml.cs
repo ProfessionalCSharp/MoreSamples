@@ -1,66 +1,45 @@
-﻿using Microsoft.Toolkit.Win32.UI.Controls.Interop.WinRT;
-using Microsoft.Toolkit.Wpf.UI.Controls;
+﻿using Microsoft.Toolkit.Wpf.UI.Controls;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+using System.Windows.Controls.Ribbon;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace XAMLIslandSample
 {
-    /// <summary>
-    /// Interaction logic for WebViewWindow.xaml
-    /// </summary>
-    public partial class WebViewWindow : Window
+    public partial class WebViewWindow : RibbonWindow
     {
-        public WebViewWindow()
-        {
-            InitializeComponent();
-        }
+        public WebViewWindow() => InitializeComponent();
 
-        private void OnClose(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
+        private void OnClose(object sender, RoutedEventArgs e) => Close();
 
         private void WebView_Loaded(object sender, RoutedEventArgs e)
         {
-            var cp = new WebViewControlProcess(new WebViewControlProcessOptions { PrivateNetworkClientServerCapability = WebViewControlProcessCapabilityState.Enabled });
-            var webview2 = new WebView(new WebViewControlProcess());
-            webview2.Navigate("https://csharp.christiannagel.com");
-        
-            //webview2.BeginInit();
-            //webview2.Source = new Uri("https://csharp.christiannagel.com");
-            //webview2.EndInit();
-
-            Grid.SetRow(webview2, 0);
-            Grid.SetColumn(webview2, 1);
-
-            Grid1.Children.Add(webview2);
+            if (sender is WebView webView)
+            {
+                webView.NavigationCompleted += (sender1, e1) => CommandManager.InvalidateRequerySuggested();
+            }
         }
 
-        private void OnGridLoaded(object sender, RoutedEventArgs e)
+        private void OnGoToPage(object sender, ExecutedRoutedEventArgs e)
         {
-            var cp = new WebViewControlProcess(new WebViewControlProcessOptions { PrivateNetworkClientServerCapability = WebViewControlProcessCapabilityState.Enabled });
-            var webview2 = new WebView(new WebViewControlProcess());
-            webview2.Navigate("https://csharp.christiannagel.com");
-
-            //webview2.BeginInit();
-            //webview2.Source = new Uri("https://csharp.christiannagel.com");
-            //webview2.EndInit();
-
-            Grid.SetRow(webview2, 0);
-            Grid.SetColumn(webview2, 0);
-
-            Grid1.Children.Add(webview2);
+            try
+            {
+                webView1.Navigate(textUrl.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
         }
+
+        private void OnBrowseBack(object sender, ExecutedRoutedEventArgs e) => webView1.GoBack();
+
+        private void OnBrowseForward(object sender, ExecutedRoutedEventArgs e) => webView1.GoForward();
+
+        private void CanBrowseForward(object sender, CanExecuteRoutedEventArgs e) =>
+            e.CanExecute = webView1?.CanGoForward ?? false;
+
+        private void CanBrowseBack(object sender, CanExecuteRoutedEventArgs e) =>
+            e.CanExecute = webView1?.CanGoBack ?? false;
     }
 }
