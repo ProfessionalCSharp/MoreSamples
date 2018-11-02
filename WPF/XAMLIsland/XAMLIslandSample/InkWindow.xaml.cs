@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Toolkit.Win32.UI.Controls.Interop.WinRT;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Toolkit = Microsoft.Toolkit.Wpf.UI.Controls;
 
 namespace XAMLIslandSample
 {
@@ -25,9 +27,9 @@ namespace XAMLIslandSample
 
         private void OnInkLoaded(object sender, RoutedEventArgs e)
         {
-            if (sender is InkCanvas inkCanvas)
+            if (sender is Toolkit.InkCanvas)
             {
-                inkCanvas
+                inkCanvas.InkPresenter.InputDeviceTypes = CoreInputDeviceTypes.Mouse | CoreInputDeviceTypes.Pen | CoreInputDeviceTypes.Touch;
             }
         }
     }

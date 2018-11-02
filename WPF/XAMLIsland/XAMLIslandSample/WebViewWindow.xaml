@@ -1,6 +1,6 @@
 ﻿<RibbonWindow 
         x:Class="XAMLIslandSample.WebViewWindow"
-        xmlns:Controls="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls.WebView"  
+        xmlns:toolkit="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls.WebView"  
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -37,7 +37,7 @@
                 </RibbonGroup>
             </RibbonTab>
         </Ribbon>
-        <Controls:WebView Grid.Row="1" 
+        <toolkit:WebView Grid.Row="1" 
                           x:Name="webView1" 
                           Source="https://csharp.christiannagel.com" 
                           Margin="4" 
@@ -45,6 +45,5 @@
                           IsIndexedDBEnabled="True"
                           IsScriptNotifyAllowed="True"
                           Loaded="WebView_Loaded" />
-        <!--<Button Grid.Row="2" Margin="4" Content="Close" Click="OnClose" />-->
     </Grid>
 </RibbonWindow>
