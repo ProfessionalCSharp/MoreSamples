@@ -5,9 +5,6 @@ using UWPControls = Windows.UI.Xaml.Controls;
 
 namespace XAMLIslandSample
 {
-    /// <summary>
-    /// Interaction logic for XamlHostWindow.xaml
-    /// </summary>
     public partial class XamlHostWindow : Window
     {
         public XamlHostWindow()

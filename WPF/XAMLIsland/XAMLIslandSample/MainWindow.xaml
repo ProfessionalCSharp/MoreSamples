@@ -10,6 +10,7 @@
         <StackPanel Orientation="Vertical">
             <Button Content="Web View" Click="OnWebView" Margin="4" />
             <Button Content="Ink View" Click="OnInkView" Margin="4" />
+            <Button Content="Map View" Click="OnMapView" Margin="4" />
             <Button Content="XAML Host" Click="OnXamlHost" Margin="4" />
         </StackPanel>
         

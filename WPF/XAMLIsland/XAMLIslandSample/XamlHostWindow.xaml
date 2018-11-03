@@ -4,11 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XAMLIslandSample"
-        xmlns:XamlHost="clr-namespace:Microsoft.Toolkit.Wpf.UI.XamlHost;assembly=Microsoft.Toolkit.Wpf.UI.XamlHost" 
+        xmlns:xamlHost="clr-namespace:Microsoft.Toolkit.Wpf.UI.XamlHost;assembly=Microsoft.Toolkit.Wpf.UI.XamlHost" 
         mc:Ignorable="d"
         Title="XamlHostWindow" Height="450" Width="800">
     <Grid>
-        <XamlHost:WindowsXamlHost 
+        <xamlHost:WindowsXamlHost 
             x:Name="MyXamlHost"  
             Height="200" 
             Width="400"
