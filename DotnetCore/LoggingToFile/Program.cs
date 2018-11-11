@@ -1,18 +1,17 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Serilog;
 using System;
 using System.Diagnostics;
-using System.Threading.Tasks;
-using Serilog;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace LoggingConfigurationSample
 {
     class Program
     {
         private static string s_url = "https://csharp.christiannagel.com";
-        private static TraceListener s_listener; // = new TextWriterTraceListener("c:/temp/logfile.txt");
 
         static async Task Main(string[] args)
         {
@@ -34,7 +33,7 @@ namespace LoggingConfigurationSample
             Log.CloseAndFlush();
 
             AppServices.Dispose();
-          
+
             Console.ReadLine();
         }
 
@@ -44,12 +43,13 @@ namespace LoggingConfigurationSample
             await controller.NetworkRequestSampleAsync(s_url);
         }
 
-        static void ConfigureSeriLogging()
-        {
-            Log.Logger = new LoggerConfiguration()
-                .WriteTo.File("serilog.txt").CreateLogger();
-        }
+        //static void ConfigureSeriLogging()
+        //{
+        //    Log.Logger = new LoggerConfiguration()
+        //        .WriteTo.File("serilog.txt").CreateLogger();
+        //}
 
+        private static TraceListener s_listener;
         static void ConfigureTraceSourceLogging()
         {
             var writer = File.CreateText("logfile.txt");
@@ -59,23 +59,22 @@ namespace LoggingConfigurationSample
 
         static void RegisterServices(IConfiguration configuration)
         {
-            ConfigureSeriLogging();
+            // ConfigureSeriLogging();  // static configuration instead of passing a logger to AddSerilog
             ConfigureTraceSourceLogging();
 
             var services = new ServiceCollection();
             services.AddLogging(builder =>
             {
                 builder.AddConfiguration(configuration.GetSection("Logging"))
-                .AddTraceSource(new SourceSwitch("TraceSourceLog", SourceLevels.Verbose.ToString()), s_listener)
-                .AddSerilog()
-                .AddConsole();
+                    .AddTraceSource(new SourceSwitch("TraceSourceLog", SourceLevels.Verbose.ToString()), s_listener)
+                    .AddSerilog(new LoggerConfiguration().WriteTo.File("serilog.txt").CreateLogger())
+                    .AddConsole();
 #if DEBUG
                 builder.AddDebug();
 #endif
             });
             services.AddHttpClient<SampleController>();
             AppServices = services.BuildServiceProvider();
-           
         }
 
         public static ServiceProvider AppServices { get; private set; }

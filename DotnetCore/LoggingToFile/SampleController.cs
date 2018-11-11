@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 
 namespace LoggingConfigurationSample
 {
-    class SampleController
+    public class SampleController
     {
         private readonly ILogger<SampleController> _logger;
         private readonly HttpClient _httpClient;
         public SampleController(HttpClient httpClient, ILogger<SampleController> logger)
         {
-            _httpClient = httpClient;
-            _logger = logger;
+            _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _logger.LogTrace("ILogger injected into {0}", nameof(SampleController));
         }
 
