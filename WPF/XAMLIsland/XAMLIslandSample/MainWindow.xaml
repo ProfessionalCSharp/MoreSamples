@@ -1,0 +1,18 @@
+﻿<Window x:Class="XAMLIslandSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XAMLIslandSample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="Grid1">
+        <StackPanel Orientation="Vertical">
+            <Button Content="Web View" Click="OnWebView" Margin="4" />
+            <Button Content="Ink View" Click="OnInkView" Margin="4" />
+            <Button Content="Map View" Click="OnMapView" Margin="4" />
+            <Button Content="XAML Host" Click="OnXamlHost" Margin="4" />
+        </StackPanel>
+        
+    </Grid>
+</Window>
