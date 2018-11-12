@@ -2,6 +2,7 @@
 
 > Enjoy the following .NET Core samples
 
+* Logging to Files
 * Dependency Injection
 * Dependency Injection with Options
 * Configuration
@@ -9,6 +10,12 @@
 * HTTP Client Factory
 * Markdown
 * Self-contained
+
+## Logging to Files
+
+This sample shows logging to files using the ILogger interface, and tracesource and Serilog log providers.
+
+See the blog article [Writing ILogger Diagnostics to a File](https://csharp.christiannagel.com).
 
 ## Dependency Injection
 
