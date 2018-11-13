@@ -15,7 +15,7 @@
 
 This sample shows logging to files using the ILogger interface, and tracesource and Serilog log providers.
 
-See the blog article [Writing ILogger Diagnostics to a File](https://csharp.christiannagel.com).
+See the blog article [Writing ILogger Diagnostics to a File](https://csharp.christiannagel.com/2018/11/13/iloggertofile/).
 
 ## Dependency Injection
 
