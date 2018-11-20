@@ -15,6 +15,9 @@ Enjoy!
 ## Azure
 
 * Hosting Blazor on Azure Storage Websites with Azure Functions in the backend
+* Hosting Angular on Azure Storage Websites with Azure Functions in the backend
+* Azure Active Directory B2C with ASP.NET Core
+* Using EF Core with Azure Cosmos DB
 
 ## C#
 
@@ -59,6 +62,7 @@ Enjoy!
 
 * 3D with WPF
 * Open Tab Items Dynamically
+* Desktop Bridge
 
 ## .NET Framework (samples from older Professional C# book editions)
 
