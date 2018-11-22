@@ -19,6 +19,12 @@ namespace CosmosDBWithEFCore
             modelBuilder.Entity<Book>().Property<string>("_etag").ValueGeneratedOnAddOrUpdate();
             modelBuilder.Entity<Book>().Property<long>("_ts").ValueGeneratedOnAddOrUpdate();
 
+            modelBuilder.Entity<Chapter>().Property(c => c.ChapterId).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+            modelBuilder.Entity<Chapter>().Property(c => c.Number).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+            modelBuilder.Entity<Chapter>().Property(c => c.Pages).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+            modelBuilder.Entity<Chapter>().Property(c => c.Title).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+
+
             modelBuilder.Entity<Book>().OwnsMany<Chapter>(b => b.Chapters);
         }
 
