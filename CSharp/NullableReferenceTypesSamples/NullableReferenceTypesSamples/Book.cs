@@ -1,4 +1,6 @@
-﻿namespace NullableReferenceTypesSamples
+﻿#nullable enable
+
+namespace NullableReferenceTypesSamples
 {
     class Book
     {

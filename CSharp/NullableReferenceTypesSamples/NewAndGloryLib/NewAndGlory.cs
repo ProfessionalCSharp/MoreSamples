@@ -1,5 +1,7 @@
 ﻿using System;
 
+#nullable enable
+
 namespace NewAndGloryLib
 {
     public class NewAndGlory
