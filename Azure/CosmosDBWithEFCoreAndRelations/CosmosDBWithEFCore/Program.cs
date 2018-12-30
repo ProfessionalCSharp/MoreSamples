@@ -12,19 +12,21 @@ namespace CosmosDBWithEFCore
     {
         static async Task Main(string[] args)
         {
-            ConfigureServices();
+            ConfigureServices(args);
             var service = Container.GetRequiredService<BooksService>();
             await service.CreateTheDatabaseAsync();
-            await service.WriteBooksAsync();
+                await service.WriteBooksAsync();
             service.ReadBooks();
             Console.WriteLine("completed");
         }
 
-        public static void ConfigureServices()
+        public static void ConfigureServices(string[] args)
         {
             var configurationBuilder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json");
+                .AddJsonFile("appsettings.json")
+                .AddEnvironmentVariables()
+                .AddCommandLine(args);
 
 #if DEBUG
             configurationBuilder.AddUserSecrets("1E2D66CC-11C9-4DE7-B25E-F1EAA5F0154A");
