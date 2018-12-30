@@ -10,6 +10,7 @@ namespace CosmosDBWithEFCore
             : base(options) { }
 
         public DbSet<Book> Books { get; set; }
+        public DbSet<Author> Authors { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -19,11 +20,14 @@ namespace CosmosDBWithEFCore
             modelBuilder.Entity<Book>().Property<string>("_etag").ValueGeneratedOnAddOrUpdate();
             modelBuilder.Entity<Book>().Property<long>("_ts").ValueGeneratedOnAddOrUpdate();
 
-            modelBuilder.Entity<Chapter>().Property(c => c.ChapterId).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
-            modelBuilder.Entity<Chapter>().Property(c => c.Number).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
-            modelBuilder.Entity<Chapter>().Property(c => c.Pages).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
-            modelBuilder.Entity<Chapter>().Property(c => c.Title).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+            modelBuilder.Entity<Author>().ToContainer("BooksWithRelation");
 
+            modelBuilder.Entity<Chapter>().HasKey(c => c.ChapterId);
+
+            //modelBuilder.Entity<Chapter>().Property(c => c.ChapterId).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+            //modelBuilder.Entity<Chapter>().Property(c => c.Number).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+            //modelBuilder.Entity<Chapter>().Property(c => c.Pages).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+            //modelBuilder.Entity<Chapter>().Property(c => c.Title).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
 
             modelBuilder.Entity<Book>().OwnsMany<Chapter>(b => b.Chapters);
         }
@@ -34,7 +38,7 @@ namespace CosmosDBWithEFCore
             foreach (var book in Books)
             {
                 Console.WriteLine(book.Title);
-                var props = Entry<Book>(book).Properties;
+                var props = Entry(book).Properties;
                 foreach (var propEntry in props)
                 {
                     Console.WriteLine($"{propEntry.Metadata.Name} {propEntry.CurrentValue}");

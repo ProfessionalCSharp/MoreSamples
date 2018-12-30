@@ -5,7 +5,7 @@ namespace CosmosDBWithEFCore
 {
     public class Book
     {
-        public static Book Create(string title, string publisher, params Chapter[] chapters)
+        public static Book Create(string title, string publisher, Author leadAuthor, params Chapter[] chapters)
         {
             var book = new Book()
             {
@@ -14,6 +14,7 @@ namespace CosmosDBWithEFCore
                 Publisher = publisher
             };
             book._chapters.AddRange(chapters);
+            book._authors.Add(leadAuthor);
             return book;
         }
 
@@ -23,5 +24,8 @@ namespace CosmosDBWithEFCore
 
         private readonly List<Chapter> _chapters = new List<Chapter>();
         public ICollection<Chapter> Chapters => _chapters;
+
+        private readonly List<Author> _authors = new List<Author>();
+        public ICollection<Author> Authors => _authors;
     }
 }
