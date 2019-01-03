@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 
 namespace LazyLoading
 {
@@ -25,10 +23,9 @@ namespace LazyLoading
                 {
                     Console.WriteLine($"{chapter.Number}. {chapter.Title}");
                 }
-                Console.WriteLine($"author: {book.Author}");
-                Console.WriteLine($"reviewer: {book.Reviewer}");
-                Console.WriteLine($"editor: {book.Editor}");
-
+                Console.WriteLine($"author: {book.Author?.Name}");
+                Console.WriteLine($"reviewer: {book.Reviewer?.Name}");
+                Console.WriteLine($"editor: {book.Editor?.Name}");
             }
         }
 
@@ -93,49 +90,19 @@ namespace LazyLoading
         {
             Console.Write("Delete the database? ");
             string input = Console.ReadLine();
+
             if (input.ToLower() == "y")
             {
-                await _booksContext.Database.EnsureDeletedAsync();
+                bool deleted = await _booksContext.Database.EnsureDeletedAsync();
+                Console.WriteLine($"database deleted: {deleted}");
             }
         }
 
-        public Task CreateDatabaseAsync() =>
-                _booksContext.Database.EnsureCreatedAsync();
-
-        public async Task AddBooksAsync()
+        public async Task CreateDatabaseAsync()
         {
-            Console.WriteLine(nameof(AddBooksAsync));
-            var author = new User("Christian Nagel");
-            var reviewer = new User("Istvan Novak");
-            var editor = new User("Charlotte Kughen");
-            var b1 = new Book("Professional C# 7 and .NET Core 2.0")
-            {
-                Editor = editor,
-                Reviewer = reviewer,
-                Author = author
-            };
-
-            var c1 = new Chapter(1, ".NET Applications and Tools")
-            {
-                Book = b1
-            };
-            var c2 = new Chapter(2, "Core C#")
-            {
-                Book = b1
-            };
-            var c3 = new Chapter(28, "Entity Framework Core")
-            {
-                Book = b1
-            };
-
-            _booksContext.Books.Add(b1);
-            _booksContext.Users.AddRange(author, editor, reviewer);
-            _booksContext.Chapters.AddRange(c1, c2, c3);
-
-            int records = await _booksContext.SaveChangesAsync();
-
-            Console.WriteLine($"{records} records added");
-            Console.WriteLine();
+            bool created = await _booksContext.Database.EnsureCreatedAsync();
+            string info = created ? "created" : "already exists";
+            Console.WriteLine($"database {info}");
         }
     }
 }

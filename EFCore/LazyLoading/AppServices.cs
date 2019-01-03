@@ -40,13 +40,15 @@ namespace LazyLoading
                     config
                         .AddConsole()
                         .AddDebug()
-                        .AddFilter(level => true);
+                        .AddFilter(level => level > LogLevel.Debug);
                 })
                 .AddTransient<BooksService>()
                 .AddDbContext<BooksContext>(options =>
                 {
-                    options.UseLazyLoadingProxies()
+                    options
+                        .UseLazyLoadingProxies()
                         .UseSqlServer(Configuration.GetConnectionString(BooksConnection));
-                }).BuildServiceProvider();
+                })
+                .BuildServiceProvider();
     }
 }
