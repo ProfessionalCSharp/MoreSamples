@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 
 #nullable disable
 
@@ -80,9 +79,6 @@ namespace LazyLoading
             {
                 c.BookId = 1;
             }
-            //_users[0].WrittenBooks.Add(_book);
-            //_users[1].ReviewedBooks.Add(_book);
-            //_users[2].EditedBooks.Add(_book);
 
             modelBuilder.Entity<User>().HasData(_users);
             modelBuilder.Entity<Book>().HasData(_book);
