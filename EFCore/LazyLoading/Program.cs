@@ -13,6 +13,8 @@ namespace LazyLoading
             var booksService = container.GetRequiredService<BooksService>();
             await booksService.CreateDatabaseAsync();
             booksService.GetBooksWithLazyLoading();
+            booksService.GetBooksWithEagerLoading();
+            booksService.GetBooksWithExplicitLoading();
             await booksService.DeleteDatabaseAsync();
         }
     }

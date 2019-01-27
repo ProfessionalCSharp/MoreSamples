@@ -15,43 +15,9 @@ namespace LazyLoading
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Book>()
-                .HasMany(b => b.Chapters)
-                .WithOne(c => c.Book)
-                .OnDelete(DeleteBehavior.Cascade);
-            modelBuilder.Entity<Book>()
-                .HasOne(b => b.Author)
-                .WithMany(a => a.WrittenBooks)
-                .HasForeignKey(b => b.AuthorId)
-                .OnDelete(DeleteBehavior.Restrict);
-            modelBuilder.Entity<Book>()
-                .HasOne(b => b.Reviewer)
-                .WithMany(r => r.ReviewedBooks)
-                .HasForeignKey(b => b.ReviewerId)
-                .OnDelete(DeleteBehavior.Restrict);
-            modelBuilder.Entity<Book>()
-                .HasOne(b => b.Editor)
-                .WithMany(e => e.EditedBooks)
-                .HasForeignKey(e => e.EditorId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            modelBuilder.Entity<Chapter>()
-                .HasOne(c => c.Book)
-                .WithMany(b => b.Chapters)
-                .HasForeignKey(c => c.BookId);
-
-            modelBuilder.Entity<User>()
-                .HasMany(a => a.WrittenBooks)
-                .WithOne(nameof(Book.Author))
-                .OnDelete(DeleteBehavior.Restrict);
-            modelBuilder.Entity<User>()
-                .HasMany(r => r.ReviewedBooks)
-                .WithOne(nameof(Book.Reviewer))
-                .OnDelete(DeleteBehavior.Restrict);
-            modelBuilder.Entity<User>()
-                .HasMany(e => e.EditedBooks)
-                .WithOne(nameof(Book.Editor))
-                .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.ApplyConfiguration(new BookConfiguration());
+            modelBuilder.ApplyConfiguration(new ChapterConfiguration());
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
 
             SeedData(modelBuilder);
         }
@@ -62,7 +28,7 @@ namespace LazyLoading
             new User(2, "Istvan Novak"),
             new User(3, "Charlotte Kughen")
         };
-        private Book _book = new Book(1, "Professional C# 7 and .NET Core 2.0");
+        private Book _book = new Book(1, "Professional C# 7 and .NET Core 2.0", "Wrox Press");
         private Chapter[] _chapters = new[]
         {
             new Chapter(1, 1, ".NET Applications and Tools"),

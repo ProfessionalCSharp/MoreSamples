@@ -1,4 +1,6 @@
-﻿namespace LazyLoading
+﻿#nullable enable
+
+namespace LazyLoading
 {
     public class Chapter
     {
