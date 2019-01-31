@@ -30,7 +30,7 @@ Folder: LazyLoading
 
 Use *lazy loading* to load relations.
 
-See the blog article [Lazy Loading with EF Core](https://csharp.christiannagel.com/) for more information.
+See the blog article [Lazy Loading with EF Core](https://csharp.christiannagel.com/2019/01/30/lazyloading/) for more information.
 
 ## Unit Tests
 
