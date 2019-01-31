@@ -43,6 +43,7 @@ Enjoy!
 
 * Inheritance (TPH)
 * Mapping to Getter Only Properties
+* Lazy Loading
 
 ## ASP.NET Core
 
