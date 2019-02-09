@@ -24,6 +24,14 @@ Mapping to fields of getter only properties.
 
 See the blog article [Mapping to Getter-only Properties with EF Core](https://csharp.christiannagel.com/2016/11/07/efcorefields/ "EF Core mapping to fields") for more information.
 
+## Lazy Loading
+
+Folder: LazyLoading
+
+Use *lazy loading* to load relations.
+
+See the blog article [Lazy Loading with EF Core](https://csharp.christiannagel.com/2019/01/30/lazyloading/) for more information.
+
 ## Unit Tests
 
 Folder: EFUnitTests
@@ -41,6 +49,6 @@ Generate logging output from Entity Framework Core
 Folder: SeedSample
 
 Seeding data on creation of the database.
-This sample requries Entity Framework Core 2.1.
+This sample requires Entity Framework Core 2.1.
 
 See the blog article [Seeding data with EF Core](https://csharp.christiannagel.com) for more information.

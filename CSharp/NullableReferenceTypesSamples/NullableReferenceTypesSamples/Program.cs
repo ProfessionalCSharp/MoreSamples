@@ -1,6 +1,8 @@
 ﻿using NewAndGloryLib;
 using TheOldLib;
 
+#nullable enable
+
 namespace NullableReferenceTypesSamples
 {
     class SomeClass : ILegacyInterface
