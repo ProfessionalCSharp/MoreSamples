@@ -1,16 +1,22 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace CosmosDBWithEFCore
 {
+    [Owned]
     public class Author
     {
-        public Author(string firstName, string lastName) =>
-            (FirstName, LastName) = (firstName, lastName);
+        public Author()
+        {
+
+        }
+
+        public Author(string firstName, string lastName) => (FirstName, LastName) = (firstName, lastName);
 
 
-        public Guid AuthorId { get; } = Guid.NewGuid();
-        public string FirstName { get; }
-        public string LastName { get; }
+        public Guid AuthorId { get; set; } = Guid.NewGuid();
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
 
         public override string ToString() => $"{FirstName} {LastName}";
     }

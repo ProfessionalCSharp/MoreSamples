@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 
 namespace CosmosDBWithEFCore
@@ -18,6 +19,11 @@ namespace CosmosDBWithEFCore
         //    return book;
         //}
 
+        public Book()
+        {
+
+        }
+
         public Book(string title, string publisher)
         {
             BookId = Guid.NewGuid();
@@ -35,16 +41,17 @@ namespace CosmosDBWithEFCore
             Chapters.AddRange(chapters);
         }
 
-        public Guid BookId { get; }
-        public string Title { get; }
-        public string Publisher { get; }
+        public Guid BookId { get; set; }
+        public string Title { get; set; }
+        public string Publisher { get; set; }
 
         //private readonly List<Chapter> _chapters = new List<Chapter>();
         //public ICollection<Chapter> Chapters => _chapters;
-        public List<Chapter> Chapters { get; set; }
+        public List<Chapter> Chapters { get; set; } = new List<Chapter>();
 
         //private readonly List<Author> _authors = new List<Author>();
         //public ICollection<Author> Authors => _authors;
-        public Author LeadAuthor { get; set; }
+       
+        public Author LeadAuthor { get; set; } = new Author();
     }
 }
