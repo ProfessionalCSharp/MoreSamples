@@ -4,9 +4,13 @@ namespace CosmosDBWithEFCore
 {
     public class Author
     {
-        public Guid AuthorId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public Author(string firstName, string lastName) =>
+            (FirstName, LastName) = (firstName, lastName);
+
+
+        public Guid AuthorId { get; } = Guid.NewGuid();
+        public string FirstName { get; }
+        public string LastName { get; }
 
         public override string ToString() => $"{FirstName} {LastName}";
     }

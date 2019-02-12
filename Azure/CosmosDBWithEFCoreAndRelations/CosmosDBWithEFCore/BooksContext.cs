@@ -10,54 +10,33 @@ namespace CosmosDBWithEFCore
             : base(options) { }
 
         public DbSet<Book> Books { get; set; }
-        public DbSet<Author> Authors { get; set; }
+//        public DbSet<Author> Authors { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Book>().ToContainer("BooksWithRelation");
+            modelBuilder.Entity<Book>().ToContainer("BooksContainer");
+            modelBuilder.Entity<Book>().OwnsOne(b => b.LeadAuthor).HasKey(a => a.AuthorId);
+            modelBuilder.Entity<Book>().OwnsMany(b => b.Chapters).HasKey(c => c.ChapterId);
 
-            modelBuilder.Entity<Book>().Property<string>("_self").ValueGeneratedOnAdd();
-            modelBuilder.Entity<Book>().Property<string>("_etag").ValueGeneratedOnAddOrUpdate();
-            modelBuilder.Entity<Book>().Property<long>("_ts").ValueGeneratedOnAddOrUpdate();
+            modelBuilder.Entity<Book>().Property(b => b.BookId).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+            modelBuilder.Entity<Book>().Property(b => b.Title).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+            modelBuilder.Entity<Book>().Property(b => b.Publisher).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+           // modelBuilder.Entity<Book>().Property(b => b.LeadAuthor).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
 
-            modelBuilder.Entity<Author>().ToContainer("BooksWithRelation");
+            modelBuilder.Entity<Chapter>().ToContainer("BooksContainer");
 
             modelBuilder.Entity<Chapter>().HasKey(c => c.ChapterId);
 
-            //modelBuilder.Entity<Chapter>().Property(c => c.ChapterId).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
-            //modelBuilder.Entity<Chapter>().Property(c => c.Number).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
-            //modelBuilder.Entity<Chapter>().Property(c => c.Pages).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
-            //modelBuilder.Entity<Chapter>().Property(c => c.Title).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+            modelBuilder.Entity<Chapter>().Property(c => c.ChapterId).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+            modelBuilder.Entity<Chapter>().Property(c => c.Number).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+            modelBuilder.Entity<Chapter>().Property(c => c.Pages).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+            modelBuilder.Entity<Chapter>().Property(c => c.Title).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
 
-            modelBuilder.Entity<Book>().OwnsMany<Chapter>(b => b.Chapters);
-        }
+            modelBuilder.Entity<Author>().ToContainer("BooksContainer");
+            modelBuilder.Entity<Author>().Property(a => a.AuthorId).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+            modelBuilder.Entity<Author>().Property(a => a.FirstName).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
+            modelBuilder.Entity<Author>().Property(a => a.LastName).UsePropertyAccessMode(PropertyAccessMode.FieldDuringConstruction);
 
-        public void ShowBooksWithShadowState()
-        {
-            Console.WriteLine("show all shadow state");
-            foreach (var book in Books)
-            {
-                Console.WriteLine(book.Title);
-                var props = Entry(book).Properties;
-                foreach (var propEntry in props)
-                {
-                    Console.WriteLine($"{propEntry.Metadata.Name} {propEntry.CurrentValue}");
-                }
-            }
-            Console.WriteLine();
-        }
-
-        public void ShowCosmosDBState()
-        {
-            Console.WriteLine("selecte specific shadow state");
-            foreach (var book in Books)
-            {
-                Console.WriteLine($"{book.Title}, etag: {Entry<Book>(book).Property("_etag").CurrentValue}, " +
-                    $"self: {Entry(book).Property("_self").CurrentValue}, " +
-                    $"ts: {Entry(book).Property("_ts").CurrentValue}");
-                Console.WriteLine();
-            }
-            Console.WriteLine();
         }
     }
 }
