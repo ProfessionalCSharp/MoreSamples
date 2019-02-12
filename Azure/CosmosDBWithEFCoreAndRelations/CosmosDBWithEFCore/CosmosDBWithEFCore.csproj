@@ -8,14 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Cosmos" Version="3.0.0-preview.19074.3" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="3.0.0-preview.19074.2" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.0.0-preview.19074.2" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.0.0-preview.19074.2" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="3.0.0-preview.19074.2" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.0-preview.19074.2" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.0.0-preview.19074.2" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0-preview.19074.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Cosmos" Version="3.0.0-preview.19080.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="3.0.0-preview.19108.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.0.0-preview.19108.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.0.0-preview.19108.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="3.0.0-preview.19108.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.0-preview.19108.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.0.0-preview.19108.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0-preview.19108.1" />
   </ItemGroup>
 
   <ItemGroup>
