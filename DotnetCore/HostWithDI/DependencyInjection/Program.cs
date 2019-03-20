@@ -17,14 +17,14 @@ namespace DependencyInjection
 
         private static void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IGreetingService, GreetingService>();
+            services.AddTransient<IGreetingService, GreetingService>();
             services.AddTransient<HelloController>();
         }
 
         private static void UsingAContainer(IServiceProvider container)
         {
             var controller = container.GetService<HelloController>();
-            string greeting = controller.Action("Stephanie");
+            string greeting = controller.Action("Katharina");
             Console.WriteLine(greeting);
         }
     }
