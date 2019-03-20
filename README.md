@@ -28,6 +28,8 @@ Enjoy!
 * Pattern Matching
 * Non-nullable Reference Types (C# 8)
 * Pattern matching extended (C# 8)
+* Indexes and Ranges (C# 8)
+* Async Streams (C# 8)
 
 ## .NET Core
 
