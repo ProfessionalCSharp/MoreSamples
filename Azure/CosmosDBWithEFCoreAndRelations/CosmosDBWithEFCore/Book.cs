@@ -5,7 +5,9 @@ namespace CosmosDBWithEFCore
 {
     public class Book
     {
-        public Book() {  }
+        public Book(string title, string publisher)
+            : this(title, publisher, Author.Empty)
+        { }
 
         public Book(string title, string publisher, Author leadAuthor, params Chapter[] chapters)
         {
@@ -19,10 +21,10 @@ namespace CosmosDBWithEFCore
 
         public Guid BookId { get; set; }
         public string Title { get; set; }
-        public string Publisher { get; set; }
+        public string? Publisher { get; set; }
 
-        public List<Chapter> Chapters { get; set; } = new List<Chapter>();
+        public List<Chapter> Chapters { get; set; }
        
-        public Author LeadAuthor { get; set; } = new Author();
+        public Author LeadAuthor { get; set; }
     }
 }

@@ -3,10 +3,11 @@ using System;
 
 namespace CosmosDBWithEFCore
 {
-    [Owned]
+    // [Owned]
     public class Chapter
     {
-        public Chapter() { }
+        public Chapter(int number, string title, int pages) => 
+            (Number, Title, Pages) = (number, title, pages);
 
         public Guid ChapterId { get; set; } = Guid.NewGuid();
         public int Number { get; set; }

@@ -20,32 +20,13 @@ namespace CosmosDBWithEFCore
 
         public async Task WriteBooksAsync()
         {
-            var author = new Author
-            {
-                FirstName = "Christian",
-                LastName = "Nagel"
-            };
-            var c1 = new Chapter
-            {
-                Number = 1,
-                Title = ".NET Applications and Tools",
-                Pages = 34
-            };
-            var c2 = new Chapter
-            {
-                Number = 2,
-                Title = "Core C#",
-                Pages = 38
-            };
-            var c3 = new Chapter
-            {
-                Number = 3,
-                Title = "Objects and Types",
-                Pages = 34
-            };
+            var author = new Author("Christian", "Nagel");
+            var c1 = new Chapter(1, ".NET Applications and Tools", 38);
+            var c2 = new Chapter(2, "Core C#", 38);
+            var c3 = new Chapter(3, "Objects and Types", 34);
 
             var book1 = new Book("Professional C# 7 and .NET Core 2.0", "Wrox Press", author, c1, c2, c3);
-            _booksContext.Books.Add(book1);
+            _booksContext.Books?.Add(book1);
             int changed = await _booksContext.SaveChangesAsync();
             Console.WriteLine($"created {changed} record(s)");
         }
