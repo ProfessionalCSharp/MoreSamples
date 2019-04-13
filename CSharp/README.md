@@ -10,6 +10,8 @@
 * Non-Nullable Reference Types (C# 8)
 * Pattern matching extended (C# 8)
 * Indexes and Ranges (C# 8)
+* Async Streams (C# 8)
+* Using Declaration (C# 8)
 
 ## Binary Literals
 
@@ -72,3 +74,21 @@ See the blog article [C# 8: Pattern Matching extended](https://csharp.christiann
 Folder: RangesSample
 
 C# 8 offers a range that can be used with strings and collections.
+
+See the blog article [C# 8: Indexes and Ranges](https://csharp.christiannagel.com/2018/07/24/indexesandranges/) for more information.
+
+## Async Streams (C# 8)
+
+Folder: AsyncStreamsSample
+
+C# 8 offers async streams with async variants of the IEnumerable and IEnumerator interfaces, and extensions to foreach and yield. 
+
+See the blog article [Async Streams with C# 8](https://csharp.christiannagel.com/2019/03/20/asyncstreams/) for more information.
+
+## Using Declaration (C# 8)
+
+Folder: UsingDeclarationSample
+
+C# 8 gives a simple syntax to dispose resources - the *using declaration*.
+
+See the blog article [Using, using, using with C# 8](https://csharp.christiannagel.com/2019/04/09/using/) for more information.
