@@ -11,6 +11,7 @@
 * Pattern matching extended (C# 8)
 * Indexes and Ranges (C# 8)
 * Async Streams (C# 8)
+* Using Declaration (C# 8)
 
 ## Binary Literals
 
@@ -83,3 +84,11 @@ Folder: AsyncStreamsSample
 C# 8 offers async streams with async variants of the IEnumerable and IEnumerator interfaces, and extensions to foreach and yield. 
 
 See the blog article [Async Streams with C# 8](https://csharp.christiannagel.com/2019/03/20/asyncstreams/) for more information.
+
+## Using Declaration (C# 8)
+
+Folder: UsingDeclarationSample
+
+C# 8 gives a simple syntax to dispose resources - the *using declaration*.
+
+See the blog article [Using, using, using with C# 8](https://csharp.christiannagel.com/2019/04/09/using/) for more information.

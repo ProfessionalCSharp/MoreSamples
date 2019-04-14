@@ -38,3 +38,11 @@ Folder: LibraryManagerSample
 Use the Library Manager instead of Bower.
 
 See the blog article [Library Manager to manage client-side packages](https://csharp.christiannagel.com)
+
+## Compare
+
+Folder: Compare
+
+ASP.NET Core 3.0 technologies
+
+See the blog article [Choosing the right ASP.NET Core technology](https://csharp.christiannagel.com/2019/04/03/choosing-the-right-asp-net-core-technology/)

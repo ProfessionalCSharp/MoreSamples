@@ -34,6 +34,14 @@ See the blog article [Using Active Directory with ASP.NET Core](https://csharp.c
 
 Folder: CosmosDBWithEFCore
 
-Using Azure Cosmos DB with Entity Framework Core 2.2.
+Using Azure Cosmos DB with Entity Framework Core 3.0.
 
 See the blog article [Using EF Core with Azure Cosmos DB](https://csharp.christiannagel.com/2018/09/05/efcorecosmos/)
+
+## Relations with Azure Cosmos DB and EF Core
+
+Folder: CosmosDBWithEFCoreAndRelations
+
+Using Azure Cosmos DB with Entity Framework Core 3.0.
+
+See the blog article [Relations with Azure Cosmos DB and EF Core]()

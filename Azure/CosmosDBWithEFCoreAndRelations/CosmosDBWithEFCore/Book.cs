@@ -5,23 +5,26 @@ namespace CosmosDBWithEFCore
 {
     public class Book
     {
-        public static Book Create(string title, string publisher, params Chapter[] chapters)
+        public Book(string title, string publisher)
+            : this(title, publisher, Author.Empty)
+        { }
+
+        public Book(string title, string publisher, Author leadAuthor, params Chapter[] chapters)
         {
-            var book = new Book()
-            {
-                BookId = Guid.NewGuid(),
-                Title = title,
-                Publisher = publisher
-            };
-            book._chapters.AddRange(chapters);
-            return book;
+            BookId = Guid.NewGuid();
+            Title = title;
+            Publisher = publisher;
+            LeadAuthor = leadAuthor;
+            _chapters.AddRange(chapters);
         }
 
         public Guid BookId { get; set; }
         public string Title { get; set; }
-        public string Publisher { get; set; }
+        public string? Publisher { get; set; }
 
-        private readonly List<Chapter> _chapters = new List<Chapter>();
-        public ICollection<Chapter> Chapters => _chapters;
+        private List<Chapter> _chapters = new List<Chapter>();
+        public IEnumerable<Chapter> Chapters => _chapters;
+       
+        public Author LeadAuthor { get; set; }
     }
 }
