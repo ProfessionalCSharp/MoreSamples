@@ -15,15 +15,15 @@ namespace CosmosDBWithEFCore
             Title = title;
             Publisher = publisher;
             LeadAuthor = leadAuthor;
-            Chapters = new List<Chapter>();
-            Chapters.AddRange(chapters);
+            _chapters.AddRange(chapters);
         }
 
         public Guid BookId { get; set; }
         public string Title { get; set; }
         public string? Publisher { get; set; }
 
-        public List<Chapter> Chapters { get; set; }
+        private List<Chapter> _chapters = new List<Chapter>();
+        public IEnumerable<Chapter> Chapters => _chapters;
        
         public Author LeadAuthor { get; set; }
     }

@@ -12,13 +12,12 @@ namespace CosmosDBWithEFCore
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasDefaultContainerName("BooksContainer");
+            // entity types can be explicitly mapped to containers
             // modelBuilder.Entity<Book>().ToContainer("BooksContainer");
-            //modelBuilder.Entity<Chapter>().ToContainer("BooksCollection");
-            //modelBuilder.Entity<Author>().ToContainer("BooksCollection");
-            //modelBuilder.Entity<Book>().OwnsOne(b => b.LeadAuthor);
-            //modelBuilder.Entity<Book>().OwnsMany(b => b.Chapters);
-            modelBuilder.Owned<Chapter>();
-            modelBuilder.Owned<Author>();
+            modelBuilder.Entity<Book>().OwnsOne(b => b.LeadAuthor);
+            modelBuilder.Entity<Book>().OwnsMany(b => b.Chapters);
+            //modelBuilder.Owned<Chapter>();  // alternative version to use owned fromt he other direction
+            //modelBuilder.Owned<Author>();
         }
     }
 }

@@ -6,7 +6,8 @@ namespace CosmosDBWithEFCore
     // [Owned]
     public class Author
     {
-        public Author(string firstName, string lastName) => (FirstName, LastName) = (firstName, lastName);
+        public Author(string firstName, string lastName) => 
+            (FirstName, LastName) = (firstName, lastName);
 
         public Guid AuthorId { get; set; } = Guid.NewGuid();
         public string FirstName { get; set; }
