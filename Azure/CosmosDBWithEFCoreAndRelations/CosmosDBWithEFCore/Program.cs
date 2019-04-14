@@ -12,12 +12,19 @@ namespace CosmosDBWithEFCore
     {
         static async Task Main(string[] args)
         {
-            ConfigureServices(args);
-            var service = Container.GetRequiredService<BooksService>();
-            await service.CreateTheDatabaseAsync();
+            try
+            {
+                ConfigureServices(args);
+                var service = Container.GetRequiredService<BooksService>();
+                await service.CreateTheDatabaseAsync();
                 await service.WriteBooksAsync();
-            service.ReadBooks();
-            Console.WriteLine("completed");
+                service.ReadBooks();
+                Console.WriteLine("completed");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         public static void ConfigureServices(string[] args)

@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-using System;
-
 namespace CosmosDBWithEFCore
 {
     public class BooksContext : DbContext
@@ -9,45 +7,17 @@ namespace CosmosDBWithEFCore
         public BooksContext(DbContextOptions<BooksContext> options)
             : base(options) { }
 
-        public DbSet<Book> Books { get; set; }
+        public DbSet<Book>? Books { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Book>().ToContainer("BooksWithRelation");
-
-            modelBuilder.Entity<Book>().Property<string>("_self").ValueGeneratedOnAdd();
-            modelBuilder.Entity<Book>().Property<string>("_etag").ValueGeneratedOnAddOrUpdate();
-            modelBuilder.Entity<Book>().Property<long>("_ts").ValueGeneratedOnAddOrUpdate();
-
-            modelBuilder.Entity<Book>().OwnsMany<Chapter>(b => b.Chapters);
-        }
-
-        public void ShowBooksWithShadowState()
-        {
-            Console.WriteLine("show all shadow state");
-            foreach (var book in Books)
-            {
-                Console.WriteLine(book.Title);
-                var props = Entry<Book>(book).Properties;
-                foreach (var propEntry in props)
-                {
-                    Console.WriteLine($"{propEntry.Metadata.Name} {propEntry.CurrentValue}");
-                }
-            }
-            Console.WriteLine();
-        }
-
-        public void ShowCosmosDBState()
-        {
-            Console.WriteLine("selecte specific shadow state");
-            foreach (var book in Books)
-            {
-                Console.WriteLine($"{book.Title}, etag: {Entry<Book>(book).Property("_etag").CurrentValue}, " +
-                    $"self: {Entry(book).Property("_self").CurrentValue}, " +
-                    $"ts: {Entry(book).Property("_ts").CurrentValue}");
-                Console.WriteLine();
-            }
-            Console.WriteLine();
+            modelBuilder.HasDefaultContainerName("BooksContainer");
+            // entity types can be explicitly mapped to containers
+            // modelBuilder.Entity<Book>().ToContainer("BooksContainer");
+            modelBuilder.Entity<Book>().OwnsOne(b => b.LeadAuthor);
+            modelBuilder.Entity<Book>().OwnsMany(b => b.Chapters);
+            //modelBuilder.Owned<Chapter>();  // alternative version to use owned fromt he other direction
+            //modelBuilder.Owned<Author>();
         }
     }
 }
