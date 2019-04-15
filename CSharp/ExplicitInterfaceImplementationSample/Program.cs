@@ -1,57 +1,58 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.ComponentModel;
 
 namespace ExplicitInterfaceImplementationSample
 {
-    public interface IFoo
+    public interface IFoo1
     {
         void Foo();
     }
 
-    public class Foo1 : IFoo
+    public class FooImpl1 : IFoo1
     {
-        void IFoo.Foo() => Console.WriteLine("IFoo.Foo");
+        public void Foo() => Console.WriteLine("ImplicitInterfaceImplementation.Foo");
     }
 
-    public interface IFoo2
+    public class FooImpl2 : IFoo1
     {
-        void Foo();
+        void IFoo1.Foo() => Console.WriteLine("ExplicitInterfaceImplementation.Foo");
     }
 
-    public class Foo2 : IFoo, IFoo2
-    {
-        public void Foo() => Console.WriteLine("Foo2.Foo");
-        void IFoo.Foo() => Console.WriteLine("IFoo.Foo");
-    }
-
-    public class MyCollection : IDataErrorInfo
-    {
-        private Dictionary<string, string> _data = new Dictionary<string, string>();
-
-        public string this[string columnName] => throw new NotImplementedException();
-
-        public string Error => throw new NotImplementedException();
-    }
 
     class Program
     {
         static void Main()
         {
-            var f1 = new Foo1();
+            var f2 = new FooImpl2();
+            // use a cast
+            ((IFoo1)f2).Foo();
 
-            (f1 as IFoo)?.Foo();
-
-            if (f1 is IFoo f)
+            // use the is operator
+            if (f2 is IFoo1 f)
             {
                 f.Foo();
             }
 
+            // the as operator
+            (f2 as IFoo1)?.Foo();
+
+            // invoke a method with IFoo parameter
+            DoIt(f2);
+
+            var coll = new MyCollection();
+            coll["a"] = "first";
+            Console.WriteLine(coll["a"]);
+
+            // Hide interface implementation
             var strings = new StringCollection();
+            strings.Add("A string");
 
-            strings.Add()
 
+        }
+
+        static void DoIt(IFoo1 foo)
+        {
+            foo.Foo();
         }
     }
 }
