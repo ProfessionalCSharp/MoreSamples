@@ -2,16 +2,17 @@
 
 > Enjoy the following C# 7 and C# 8 samples
 
-* Literals
-* Tuples
-* Out Vars and Ref Returns
-* Expression Bodied Members
-* Pattern Matching
+* Literals (C# 7)
+* Tuples (C# 7)
+* Out Vars and Ref Returns (C# 7)
+* Expression Bodied Members (C# 7)
+* Pattern Matching (C# 7)
 * Non-Nullable Reference Types (C# 8)
 * Pattern matching extended (C# 8)
 * Indexes and Ranges (C# 8)
 * Async Streams (C# 8)
 * Using Declaration (C# 8)
+* Explicit Interface Implementation
 
 ## Binary Literals
 
@@ -92,3 +93,11 @@ Folder: UsingDeclarationSample
 C# 8 gives a simple syntax to dispose resources - the *using declaration*.
 
 See the blog article [Using, using, using with C# 8](https://csharp.christiannagel.com/2019/04/09/using/) for more information.
+
+## Explicit Interface Implementation
+
+Folder: ExplicitInterfaceImplementationSample
+
+How and why to use explicit interface implementation with C#.
+
+See the blog article [Explicit Interface Implementation with C#](https://csharp.christiannagel.com) for more information.
