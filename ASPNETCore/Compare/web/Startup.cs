@@ -26,9 +26,11 @@ namespace web
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting(routes =>
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints =>
             {
-                routes.MapGet("/", async context =>
+                endpoints.MapGet("/", async context =>
                 {
                     await context.Response.WriteAsync("Hello World!");
                 });
