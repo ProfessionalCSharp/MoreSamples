@@ -12,16 +12,18 @@ namespace ClientApp
             {
                 Console.WriteLine("client - wait for service to be ready, please press return afterwards...");
                 Console.ReadLine();
-                var conn = new HubConnectionBuilder().WithUrl("http://localhost:7071/api/").Build();
+                var connection = new HubConnectionBuilder()
+                    .WithUrl("http://localhost:5001/api/buttonhub/")
+                    .Build();
 
                 Console.WriteLine("adding the handler");
-                conn.On("buttonClicked", (string s) =>
+                connection.On("waiter", (string s) =>
                 {
-                    Console.WriteLine($"Buttton clicked with message {Environment.NewLine}{s}");
+                    Console.WriteLine($"Button clicked with message {Environment.NewLine}{s}");
                 });
 
-                await conn.StartAsync();
-                Console.WriteLine($"connection started, waiting for events {conn.State}");
+                await connection.StartAsync();
+                Console.WriteLine($"connection started, waiting for events {connection.State}");
             }
             catch (Exception ex)
             {
