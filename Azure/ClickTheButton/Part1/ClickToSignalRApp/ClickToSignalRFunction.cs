@@ -10,6 +10,8 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Extensions.SignalRService;
 using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.SignalR.Client;
+using System.Threading;
 
 namespace ClickToSignalRApp
 {
@@ -46,14 +48,29 @@ namespace ClickToSignalRApp
         //        });
         //}
 
+        private static HubConnection s_connection = null;
+
+        static ClickToSignalRFunction()
+        {
+            var connection = new HubConnectionBuilder()
+                .WithUrl("https://localhost:5001/api/buttonhub/")
+                .Build();
+            s_connection = connection;
+        }
+
         // second version - call SignalR service programmatically
         private static HttpClient client = new HttpClient();
 
         [FunctionName("ClickToSignalRFunction")]
-        public void Run([IoTHubTrigger("messages/events", Connection = "IOTButtonConnectionString")]EventData message, ILogger log)
+        public async Task Run([IoTHubTrigger("messages/events", Connection = "IOTButtonConnectionString")]EventData message, ILogger log)
         {
             string json = Encoding.UTF8.GetString(message.Body.Array);
             log.LogInformation($"C# IoT Hub trigger function processed a message: {json}");
+            if (s_connection.State != HubConnectionState.Connected)
+            {
+                await s_connection.StartAsync();
+            }
+            await s_connection.SendAsync("ButtonClicked", json);
         }
 
         //// first version - just a trigger on the IoT hub
