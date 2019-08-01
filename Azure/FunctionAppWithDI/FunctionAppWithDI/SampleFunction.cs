@@ -12,15 +12,11 @@ namespace FunctionAppWithDI
     public class SampleFunction
     {
         private readonly BooksContext _booksContext;
-        public SampleFunction(BooksContext booksContext)
-        {
-            _booksContext = booksContext;
-        }
+        public SampleFunction(BooksContext booksContext) => _booksContext = booksContext;
 
         [FunctionName("SampleFunction")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)]
-                HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             ILogger log)
         {
             log.LogInformation("SampleFunction invoked to process a request");
