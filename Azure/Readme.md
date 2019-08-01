@@ -52,4 +52,12 @@ Folder: ClickTheButton
 
 Azure IoT Button connecting to the Azure IoT Hub.
 
-See the blog article [Click the Azure IoT Button - Part 1]()
+See the blog article [Click the Azure IoT Button - Part 1](https://csharp.christiannagel.com/2019/07/30/iotbuttonpart1/)
+
+## Azure Functions with Dependency Injection
+
+Folder: FunctionAppWithDI
+
+Configure a DI container with Azure Functions
+
+See the blog article [Azure Functions with Dependency Injection](https://csharp.christiannagel.com)
