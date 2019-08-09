@@ -60,4 +60,4 @@ Folder: FunctionAppWithDI
 
 Configure a DI container with Azure Functions
 
-See the blog article [Azure Functions with Dependency Injection](https://csharp.christiannagel.com)
+See the blog article [Azure Functions with Dependency Injection](https://csharp.christiannagel.com/2019/08/06/azurefunctionsdi/)
