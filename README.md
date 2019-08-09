@@ -18,6 +18,9 @@ Enjoy!
 * Hosting Angular on Azure Storage Websites with Azure Functions in the backend
 * Azure Active Directory B2C with ASP.NET Core
 * Using EF Core with Azure Cosmos DB
+* Relations with Azure Cosmos DB and EF Core
+* Azure IoT - Click the Azure IoT Button
+* Azure Functions with Dependency Injection
 
 ## C#
 
