@@ -18,6 +18,9 @@ Enjoy!
 * Hosting Angular on Azure Storage Websites with Azure Functions in the backend
 * Azure Active Directory B2C with ASP.NET Core
 * Using EF Core with Azure Cosmos DB
+* Relations with Azure Cosmos DB and EF Core
+* Azure IoT - Click the Azure IoT Button
+* Azure Functions with Dependency Injection
 
 ## C#
 
@@ -52,6 +55,9 @@ Enjoy!
 
 * View Components
 * GDPR Support with ASP.NET Core 2.1
+* Identity Pages with ASP.NET Core 2.1
+* Library Manager with Visual Studio 2017 Update 8
+* Compare ASP.NET Core technologies
 
 ## Universal Windows Platform (UWP)
 
