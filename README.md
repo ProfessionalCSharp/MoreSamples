@@ -55,6 +55,9 @@ Enjoy!
 
 * View Components
 * GDPR Support with ASP.NET Core 2.1
+* Identity Pages with ASP.NET Core 2.1
+* Library Manager with Visual Studio 2017 Update 8
+* Compare ASP.NET Core technologies
 
 ## Universal Windows Platform (UWP)
 
