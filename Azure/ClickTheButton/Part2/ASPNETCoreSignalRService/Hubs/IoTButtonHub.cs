@@ -8,7 +8,6 @@ namespace ASPNETCoreSignalRService.Hubs
         public Task ButtonClicked(object data)
         {
             return base.Clients.Others.SendAsync("Waiter", data);
-//            return base.Clients.All.SendAsync("Waiter", data);
         }
     }
 }
