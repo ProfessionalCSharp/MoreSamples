@@ -5,7 +5,7 @@ namespace ASPNETCoreSignalRService.Hubs
 {
     public class IoTButtonHub : Hub
     {
-        public Task ButtonClicked(object data)
+        public Task ButtonClicked(string data)
         {
             return base.Clients.Others.SendAsync("Waiter", data);
         }
