@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BooksLib;
+using Microsoft.EntityFrameworkCore;
 
-namespace BooksLib
+namespace ClientSideBlazor.Server
 {
     public class BooksContext : DbContext
     {

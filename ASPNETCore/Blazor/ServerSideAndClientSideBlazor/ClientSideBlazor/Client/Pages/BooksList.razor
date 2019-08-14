@@ -1,12 +1,10 @@
-﻿@page "/bookslist1"
+﻿@page "/bookslist"
 @using BooksLib
-@using ServerSideBlazor.Services
-@using Microsoft.EntityFrameworkCore;
-@inject BooksContext BooksContext
+@inject IBooksService BooksService
 
 <h1>Books</h1>
 
-<p>This component demonstrates using the EF Core context.</p>
+<p>This component demonstrates using the same component for client-side and server-side Blazor</p>
 
 @if (books == null)
 {
@@ -40,6 +38,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        books = await BooksContext.Books.ToArrayAsync();
+        books = (await BooksService.GetBooksAsync()).ToArray();
     }
 }

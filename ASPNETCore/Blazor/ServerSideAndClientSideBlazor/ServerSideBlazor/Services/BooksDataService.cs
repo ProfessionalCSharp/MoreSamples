@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BooksLib;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BooksLib
+namespace ServerSideBlazor.Services
 {
     public class BooksDataService : IBooksService
     {

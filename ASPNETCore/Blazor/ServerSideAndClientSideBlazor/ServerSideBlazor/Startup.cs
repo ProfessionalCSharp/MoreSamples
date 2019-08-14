@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ServerSideBlazor.Data;
+using ServerSideBlazor.Services;
 
 namespace ServerSideBlazor
 {
