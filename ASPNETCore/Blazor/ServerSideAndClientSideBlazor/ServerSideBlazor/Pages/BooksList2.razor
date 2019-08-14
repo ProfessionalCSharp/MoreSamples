@@ -37,7 +37,7 @@ else
 @code {
     Book[]? books;
 
-    protected override async Task OnInitAsync()
+    protected override async Task OnInitializedAsync()
     {
         books = (await BooksService.GetBooksAsync()).ToArray();
     }
