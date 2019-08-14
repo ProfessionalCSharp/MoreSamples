@@ -1,0 +1,45 @@
+﻿@page "/bookslist1"
+@using BooksLib
+@using ServerSideBlazor.Services
+@using Microsoft.EntityFrameworkCore;
+@inject BooksContext BooksContext
+
+<h1>Books</h1>
+
+<p>This component demonstrates using the EF Core context.</p>
+
+@if (books == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Publisher</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in books)
+            {
+                <tr>
+                    <td>@book.BookId</td>
+                    <td>@book.Title</td>
+                    <td>@book.Publisher</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    Book[]? books;
+
+    protected override async Task OnInitializedAsync()
+    {
+        books = await BooksContext.Books.ToArrayAsync();
+    }
+}

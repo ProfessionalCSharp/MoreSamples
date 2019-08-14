@@ -1,0 +1,43 @@
+﻿@page "/bookslist"
+@using BooksLib
+@inject IBooksService BooksService
+
+<h1>Books</h1>
+
+<p>This component demonstrates using the same component for client-side and server-side Blazor</p>
+
+@if (books == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Publisher</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in books)
+            {
+                <tr>
+                    <td>@book.BookId</td>
+                    <td>@book.Title</td>
+                    <td>@book.Publisher</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    Book[]? books;
+
+    protected override async Task OnInitializedAsync()
+    {
+        books = (await BooksService.GetBooksAsync()).ToArray();
+    }
+}
