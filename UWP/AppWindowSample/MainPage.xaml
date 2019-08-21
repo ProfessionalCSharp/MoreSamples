@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="AppWindowSample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppWindowSample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel>
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="16" />
+                    <Setter Property="Padding" Value="8" />
+                    <Setter Property="FontSize" Value="24" />
+                    <Setter Property="HorizontalAlignment" Value="Left" />
+                </Style>
+            </StackPanel.Resources>
+            <TextBox Header="Thread" Text="{x:Bind ThreadId, Mode=OneTime}" IsReadOnly="True" />
+            <Button Content="AppWindow" Click="OnAppWindow" />
+            <Button Content="AppView" Click="OnAppView" />
+        </StackPanel>
+
+    </Grid>
+</Page>
