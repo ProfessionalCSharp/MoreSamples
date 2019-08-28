@@ -11,7 +11,7 @@ namespace UWPSwitchExpressionSample
         {
             this.InitializeComponent();
             LightState = LightState.Red;
-            previousState = LightState.Yellow;
+            _previousState = LightState.Yellow;
 
             var switcher = new TrafficLightStateSwitcher();
 
@@ -19,13 +19,20 @@ namespace UWPSwitchExpressionSample
             timer.Interval = TimeSpan.FromSeconds(3);
             timer.Tick += (sender, e) =>
             {
-                (LightState, previousState) = switcher.GetLight(LightState, previousState);
+                (LightState, _previousState) = switcher.GetNextLight(LightState, _previousState);
             };
             timer.Start();
 
+            //var timer = new DispatcherTimer();
+            //timer.Interval = TimeSpan.FromSeconds(3);
+            //timer.Tick += (sender, e) =>
+            //{
+            //    LightState = switcher.GetNextLight(LightState);
+            //};
+            //timer.Start();
         }
 
-        private LightState previousState;
+        private LightState _previousState;
 
         public LightState LightState
         {
