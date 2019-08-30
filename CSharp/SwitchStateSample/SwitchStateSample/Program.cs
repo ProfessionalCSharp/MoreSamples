@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using System.CommandLine;
+﻿using System.CommandLine;
 using System.CommandLine.Invocation;
 
 namespace SwitchStateSample
@@ -39,13 +37,10 @@ namespace SwitchStateSample
                     case AppMode.Type:
                         await runner.UseCustomTypeAsync();
                         break;
-                    default:
-                        break;
                 }
             });
 
             rootCommand.Invoke(args);
         }
-  
     }
 }
