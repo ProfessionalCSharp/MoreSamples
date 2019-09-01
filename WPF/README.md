@@ -28,4 +28,4 @@ This sample enhances WPF by Windows Runtime APIs using a packaged app, launching
 
 Folder: XAMLIsland
 
-This sample enhances a WPF application using UWP controls with wrapped controls and custom hosting. See the blog article [Desktop Applications with XAML. Part 3: XAML Island](https://csharp.christiannagel.com) for more information.
+This sample enhances a WPF application using UWP controls with wrapped controls and custom hosting. See the blog article [Desktop Applications with XAML. Part 3: XAML Island](https://csharp.christiannagel.com/2018/11/06/xamlisland/) for more information.
