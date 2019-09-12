@@ -115,4 +115,4 @@ Folder: SwitchStateSample
 
 Using the *switch expression* with tuples and pattern matching.
 
-See the blog article [Changing State with the Switch Expression (C# 8)](https://csharp.christiannagel.com) for more information.
+See the blog article [Changing State with the Switch Expression (C# 8)](https://csharp.christiannagel.com/2019/09/03/swtichexpression/) for more information.
