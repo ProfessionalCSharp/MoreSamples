@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SwitchStateSample": {
+      "commandName": "Project",
+      "commandLineArgs": "--mode Tuple"
+    }
+  }
+}
