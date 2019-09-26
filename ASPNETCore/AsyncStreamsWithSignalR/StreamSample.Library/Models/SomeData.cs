@@ -1,6 +1,6 @@
 ﻿namespace StreamSample.Models
 {
-    public struct SomeData
+    public class SomeData
     {
         public int Value { get; set; }
 

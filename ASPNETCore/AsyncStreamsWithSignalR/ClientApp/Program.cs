@@ -15,8 +15,8 @@ namespace ClientApp
             Console.WriteLine("client - wait for service...");
             Console.ReadLine();
 
-            // await ServerToClientStreamingAsync();
-            await ClientToServerStreamingAsync();
+            await ServerToClientStreamingAsync();
+            // await ClientToServerStreamingAsync();
         }
 
         private static async Task ClientToServerStreamingAsync()
@@ -64,14 +64,14 @@ namespace ClientApp
 
 
             // read from the hub using ChannelReader
-            //var channel = await s_hubConnection.StreamAsChannelAsync<int>("GetSomeData", 100, 1000, cts.Token);
-            //while (await channel.WaitToReadAsync())
-            //{
-            //    while (channel.TryRead(out int data))
-            //    {
-            //        Console.WriteLine($"received {data}");
-            //    }
-            //}
+           v ar channel = await s_hubConnection.StreamAsChannelAsync<int>("GetSomeData", 100, 1000, cts.Token);
+            while (await channel.WaitToReadAsync())
+            {
+                while (channel.TryRead(out int data))
+                {
+                    Console.WriteLine($"received {data}");
+                }
+            }
 
             //// read from the hub using async streams
             //var stream = s_hubConnection.StreamAsync<SomeData>("GetSomeDataWithAsyncStreams", 20, 100, cts.Token);

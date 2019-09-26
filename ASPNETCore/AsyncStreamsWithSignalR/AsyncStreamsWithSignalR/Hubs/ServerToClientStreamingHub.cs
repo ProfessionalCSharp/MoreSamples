@@ -24,19 +24,19 @@ namespace AsyncStreamsWithSignalR.Hubs
         }
 
         // v1 - using ChannelReader
-        public ChannelReader<int> GetSomeDataWithChannelReader(
+        public ChannelReader<SomeData> GetSomeDataWithChannelReader(
             int count, 
             int delay, 
             CancellationToken cancellationToken)
         {
-            var channel = Channel.CreateUnbounded<int>();
+            var channel = Channel.CreateUnbounded<SomeData>();
              _ = WriteItemsAsync(channel.Writer, count, delay, cancellationToken);
 
             return channel.Reader;
         }
 
         private async Task WriteItemsAsync(
-            ChannelWriter<int> writer,
+            ChannelWriter<SomeData> writer,
             int count,
             int delay,
             CancellationToken cancellationToken)
@@ -46,7 +46,7 @@ namespace AsyncStreamsWithSignalR.Hubs
                 for (var i = 0; i < count; i++)
                 {
                     cancellationToken.ThrowIfCancellationRequested();
-                    await writer.WriteAsync(i);
+                    await writer.WriteAsync(new SomeData { Value = i });
 
                     await Task.Delay(delay, cancellationToken);
                 }
