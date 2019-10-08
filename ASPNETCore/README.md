@@ -6,6 +6,7 @@
 * GDPR Support with ASP.NET Core 2.1
 * Identity Pages with ASP.NET Core 2.1
 * Library Manager with Visual Studio 2017 Update 8
+* Async Streams with SignalR
 
 ## View Components
 
@@ -46,3 +47,9 @@ Folder: Compare
 ASP.NET Core 3.0 technologies
 
 See the blog article [Choosing the right ASP.NET Core technology](https://csharp.christiannagel.com/2019/04/03/choosing-the-right-asp-net-core-technology/)
+
+## Async Streams with SignalR
+
+Folder: AsyncStreamsWithSignalR
+
+See the blog article [Async Streams with ASP.NET Core SignalR and C# 8](https://csharp.christiannagel.com/2019/10/08/signalrstreaming/)
