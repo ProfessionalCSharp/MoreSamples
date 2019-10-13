@@ -1,7 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk.Worker">
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <Nullable>enable</Nullable>
     <UserSecretsId>dotnet-WindowsServiceSample-86566739-9A6B-44BC-9776-B39865E786CF</UserSecretsId>
   </PropertyGroup>
 
