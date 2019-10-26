@@ -6,6 +6,7 @@
 * GDPR Support with ASP.NET Core 2.1
 * Identity Pages with ASP.NET Core 2.1
 * Library Manager with Visual Studio 2017 Update 8
+* Async Streams with SignalR
 
 ## View Components
 
@@ -13,7 +14,7 @@ Folder : ViewComponentsSample
 
 Create and use view components, use it from the controller, from the view, and using the ASP.NET Core 1.1 tag helper syntax
 
-See the blog article [C# Literals & C# 7.0 Binary Literals and Digit Separators](https://csharp.christiannagel.com/2017/02/28/viewcomponents/ "View Components with ASP.NET Core 1.1") for more information.
+See the blog article [View Components with ASP.NET Core 1.1](https://csharp.christiannagel.com/2017/02/28/viewcomponents/ "View Components with ASP.NET Core 1.1") for more information.
 
 ## GDPR Support with ASP.NET Core 2.1
 
@@ -46,3 +47,9 @@ Folder: Compare
 ASP.NET Core 3.0 technologies
 
 See the blog article [Choosing the right ASP.NET Core technology](https://csharp.christiannagel.com/2019/04/03/choosing-the-right-asp-net-core-technology/)
+
+## Async Streams with SignalR
+
+Folder: AsyncStreamsWithSignalR
+
+See the blog article [Async Streams with ASP.NET Core SignalR and C# 8](https://csharp.christiannagel.com/2019/10/08/signalrstreaming/)

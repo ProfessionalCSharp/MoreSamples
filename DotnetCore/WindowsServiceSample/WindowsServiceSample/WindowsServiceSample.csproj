@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>dotnet-WindowsServiceSample-86566739-9A6B-44BC-9776-B39865E786CF</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="3.0.0" />
+  </ItemGroup>
+</Project>
