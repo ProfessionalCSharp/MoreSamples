@@ -2,7 +2,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.IO;
-using static System.Console;
 
 namespace DependencyInjectionWithConfig
 {
@@ -35,7 +34,7 @@ namespace DependencyInjectionWithConfig
 
             string greeting = controller.Action("Katharina");
 
-            WriteLine(greeting);
+            Console.WriteLine(greeting);
         }
 
         public static IServiceProvider Container { get; private set; }

@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
-using static System.Console;
 
 namespace DependencyInjection
 {
@@ -29,14 +28,14 @@ namespace DependencyInjection
             IGreetingService service = new GreetingService();
             var controller = new HelloController(service);
             string greeting = controller.Action("Matthias");
-            WriteLine(greeting);
+            Console.WriteLine(greeting);
         }
 
         private static void UsingAContainer()
         {
             var controller = Container.GetService<HelloController>();
             string greeting = controller.Action("Stephanie");
-            WriteLine(greeting);
+            Console.WriteLine(greeting);
         }
     }
 }
