@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using System;
 
 namespace DependencyInjection
@@ -7,21 +8,10 @@ namespace DependencyInjection
     {
         public static void Main()
         {
-            RegisterServices();
-
             WithoutUsingAContainer();
             UsingAContainer();
+            UsingHost();
         }
-
-        private static void RegisterServices()
-        {
-            var services = new ServiceCollection();
-            services.AddSingleton<IGreetingService, GreetingService>();
-            services.AddTransient<HelloController>();
-            Container = services.BuildServiceProvider();
-        }
-
-        public static IServiceProvider Container { get; private set; }
 
         private static void WithoutUsingAContainer()
         {
@@ -33,8 +23,22 @@ namespace DependencyInjection
 
         private static void UsingAContainer()
         {
-            var controller = Container.GetService<HelloController>();
+            var controller = AppServices.Instance.Container.GetService<HelloController>();
             string greeting = controller.Action("Stephanie");
+            Console.WriteLine(greeting);
+        }
+
+        private static void UsingHost()
+        {
+            var host = Host.CreateDefaultBuilder()
+                .ConfigureServices(services =>
+                {
+                    services.AddSingleton<IGreetingService, GreetingService>();
+                    services.AddTransient<HelloController>();
+                }).Build();
+
+            var controller = host.Services.GetService<HelloController>();
+            string greeting = controller.Action("Katharina");
             Console.WriteLine(greeting);
         }
     }
