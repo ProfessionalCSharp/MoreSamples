@@ -30,7 +30,7 @@ namespace DependencyInjection
 
         private static void UsingHost()
         {
-            var host = Host.CreateDefaultBuilder()
+            using var host = Host.CreateDefaultBuilder()
                 .ConfigureServices(services =>
                 {
                     services.AddSingleton<IGreetingService, GreetingService>();

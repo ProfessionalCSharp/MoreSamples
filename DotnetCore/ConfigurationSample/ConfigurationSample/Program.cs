@@ -19,7 +19,7 @@ namespace ConfigurationSample
             config = SetupConfigurationWithOptionalSettings();
             ReadConfigurationWithOptionalSettings(config);
 
-            var host = SetupConfigurationWithHost();
+            using var host = SetupConfigurationWithHost();
             ReadConfigurationUsingHost(host);
         }
 

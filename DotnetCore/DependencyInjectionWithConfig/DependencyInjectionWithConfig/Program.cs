@@ -14,7 +14,7 @@ namespace DependencyInjectionWithConfig
 
         private static void UseServicesWithHost()
         {
-            var host = Host.CreateDefaultBuilder()
+            using var host = Host.CreateDefaultBuilder()
                 .ConfigureServices((context, services) =>
                 {
                     services.AddGreetingService(context.Configuration.GetSection("GreetingService"));
