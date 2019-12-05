@@ -27,5 +27,7 @@ namespace RangesSample
             var slice = _items.GetRange(begin, count).ToArray();
             return new CustomCollection<T>(slice);
         }
+
+        public T this[int index] => _items[index]; 
     }
 }
