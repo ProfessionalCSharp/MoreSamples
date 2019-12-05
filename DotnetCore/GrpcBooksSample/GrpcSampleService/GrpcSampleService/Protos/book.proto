@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcSampleService";
+
+package bookspackage;
+
+// The greeting service definition.
+service Books {
+  // Sends a greeting
+  rpc GetBook (BookRequest) returns (BookReply);
+}
+
+// The request message containing the user's name.
+message BookRequest {
+  int32 id = 1;
+}
+
+// The response message containing the greetings.
+message BookReply {
+  int32 id = 1;
+  string title = 2;
+  string publisher = 3;
+}

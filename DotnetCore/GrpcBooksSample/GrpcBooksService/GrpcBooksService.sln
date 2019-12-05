@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcBooksService", "GrpcBooksService\GrpcBooksService.csproj", "{D95D4958-6EA1-4970-8D87-0FD2E952F1ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D95D4958-6EA1-4970-8D87-0FD2E952F1ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D95D4958-6EA1-4970-8D87-0FD2E952F1ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D95D4958-6EA1-4970-8D87-0FD2E952F1ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D95D4958-6EA1-4970-8D87-0FD2E952F1ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8521C027-409E-4A09-B447-8118E17DE249}
+	EndGlobalSection
+EndGlobal
