@@ -16,7 +16,9 @@ namespace LazyLoading
 
         public void GetBooksWithLazyLoading()
         {
+#nullable disable
             var books = _booksContext.Books.Where(b => b.Publisher.StartsWith("Wrox"));
+#nullable restore
 
             foreach (var book in books)
             {
@@ -34,7 +36,7 @@ namespace LazyLoading
 
         public void GetBooksWithExplicitLoading()
         {
-            var books = _booksContext.Books.Where(b => b.Publisher.StartsWith("Wrox"));
+            var books = _booksContext.Books.Where(b => b.Publisher!.StartsWith("Wrox"));
 
             foreach (var book in books)
             {
@@ -61,7 +63,7 @@ namespace LazyLoading
         public void GetBooksWithEagerLoading()
         {
             var books = _booksContext.Books
-                .Where(b => b.Publisher.StartsWith("Wrox"))
+                .Where(b => b.Publisher!.StartsWith("Wrox"))
                 .Include(b => b.Chapters)
                 .Include(b => b.Author)
                 .Include(b => b.Reviewer)

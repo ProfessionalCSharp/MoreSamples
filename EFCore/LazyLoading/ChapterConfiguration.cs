@@ -8,7 +8,7 @@ namespace LazyLoading
         public void Configure(EntityTypeBuilder<Chapter> builder)
         {
             builder.HasOne(c => c.Book)
-                .WithMany(b => b.Chapters)
+                .WithMany(b => b!.Chapters)
                 .HasForeignKey(c => c.BookId);
         }
     }

@@ -9,9 +9,9 @@ namespace LazyLoading
         public BooksContext(DbContextOptions<BooksContext> options)
             : base(options) { }
 
-        public DbSet<Book> Books { get; private set; }
-        public DbSet<Chapter> Chapters { get; private set; }
-        public DbSet<User> Users { get; private set; }
+        public DbSet<Book> Books { get; private set; } = default!;
+        public DbSet<Chapter> Chapters { get; private set; } = default!;
+        public DbSet<User> Users { get; private set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
