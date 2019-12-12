@@ -18,9 +18,11 @@ namespace ServerSideBlazor
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private readonly IWebHostEnvironment _env;
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
+            _env = env;
         }
 
         public IConfiguration Configuration { get; }
@@ -30,7 +32,14 @@ namespace ServerSideBlazor
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddServerSideBlazor();
+            services.AddServerSideBlazor()
+                .AddCircuitOptions(options =>
+                {
+                    if (_env.IsDevelopment())
+                    {
+                        options.DetailedErrors = true;
+                    }
+                });
             services.AddSingleton<WeatherForecastService>();
             services.AddScoped<IBooksService, BooksDataService>();
             services.AddDbContext<BooksContext>(options =>
