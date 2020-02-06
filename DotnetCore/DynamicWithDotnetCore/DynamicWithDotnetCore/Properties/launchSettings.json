@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DynamicWithDotnetCore": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\christian\\source\\repos\\DynamicWithDotnetCore\\JustALib\\bin\\Debug\\netstandard2.0\\justalib.dll"
+    }
+  }
+}
