@@ -26,7 +26,7 @@ namespace CosmosDBWithEFCore
             var c3 = new Chapter(3, "Objects and Types", 34);
 
             var book1 = new Book("Professional C# 7 and .NET Core 2.0", "Wrox Press", author, c1, c2, c3);
-            _booksContext.Books?.Add(book1);
+            _booksContext.Books.Add(book1);
             int changed = await _booksContext.SaveChangesAsync();
             Console.WriteLine($"created {changed} record(s)");
         }
