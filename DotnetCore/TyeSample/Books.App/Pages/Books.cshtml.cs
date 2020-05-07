@@ -10,7 +10,7 @@ namespace Books.App.Pages
 {
     public class BooksModel : PageModel
     {
-        public Book[] Books { get; set; }
+        public Book[]? Books { get; set; }
 
         public async Task OnGet([FromServices] BooksClient booksClient)
         {

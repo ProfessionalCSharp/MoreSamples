@@ -15,7 +15,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var book in @Model.Books)
+        @foreach (var book in @Model.Books!)
         {
             <tr>
                 <td>@book.BookId</td>
@@ -25,4 +25,3 @@
         }
     </tbody>
 </table>
-
