@@ -19,7 +19,6 @@ namespace Books.App
 
         public async Task<Book[]> GetBooksAsync()
         {
-            await Task.Delay(4000);
             var response = await _httpClient.GetAsync("/api/Books");
             var stream = await response.Content.ReadAsStreamAsync();
             return await JsonSerializer.DeserializeAsync<Book[]>(stream, serializerOptions);

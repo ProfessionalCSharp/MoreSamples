@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books.Shared", "Books.Shared\Books.Shared.csproj", "{D88601CA-9E5F-49E9-8C21-3EB9DE74E0CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Books.Shared", "Books.Shared\Books.Shared.csproj", "{D88601CA-9E5F-49E9-8C21-3EB9DE74E0CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books.API", "Books.API\Books.API.csproj", "{E93C33C3-17BC-47AC-93BE-A3CD87744807}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksAPI", "Books.API\BooksAPI.csproj", "{E93C33C3-17BC-47AC-93BE-A3CD87744807}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books.App", "Books.App\Books.App.csproj", "{AC461FC7-4CB7-47B8-A09C-051FFC18EC3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksApp", "Books.App\BooksApp.csproj", "{AC461FC7-4CB7-47B8-A09C-051FFC18EC3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D88601CA-9E5F-49E9-8C21-3EB9DE74E0CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -58,5 +55,11 @@ Global
 		{AC461FC7-4CB7-47B8-A09C-051FFC18EC3F}.Release|x64.Build.0 = Release|Any CPU
 		{AC461FC7-4CB7-47B8-A09C-051FFC18EC3F}.Release|x86.ActiveCfg = Release|Any CPU
 		{AC461FC7-4CB7-47B8-A09C-051FFC18EC3F}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B4490C5-39EB-4801-9265-AADEA39EF965}
 	EndGlobalSection
 EndGlobal
