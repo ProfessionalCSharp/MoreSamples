@@ -27,7 +27,7 @@ namespace Books.App
 
             services.AddHttpClient<BooksClient>(client =>
             {
-                client.BaseAddress = Configuration.GetServiceUri("books.api");
+                client.BaseAddress = Configuration.GetServiceUri("booksapi");
             });
         }
 

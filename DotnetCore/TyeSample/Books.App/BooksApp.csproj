@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
