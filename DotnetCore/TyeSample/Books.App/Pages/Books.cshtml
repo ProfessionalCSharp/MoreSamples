@@ -1,0 +1,27 @@
+﻿@page
+@model Books.App.Pages.BooksModel
+@{
+    ViewData["Title"] = "Books";
+}
+
+<h1>Books</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Publisher</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in @Model.Books!)
+        {
+            <tr>
+                <td>@book.BookId</td>
+                <td>@book.Title</td>
+                <td>@book.Publisher</td>
+            </tr>
+        }
+    </tbody>
+</table>
