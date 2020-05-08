@@ -14,8 +14,8 @@ namespace Books.App
             PropertyNamingPolicy = JsonNamingPolicy.CamelCase
         };
 
-        public BooksClient(HttpClient httpClient) 
-            => _httpClient = httpClient; 
+        public BooksClient(HttpClient httpClient)
+            => _httpClient = httpClient;
 
         public async Task<Book[]> GetBooksAsync()
         {
