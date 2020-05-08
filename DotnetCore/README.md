@@ -2,6 +2,7 @@
 
 > Enjoy the following .NET Core samples
 
+* Project Tye
 * Logging to Files
 * Dependency Injection
 * Dependency Injection with Options
@@ -10,6 +11,12 @@
 * HTTP Client Factory
 * Markdown
 * Self-contained
+
+## Project Tye
+
+Introducing *Project Tye*.
+
+See the blog article [Project Tye - easier development with .NET for Kubernetes]()
 
 ## Logging to Files
 

@@ -44,6 +44,7 @@ Enjoy!
 * HTTP Client Factory
 * Markdown
 * Self-contained
+* Project Tye
 
 ## Entity Framework Core
 
