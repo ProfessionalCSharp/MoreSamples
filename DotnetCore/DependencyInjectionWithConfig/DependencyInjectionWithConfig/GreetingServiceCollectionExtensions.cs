@@ -6,12 +6,12 @@ namespace Microsoft.Extensions.DependencyInjection
 {
     public static class GreetingServiceCollectionExtensions
     {
-        public static IServiceCollection AddGreetingService(this IServiceCollection collection, IConfiguration config)
+        public static IServiceCollection AddGreetingService(this IServiceCollection collection, IConfiguration configuration)
         {
             if (collection == null) throw new ArgumentNullException(nameof(collection));
-            if (config == null) throw new ArgumentNullException(nameof(config));
+            if (configuration == null) throw new ArgumentNullException(nameof(configuration));
             
-            collection.Configure<GreetingServiceOptions>(config);
+            collection.Configure<GreetingServiceOptions>(configuration);
             return collection.AddTransient<IGreetingService, GreetingService>();
         }
     }

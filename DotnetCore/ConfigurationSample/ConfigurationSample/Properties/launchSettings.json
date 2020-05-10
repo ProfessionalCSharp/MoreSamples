@@ -4,7 +4,7 @@
       "commandName": "Project",
       "commandLineArgs": "config1=42",
       "environmentVariables": {
-        "Environment": "Staging",
+        "DOTNET_Environment": "Staging",
         "config2": "something else",
         "config1": "11"
       }

@@ -1,8 +1,6 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using System;
-using System.IO;
-using static System.Console;
 
 namespace DependencyInjectionWithConfig
 {
@@ -10,34 +8,32 @@ namespace DependencyInjectionWithConfig
     {
         public static void Main()
         {
-            RegisterServicesWithConfig();
-            UseServices();
+            UseServicesWithConfig();
+            UseServicesWithHost();
         }
 
-        private static void RegisterServicesWithConfig()
+        private static void UseServicesWithHost()
         {
-            IConfigurationBuilder configBuilder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json");
-            IConfigurationRoot config = configBuilder.Build();
+            using var host = Host.CreateDefaultBuilder()
+                .ConfigureServices((context, services) =>
+                {
+                    services.AddGreetingService(context.Configuration.GetSection("GreetingService"));
+                    services.AddSingleton<IGreetingService, GreetingService>();
+                    services.AddTransient<HelloController>();
+                }).Build();
 
-            var services = new ServiceCollection();
-            services.AddTransient<HelloController>();
-            services.AddOptions();
-            services.AddGreetingService(config.GetSection("GreetingService"));
-
-            Container = services.BuildServiceProvider();
+            var controller = host.Services.GetService<HelloController>();
+            string greeting = controller.Action("Katharina");
+            Console.WriteLine(greeting);
         }
 
-        private static void UseServices()
+        private static void UseServicesWithConfig()
         {
-            var controller = Container.GetService<HelloController>();
+            var controller = AppServices.Instance.Container.GetService<HelloController>();
 
             string greeting = controller.Action("Katharina");
 
-            WriteLine(greeting);
+            Console.WriteLine(greeting);
         }
-
-        public static IServiceProvider Container { get; private set; }
     }
 }
