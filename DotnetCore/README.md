@@ -16,7 +16,7 @@
 
 Introducing *Project Tye*.
 
-See the blog article [Project Tye - easier development with .NET for Kubernetes]()
+See the blog article [Project Tye - easier development with .NET for Kubernetes](https://csharp.christiannagel.com/2020/05/11/tye/)
 
 ## Logging to Files
 
