@@ -37,6 +37,7 @@ Enjoy!
 
 ## .NET Core
 
+* Dependency Injection with the Host class
 * Dependency Injection
 * Dependency Injection with Options
 * Configuration
