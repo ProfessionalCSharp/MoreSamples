@@ -37,6 +37,7 @@ Enjoy!
 
 ## .NET Core
 
+* Dependency Injection with the Host class
 * Dependency Injection
 * Dependency Injection with Options
 * Configuration
@@ -44,6 +45,7 @@ Enjoy!
 * HTTP Client Factory
 * Markdown
 * Self-contained
+* Project Tye
 
 ## Entity Framework Core
 

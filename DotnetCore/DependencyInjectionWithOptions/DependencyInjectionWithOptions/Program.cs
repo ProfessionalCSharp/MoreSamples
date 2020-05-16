@@ -1,41 +1,42 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using System;
-using static System.Console;
 
 namespace DependencyInjectionWithOptions
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
-            RegisterServicesWithOptions();
             UseServices();
+            UsingHost();
         }
 
         private static void UseServices()
         {
-            var controller = Container.GetService<HelloController>();
+            var controller = AppServices.Instance.Container.GetService<HelloController>();
 
             string greeting = controller.Action("Stephanie");
 
-            WriteLine(greeting);
+            Console.WriteLine(greeting);
         }
 
-        private static void RegisterServicesWithOptions()
+        private static void UsingHost()
         {
-            var services = new ServiceCollection();
-            services.AddOptions();
+            using var host = Host.CreateDefaultBuilder()
+                .ConfigureServices(services =>
+                {
+                    services.AddGreetingService(options =>
+                    {
+                        options.From = "Angela";
+                    });
+                    services.AddSingleton<IGreetingService, GreetingService>();
+                    services.AddTransient<HelloController>();
+                }).Build();
 
-            services.AddTransient<HelloController>();
-
-            services.AddGreetingService(options =>
-            {
-                options.From = "Christian";
-            });
-
-            Container = services.BuildServiceProvider();
+            var controller = host.Services.GetService<HelloController>();
+            string greeting = controller.Action("Katharina");
+            Console.WriteLine(greeting);
         }
-
-        public static IServiceProvider Container { get; private set; }
     }
 }

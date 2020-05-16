@@ -2,6 +2,7 @@
 
 > Enjoy the following .NET Core samples
 
+* Project Tye
 * Logging to Files
 * Dependency Injection
 * Dependency Injection with Options
@@ -11,13 +12,29 @@
 * Markdown
 * Self-contained
 
+## Project Tye
+
+Introducing *Project Tye*.
+
+See the blog article [Project Tye - easier development with .NET for Kubernetes](https://csharp.christiannagel.com/2020/05/11/tye/)
+
 ## Logging to Files
 
 This sample shows logging to files using the ILogger interface, and tracesource and Serilog log providers.
 
 See the blog article [Writing ILogger Diagnostics to a File](https://csharp.christiannagel.com/2018/11/13/iloggertofile/).
 
+## Dependency Injection with the Host class
+
+Foder: DependencyInjectionWithHost
+
+This sample offers a simple console project using dependency injection with the Microsoft.Extensions.DependencyInjection framework.
+
+See the blog article [It's all in the Host Class - Dependency Injection with .NET](https://csharp.christiannagel.com/2020/05/15/dependencyinjection-2/) for more information.
+
 ## Dependency Injection
+
+> See the newer version: *Dependency Injection with the Host class*
 
 Folder: DependencyInjection
 
@@ -30,6 +47,8 @@ The Simple MVVM sample makes use of Microsoft.Extensions.DependencyInjection as 
 The book Professional C# 6 and .NET Core 1.0 offers a bigger example with MVVM and both WPF and UWP applications in the chapter 31, "Patterns with XAML Apps", and in the ASP.NET Core chapters 40 "ASP.NET Core" and 41 "ASP.NET MVC". 
 
 ## Dependency Injection with Options
+
+> See the newer version: *Dependency Injection with the Host class*
 
 Folder: DependencyInjectionWithOptions
 
