@@ -2,9 +2,18 @@
 
 > Enjoy the following Microsoft Azure samples
 
+* Azure App Configuration: Configuration of .NET Applications
 * Hosting ASP.NET Core Blazor on Azure Storage Websites with Azure Functions in the back-end
 * Hosting Angular with Azure Storage and Azure Functions
 * Azure Active Directory B2C with ASP.NET Core
+
+## Using Azure App Configuration
+
+Folder: AzureAppConfigSample
+
+This sample shows using *Azure App Configuration* with a .NET application and the *Azure App Configuration Configuration Provider*.
+
+See the blog article [Azure App Configuration: Configuration of .NET Applications](https://csharp.christiannagel.com) for more information.
 
 ## Hosting Blazor with Azure Storage and Azure Functions
 
