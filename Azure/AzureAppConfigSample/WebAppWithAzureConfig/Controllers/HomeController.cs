@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics;
 using WebAppWithAzureConfig.Models;
 
 namespace WebAppWithAzureConfig.Controllers
@@ -40,12 +36,6 @@ namespace WebAppWithAzureConfig.Controllers
         public string Configuration1()
         {
             return _configuration.GetSection("app1")["configuration1"];
-        }
-
-        public string Configuration2()
-        {
-            string val = _configuration.GetSection("app1")["secret1"];
-            return val;
         }
     }
 }
