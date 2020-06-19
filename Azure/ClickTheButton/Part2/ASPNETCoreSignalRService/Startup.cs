@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ASPNETCoreSignalRService.Hubs;
+﻿using ASPNETCoreSignalRService.Hubs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace ASPNETCoreSignalRService
 {
@@ -20,21 +17,22 @@ namespace ASPNETCoreSignalRService
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSignalR(config =>
-            {
-                config.MapHub<IoTButtonHub>("/api/buttonhub");
-            });
+            app.UseRouting();
 
-            app.Run(async (context) =>
+            app.UseEndpoints(endpoints =>
             {
-                await context.Response.WriteAsync("SignalR Sample");
+                endpoints.MapHub<IoTButtonHub>("/api/buttonhub");
+                endpoints.MapGet("/", async context =>
+                {
+                    await context.Response.WriteAsync("<h1>SignalR Sample</h1>");
+                });
             });
         }
     }
