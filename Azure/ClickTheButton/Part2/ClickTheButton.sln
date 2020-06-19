@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClickToSignalRApp", "ClickT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientApp", "ClientApp\ClientApp.csproj", "{ECB4E48D-8D4C-4DE7-BD0F-E13A62852B25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNETCoreSignalRService", "ASPNETCoreSignalRService\ASPNETCoreSignalRService.csproj", "{9E181513-CCF4-4993-A2B2-A09911881C14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASPNETCoreSignalRService", "ASPNETCoreSignalRService\ASPNETCoreSignalRService.csproj", "{9E181513-CCF4-4993-A2B2-A09911881C14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
