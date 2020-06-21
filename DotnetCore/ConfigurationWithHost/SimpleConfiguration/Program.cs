@@ -35,5 +35,24 @@ namespace SimpleConfiguration
                 .AddEnvironmentVariables()
                 .AddCommandLine(args)
                 .Build();
+
+        private static IConfiguration SetupConfigurationWithOptionalSettings()
+        {
+            string environment = Environment.GetEnvironmentVariable("DOTNET_Environment") ?? "production";
+
+            return new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .AddJsonFile($"appsettings.{environment}.json", optional: true)
+                .Build();
+        }
+
+        private static void ReadConfigurationWithOptionalSettings(IConfiguration configuration)
+        {
+            Console.WriteLine(nameof(ReadConfigurationWithOptionalSettings));
+            Console.WriteLine(configuration.GetSection("ConnectionStrings")["DefaultConnection"]);
+            Console.WriteLine(configuration.GetConnectionString("DefaultConnection"));
+            Console.WriteLine();
+        }
     }
 }
