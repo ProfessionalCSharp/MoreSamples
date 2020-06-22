@@ -16,7 +16,8 @@ namespace ConfigurationWithHost
             return services.AddTransient<ControllerWithOptions>();
         }
 
-        public static IServiceCollection AddControllerWithOptions(this IServiceCollection services,
+        public static IServiceCollection AddControllerWithOptions(
+            this IServiceCollection services,
             IConfiguration configuration)
         {
             services.Configure<MyConfiguration>(configuration);
