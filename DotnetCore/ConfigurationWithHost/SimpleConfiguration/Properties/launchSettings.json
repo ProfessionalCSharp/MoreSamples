@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "SimpleConfiguration": {
+      "commandName": "Project",
+      "commandLineArgs": "config1=42",
+      "environmentVariables": {
+        "DOTNET_Environment": "Staging",
+        "config2": "something else",
+        "config1": "11"
+      }
+    }
+  }
+}

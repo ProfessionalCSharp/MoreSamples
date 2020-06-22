@@ -32,6 +32,14 @@ This sample offers a simple console project using dependency injection with the 
 
 See the blog article [It's all in the Host Class - Dependency Injection with .NET](https://csharp.christiannagel.com/2020/05/15/dependencyinjection-2/) for more information.
 
+## Configuration with the Host class
+
+Folder: ConfigurationWithHost
+
+This sample shows how to configure applications with the help of the Host class.
+
+See the blog article [It's all in the Host class - Part 2: Configuration](https://csharp.christiannagel.com/) for more information
+
 ## Dependency Injection
 
 > See the newer version: *Dependency Injection with the Host class*
@@ -58,9 +66,11 @@ See the blog article [.NET Core Dependency Injection with Options](https://cshar
 
 ## Configuration
 
+> See the newer version: *Configuration with the Host class*
+
 Folder: ConfigurationSample
 
-This sample shows .NET Core configuration with a simple console application. The book contains configuration information in Chapter 40, ASP.NET Core.
+This sample shows .NET Core configuration with a simple console application and the Host class. The book contains configuration information in Chapter 40, ASP.NET Core.
 
 See the blog article [Configuration with .NET Core](https://csharp.christiannagel.com/2016/08/02/netcoreconfiguration/ "Configuration") for more information.
 

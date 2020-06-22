@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "ConfigurationWithHost": {
+      "commandName": "Project",
+      "commandLineArgs": "Config1=\"from program arguments\"",
+      "environmentVariables": {
+        "DOTNET_Environment": "Staging",
+        "config2": "something else",
+        "Config1": "\"from environment variables\""
+      }
+    }
+  }
+}
