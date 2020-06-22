@@ -38,7 +38,7 @@ namespace SimpleConfiguration
 
         private static IConfiguration SetupConfigurationWithOptionalSettings()
         {
-            string environment = Environment.GetEnvironmentVariable("DOTNET_Environment") ?? "production";
+            string environment = Environment.GetEnvironmentVariable("DOTNET_Environment") ?? "Production";
 
             return new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
