@@ -34,6 +34,7 @@ Enjoy!
 * Indexes and Ranges (C# 8)
 * Async Streams (C# 8)
 * Using Declaration (C# 8)
+* Top Level Statements (C# 9)
 
 ## .NET Core
 

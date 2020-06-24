@@ -14,6 +14,7 @@
 * Using Declaration (C# 8)
 * Explicit Interface Implementation
 * Select Expression (C# 8)
+* Top Level Statements (C# 9)
 
 ## Binary Literals
 
@@ -116,3 +117,11 @@ Folder: SwitchStateSample
 Using the *switch expression* with tuples and pattern matching.
 
 See the blog article [Changing State with the Switch Expression (C# 8)](https://csharp.christiannagel.com/2019/09/03/swtichexpression/) for more information.
+
+## Top Level Statements
+
+Folder: TopLevelStatements
+
+Simple C# programs with C# 9
+
+See the blog article [How Hello World! changed - top level statements and functions (C# 9)](https://csharp.christiannagel.com/) for more information.
