@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "HelloWorldCSharp9": {
+      "commandName": "Project",
+      "commandLineArgs": "one two three"
+    }
+  }
+}
