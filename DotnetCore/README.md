@@ -38,7 +38,7 @@ Folder: ConfigurationWithHost
 
 This sample shows how to configure applications with the help of the Host class.
 
-See the blog article [It's all in the Host class - Part 2: Configuration](https://csharp.christiannagel.com/) for more information
+See the blog article [It's all in the Host class - Part 2: Configuration](https://csharp.christiannagel.com/2020/06/23/configurationwithhost/) for more information
 
 ## Dependency Injection
 
