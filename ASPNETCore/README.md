@@ -53,3 +53,11 @@ See the blog article [Choosing the right ASP.NET Core technology](https://csharp
 Folder: AsyncStreamsWithSignalR
 
 See the blog article [Async Streams with ASP.NET Core SignalR and C# 8](https://csharp.christiannagel.com/2019/10/08/signalrstreaming/)
+
+## Local Users with ASP.NET Core
+
+Folder: RolesSample
+
+Manage roles, users, validate emails with ASP.NET Core
+
+See the blog article [Local Users with ASP.NET Core](https://csharp.christiannagel.com)
