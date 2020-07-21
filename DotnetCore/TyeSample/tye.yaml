@@ -6,7 +6,7 @@
 #
 name: tyesample
 services:
-- name: booksapi
-  project: Books.API/BooksAPI.csproj
-- name: booksapp
-  project: Books.App/BooksApp.csproj
+- name: books-api
+  project: Books.API/Books.API.csproj
+- name: books-app
+  project: Books.App/Books.App.csproj

@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Books.Shared", "Books.Shared\Books.Shared.csproj", "{D88601CA-9E5F-49E9-8C21-3EB9DE74E0CD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksAPI", "Books.API\BooksAPI.csproj", "{E93C33C3-17BC-47AC-93BE-A3CD87744807}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Books.API", "Books.API\Books.API.csproj", "{E93C33C3-17BC-47AC-93BE-A3CD87744807}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksApp", "Books.App\BooksApp.csproj", "{AC461FC7-4CB7-47B8-A09C-051FFC18EC3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Books.App", "Books.App\Books.App.csproj", "{AC461FC7-4CB7-47B8-A09C-051FFC18EC3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
