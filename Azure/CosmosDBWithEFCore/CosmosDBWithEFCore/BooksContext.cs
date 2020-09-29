@@ -9,10 +9,12 @@ namespace CosmosDBWithEFCore
         public BooksContext(DbContextOptions<BooksContext> options)
             : base(options) { }
 
-        public DbSet<Book> Books { get; set; }
+        public DbSet<Book> Books { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.HasDefaultContainer("books");
+
             modelBuilder.Entity<Book>().Property<string>("_self").ValueGeneratedOnAdd();
             modelBuilder.Entity<Book>().Property<string>("_etag").ValueGeneratedOnAddOrUpdate();
             modelBuilder.Entity<Book>().Property<long>("_ts").ValueGeneratedOnAddOrUpdate();
