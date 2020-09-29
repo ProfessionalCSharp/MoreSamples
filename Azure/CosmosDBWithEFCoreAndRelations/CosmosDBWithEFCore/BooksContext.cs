@@ -11,7 +11,7 @@ namespace CosmosDBWithEFCore
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultContainer("BooksContainer");
+            modelBuilder.HasDefaultContainerName("BooksContainer");
             // entity types can be explicitly mapped to containers
             // modelBuilder.Entity<Book>().ToContainer("BooksContainer");
             modelBuilder.Entity<Book>().OwnsOne(b => b.LeadAuthor);
