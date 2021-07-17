@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 
 namespace ConfigSample.Pages
 {
@@ -12,10 +13,13 @@ namespace ConfigSample.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(IOptions<IndexAppSettings> options, ILogger<IndexModel> logger)
         {
             _logger = logger;
+            Setting1 = options.Value.Config1 ?? "no value configured";
         }
+
+        public string Setting1 { get; init; }
 
         public void OnGet()
         {
