@@ -1,10 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Configuration.AzureAppConfiguration;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace ConfigSample.Pages
 {
@@ -17,7 +15,9 @@ namespace ConfigSample.Pages
         }
         public async Task OnGet()
         {
-            await _configurationRefresher.RefreshAsync();
+            _configurationRefresher.SetDirty(TimeSpan.FromSeconds(1));
+            await Task.Delay(1000);
+            bool success = await _configurationRefresher.TryRefreshAsync();
         }
     }
 }

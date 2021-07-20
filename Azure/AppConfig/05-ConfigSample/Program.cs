@@ -1,16 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 using Azure.Core.Diagnostics;
 using Azure.Identity;
-
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.AzureAppConfiguration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+
+using System;
 
 namespace ConfigSample
 {
@@ -40,10 +35,9 @@ namespace ConfigSample
                             .Select("AppConfigurationSample:*", context.HostingEnvironment.EnvironmentName)
                             .ConfigureRefresh(refreshConfig =>
                             {
-                                refreshConfig.Register("sentinel", refreshAll: true);
+                                refreshConfig.Register("AppConfigurationSample:Sentinel", refreshAll: true)
+                                    .SetCacheExpiration(TimeSpan.FromDays(30));
                             });
-
-                        var r = options.GetRefresher();
                     });
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
