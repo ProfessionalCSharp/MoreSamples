@@ -64,7 +64,7 @@ namespace ClientApp
 
 
             // read from the hub using ChannelReader
-           v ar channel = await s_hubConnection.StreamAsChannelAsync<int>("GetSomeData", 100, 1000, cts.Token);
+            var channel = await s_hubConnection.StreamAsChannelAsync<int>("GetSomeData", 100, 1000, cts.Token);
             while (await channel.WaitToReadAsync())
             {
                 while (channel.TryRead(out int data))
