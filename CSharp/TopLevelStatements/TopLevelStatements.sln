@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorldCSharp6", "HelloW
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorldCSharp9", "HelloWorldCSharp9\HelloWorldCSharp9.csproj", "{D0D45342-1F45-40F9-87D7-98591D8089CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldCSharp11", "HelloWorldCSharp11\HelloWorldCSharp11.csproj", "{364BC52A-E7CE-4B21-B166-B8A70EC5FB18}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldCSharp12", "HelloWorldCSharp12\HelloWorldCSharp12.csproj", "{6D340860-9FA6-419D-BBEF-C41436FF98A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{D0D45342-1F45-40F9-87D7-98591D8089CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0D45342-1F45-40F9-87D7-98591D8089CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0D45342-1F45-40F9-87D7-98591D8089CA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{364BC52A-E7CE-4B21-B166-B8A70EC5FB18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{364BC52A-E7CE-4B21-B166-B8A70EC5FB18}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{364BC52A-E7CE-4B21-B166-B8A70EC5FB18}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{364BC52A-E7CE-4B21-B166-B8A70EC5FB18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D340860-9FA6-419D-BBEF-C41436FF98A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D340860-9FA6-419D-BBEF-C41436FF98A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D340860-9FA6-419D-BBEF-C41436FF98A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D340860-9FA6-419D-BBEF-C41436FF98A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
